@@ -2,10 +2,21 @@
 input {
 	outline: none;
 }
+ul {
+	list-style: none;
+	margin: 0;
+}
 
 .clearfloat{zoom:1;} 
 .clearfloat:after{display:block;clear:both;content:"";visibility:hidden;height:0;} 
 
+
+
+
+
+
+
+/*header*/
 #header .brand  {
 	padding: 0!important;
 	margin-left: 0;
@@ -19,3 +30,53 @@ input {
     height: 30px;
     border-radius: 100%;
 }
+
+
+
+/*index.html*/
+.allInput {
+	vertical-align: middle;
+}
+.task-at-title {
+	padding: 0 15px;
+	font-size: 16px;
+}
+.task-at-title ul li {
+	padding-bottom: 10px;
+}
+
+
+
+.table tr th,
+.table tr td {
+	vertical-align: middle;
+    text-align: center;
+}
+.task-at-list .task-stage,
+.task-at-list .task-time,
+.task-at-list .task-state {
+	padding: 0;
+}
+
+.task-at-list .task-stage div,
+.task-at-list .task-time div,
+.task-at-list .task-state div {
+	border-bottom: 1px solid #ddd;
+	display: table;
+	width: 100%;
+}
+.task-at-list .task-stage div:last-child,
+.task-at-list .task-time div:last-child,
+.task-at-list .task-state div:last-child {
+	border-bottom: none;
+}
+
+
+.task-at-list .task-stage div span,
+.task-at-list .task-time div span,
+.task-at-list .task-state div span {
+	display: block;
+}
+
+
+

@@ -124,35 +124,21 @@
       <!-- begin 中间内容区-->  
       <div id="main-content" class="container-fluid">
         
-          <h3 class="page-title">活动列表</h3>
-          <div class="widget-body activity-list">
-                <table class="table table-bordered">
-                    <thead>
-                    <tr>
-                        <th>活动名称</th>
-                        <th>周期</th>
-                        <th>广告主</th>
-                        <th>品牌</th>
-                        <th>任务数量</th>
-                        <th>活动阶段</th>
-                        <th>操作</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>活动1</td>
-                            <td>2017.01.01 - 2017.12.30</td>
-                            <td>耐克专卖店耐克专卖店耐克专卖店耐克专卖店</td>
-                            <td>耐克</td>
-                            <td>2</td>
-                            <td>4</td>
-                            <td>
-                                <button class="btn btn-primary">详情</button>
-                                <button class="btn btn-danger"><a href="task-list.html">任务</a></button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+          <h3 class="page-title">创建任务/任务详情</h3>
+
+
+          <div class="widget-body form">
+                
+              <!-- BEGIN FORM-->
+              <form class="form-horizontal" action="#">
+
+
+
+
+
+              </form>
+              <!-- end FORM-->
+
           </div>
 
 
@@ -162,7 +148,7 @@
 
 
   </div>
-  <!-- END CONTAINER-->
+  <!-- END CONTAINER -->
 
 
 
@@ -190,7 +176,10 @@
 
 <script>
 
-   
+    $(function () {
+       $("input[type=checkbox]").uniform();
+   });
+
 
 </script>
 </body>
