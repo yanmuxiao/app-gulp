@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="css/normalize.css" rel="stylesheet">
+<link href="css/button.css" rel="stylesheet">
+<link href="css/index.css" rel="stylesheet">
+</head>
+<body>
+    <div class="head-wrap">
+    	<div class="sync-containter">
+    		<h1>LOGO</h1>
+    		<div class="head-guide">
+    			<a href="index.html" class="setsync guide-on">同步任务</a>
+    			<a href="journal.html" class="operatesync">任务日志清单</a>
+    		</div>
+    	</div>
+    </div>
+    <div class="content-wrap">
+    	<div class="sync-containter">
+    		
+			<div class="sync-operate">
+				<button id="syncSetup" class="button button-glow button-rounded button-raised button-primary">新建</button>
+				
+				<button id="syncDel" class="button button-glow button-rounded button-caution">删除</button>
+			</div>
+			
+			<div class="sync-table">
+				
+				<table>
+					<thead>
+						<tr>
+							<th width="8%"><label><input type="checkbox" id="syncAll" />全选</label></th>
+							<th>频率</th>
+							<th>循环日期</th>
+							<th>执行时间</th>
+							<th>上次完成时间</th>
+							<th>最近计划时间</th>
+							<th>同步内容</th>
+							<th>任务标签</th>
+							<th>状态</th>
+							<th>操作</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><input type="checkbox" class="sync-checkbox" /></td>
+							<td>每天</td>
+							<td>每天</td>
+							<td>15:00:00</td>
+							<td class="last-sync">2017/4/5 15:00:00</td>
+							<td>2017/4/6 15:00:00</td>
+							<td>全部基础资料</td>
+							<td>同步时间</td>
+							<td><input type="checkbox" class="sync-effective" /></td>
+							<td>
+								<button class="button button-glow button-border button-rounded button-primary button-small implement-btn">同步</button>
+								<button class="button button-glow button-border button-rounded button-primary button-small button-highlight syncChange-btn">修改</button>
+							</td>
+						</tr>
+
+						<tr>
+							<td><input type="checkbox" class="sync-checkbox" /></td>
+							<td>每天</td>
+							<td>每天</td>
+							<td>15:00:00</td>
+							<td class="last-sync">2017/4/5 15:00:00</td>
+							<td>2017/4/6 15:00:00</td>
+							<td>全部基础资料</td>
+							<td>同步时间</td>
+							<td><input type="checkbox" class="sync-effective" /></td>
+							<td>
+								<button class="button button-glow button-border button-rounded button-primary button-small implement-btn">同步</button>
+								<button class="button button-glow button-border button-rounded button-primary button-small button-highlight syncChange-btn">修改</button>
+							</td>
+						</tr>
+
+						<tr>
+							<td><input type="checkbox" class="sync-checkbox" /></td>
+							<td>每天</td>
+							<td>每天</td>
+							<td>15:00:00</td>
+							<td class="last-sync">2017/4/5 15:00:00</td>
+							<td>2017/4/6 15:00:00</td>
+							<td>全部基础资料</td>
+							<td>同步时间</td>
+							<td><input type="checkbox" class="sync-effective" /></td>
+							<td>
+								<button class="button button-glow button-border button-rounded button-primary button-small implement-btn">同步</button>
+								<button class="button button-glow button-border button-rounded button-primary button-small button-highlight syncChange-btn">修改</button>
+							</td>
+						</tr>
+
+						<tr>
+							<td><input type="checkbox" class="sync-checkbox" /></td>
+							<td>每天</td>
+							<td>每天</td>
+							<td>15:00:00</td>
+							<td class="last-sync">2017/4/5 15:00:00</td>
+							<td>2017/4/6 15:00:00</td>
+							<td>全部基础资料</td>
+							<td>同步时间</td>
+							<td><input type="checkbox" class="sync-effective" /></td>
+							<td>
+								<button class="button button-glow button-border button-rounded button-primary button-small implement-btn">立即同步</button>
+								<button class="button button-glow button-border button-rounded button-primary button-small button-highlight syncChange-btn">修改</button>
+							</td>
+						</tr>
+
+					</tbody>
+				</table>
+
+			</div>
+
+
+    	</div>
+    </div>
+</body>
+<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/layer/layer.js"></script>
+<script type="text/javascript" src="js/laydate/laydate.js"></script>
+<script type="text/javascript">
+	
+
+	// 全选
+	XjQuery.selectAll('#syncAll', '.sync-checkbox');
+
+
+
+	var syncSetupHtml = '<form class="sync-form">' + 
+
+		'<div class="sync-sp-list sync-fq"><label class="label-title">频率：</label><div class="form-content"><label><input type="radio" name="syncfq" checked="checked" data-type="every-day" />每天</label><label><input type="radio" name="syncfq" data-type="every-week" />每周</label></div></div>' + 
+
+		'<div class="sync-sp-list sync-loop"><label class="label-title">循环日期：</label><div class="form-content"><div class="every-day">每天</div><ul class="every-week"><li><label><input type="checkbox" />周日</label</li><li><label><input type="checkbox" />周一</label</li><li><label><input type="checkbox" />周二</label</li><li><label><input type="checkbox" />周三</label</li><li><label><input type="checkbox" />周四</label</li><li><label><input type="checkbox" />周五</label</li><li><label><input type="checkbox" />周六</label</li></ul></div></div>' +
+
+		'<div class="sync-sp-list sync-ef-time"><label class="label-title">执行时间：</label><div class="form-content"><input type="text" /></div></div>' +
+
+		'<div class="sync-sp-list sync-time"><label class="label-title">有效区间：</label><div class="form-content"><input type="text" id="syncStart" /> 至 <input type="text" id="syncEnd" /></div></div>' +
+
+		'<div class="sync-sp-list sync-content"><label class="label-title">同步内容：</label><div class="form-content">全部基础资料</div></div>' +
+
+		'<div class="sync-sp-list sync-label"><label class="label-title">任务标签：</label><div class="form-content"><input type="text" /></div></div>' +
+
+		'<div class="sync-layer-btn"><button id="syncSave" class="button button-glow button-rounded button-raised button-primary">保存并应用</button><button id="syncCancle" class="button button-glow button-rounded button-highlight">取消</button></div>'
+
+	+ '</form>';
+
+
+
+
+	// 创建
+	$('#syncSetup').click(function() {
+		var layerMask = layer.open({
+	      type: 1,
+	      title: '<div>任务配置</div>',
+	      skin: 'adminLogin', //加上边框
+	      area: ['600px', '440px'], //宽高
+	      // scrollbar: false,
+	      content: syncSetupHtml
+	    });
+	    function layerClose(){layer.close(layerMask);}   
+
+	    // 保存并应用
+	    $('#syncSave').click(function() {
+	    	console.log('保存并应用');
+
+	    	layerClose();
+	    	return false;
+	    })
+
+
+	    // 取消
+		$('#syncCancle').click(function() {
+			layerClose();
+	    	return false;
+		})
+
+		$('input:radio[name="syncfq"]:checked').each(function() {
+			$('.' + ($(this).data('type'))).show().siblings('div').hide();
+		})
+		$('input:radio[name="syncfq"]').change(function() {
+			$('.' + ($(this).data('type'))).show().siblings().hide();
+		})
+
+		$('#syncStart').focus(function() {
+			laydate({
+			   elem: '#syncStart'
+			})
+		})
+		$('#syncEnd').focus(function() {
+			laydate({
+			   elem: '#syncEnd'
+			})
+		})
+		
+
+	})
+
+
+
+	// 修改
+	$('.syncChange-btn').click(function() {
+		var layerMask = layer.open({
+	      type: 1,
+	      title: '<div>任务修改</div>',
+	      skin: 'adminLogin', //加上边框
+	      area: ['600px', '440px'], //宽高
+	      // scrollbar: false,
+	      content: syncSetupHtml
+	    });
+	    function layerClose(){layer.close(layerMask);}   
+
+	    // 保存并应用
+	    $('#syncSave').click(function() {
+	    	console.log('保存并应用');
+
+	    	layerClose();
+	    	return false;
+	    })
+	    // 取消
+		$('#syncCancle').click(function() {
+			layerClose();
+	    	return false;
+		})
+
+		$('input:radio[name="syncfq"]:checked').each(function() {
+			$('.' + ($(this).data('type'))).show().siblings('div').hide();
+		})
+		$('input:radio[name="syncfq"]').change(function() {
+			$('.' + ($(this).data('type'))).show().siblings().hide();
+		})
+
+	})
+
+
+
+
+
+	// 删除
+	$('#syncDel').click(function() {
+		if($('.sync-checkbox:checked').length > 0) {
+			var layerDel = layer.confirm('确定删除？', {
+				  btn: ['确定','取消'] //按钮
+				}, function(){
+					layer.close(layerDel);
+					$('.sync-checkbox:checked').each(function() {
+						$(this).parents('tr').remove();
+					})
+				}, function(){
+				});
+
+		} else {
+			layer.msg('请选择要删除的设置！')
+		}
+	});
+
+
+	// 手动同步
+	$('.sync-table').on('click', '.implement-btn', function() {
+		var layerManual = layer.confirm('确定同步？', {
+			  btn: ['确定','取消'] //按钮
+			}, function(){
+				layer.close(layerManual);
+				layer.msg('已经同步！');
+			}, function(){
+			});
+	})
+
+
+	// 上一次同步的详细清单
+	$('.sync-table').on('click', '.last-sync', function() {
+
+		window.location.href = 'journal-detail.html';
+
+	})
+
+
+
+</script>
+</html>

@@ -42,7 +42,10 @@ ul {
 	font-size: 16px;
 }
 .task-at-title ul li {
-	padding-bottom: 10px;
+	padding-bottom: 20px;
+}
+.task-at-title ul li:first-child {
+	padding-top: 20px;
 }
 
 
@@ -79,4 +82,55 @@ ul {
 }
 
 
+
+
+/*任务创建、任务详情*/
+.task-create-detail .control-group .control-label {
+	width: 100px;
+	text-align: right;
+}
+.task-create-detail .control-group .controls {
+	margin-left: 120px;
+}
+
+.controls-value {
+	margin-left: 120px;
+	padding-top: 5px;
+	font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+}
+.controls-value > label {
+	display: inline;
+	margin-right: 20px;
+}
+.controls-value > input[type=checkbox] {
+	margin-top: 0;
+}
+.controls-value > .checker {
+	margin-right: 0;
+}
+.controls-value > input {
+	margin-top: -5px;
+}
+.controls-value .tcd-textarea {
+	min-height: 100px;
+	max-width: 600px;
+	max-height: 800px;
+}
+.tcd-stage td {
+	padding: 6px 0;
+}
+.tcd-stage td input {
+	width: 90%;
+	padding: 6px;
+	box-sizing: border-box;
+	height: 30px;
+}
+.tcd-stage td .input-medium {
+	width: 90%;
+}
+.tcd-stage .tcd-time-range input {
+	width: 40%;
+}
 

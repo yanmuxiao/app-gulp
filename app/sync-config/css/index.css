@@ -1,0 +1,132 @@
+
+*{
+	margin: 0;
+	padding: 0;
+}
+input {
+	outline: none;
+}
+
+.sync-containter {
+	width: 90%;
+	margin: 0 auto;
+}
+
+
+
+.head-wrap {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	height: 60px;
+	background-color: #324057;
+	color: #cbcfd4;
+}
+.head-wrap .sync-containter {
+	height: 60px;
+}
+.head-wrap h1 {
+	font-size: 26px;
+	line-height: 60px;
+	margin: 0;
+	float: left;
+}
+.head-guide {
+	float: left;
+	height: 60px;
+	font-size: 0;
+	margin-left: 30px;
+}
+.head-guide > a {
+	color: #cbcfd4;
+	display: inline-block;
+	font-size: 20px;
+	text-decoration: none;
+	height: 30px;
+	line-height: 30px;
+	margin: 15px 20px 0 20px;
+}
+.head-guide > a.guide-on {
+	color: #2fade7;
+}
+
+
+.content-wrap .sync-containter {
+	margin-top: 60px;
+	padding: 15px;
+}
+
+
+.sync-operate {
+	padding-top: 20px;
+}
+
+
+
+.sync-table {
+	padding-top: 30px;
+}
+.sync-table table {
+	text-align: center;
+	width: 100%;
+}
+
+.sync-table table th,
+.sync-table table tfoot td {
+	background-color: #ddd;
+	border: 1px solid #ccc;
+	padding: 6px 2px;
+}
+
+.sync-table table td {
+	border: 1px solid #ddd;
+	padding: 6px 2px;
+}
+.sync-table table th {
+	font-weight: normal;
+}
+.sync-table .button-glow {
+	padding: 0;
+	min-width: 60px;
+}
+
+
+/*index.html*/
+.sync-form {
+	padding: 15px;
+}
+.sync-sp-list {
+	padding-bottom: 20px;
+}
+.label-title {
+	float: left;
+	width: 100px;
+	text-align: right;
+}
+.form-content {
+	padding-left: 110px;
+}
+.every-day,.every-week {
+	display: none;
+}
+.every-week li {
+	display: inline-block;
+	margin-right: 10px;
+}
+.sync-fq .form-content > label:nth-child(2) {
+	margin-left: 30px;
+}
+.sync-time .form-content > input {
+	width: 107px;
+}
+.sync-layer-btn {
+	text-align: center;
+	padding-top: 20px;
+}
+.sync-layer-btn > button {
+	margin: 0 20px;
+}
+.syncChange-btn {
+	margin-top: 10px;
+}

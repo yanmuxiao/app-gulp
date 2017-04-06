@@ -98,6 +98,13 @@
                 <li class="sub-menu">
                     <a class="" href="index.html">
                         <i class="icon-dashboard"></i>
+                        <span>监测人列表</span>
+                    </a>
+                </li>
+
+                <li class="sub-menu">
+                    <a class="" href="index.html">
+                        <i class="icon-dashboard"></i>
                         <span>密码修改</span>
                     </a>
                 </li>
@@ -122,7 +129,7 @@
 
 
       <!-- begin 中间内容区-->  
-      <div id="main-content" class="container-fluid">
+      <div id="main-content" class="container-fluid task-create-detail">
         
           <h3 class="page-title">创建任务/任务详情</h3>
 
@@ -131,8 +138,170 @@
                 
               <!-- BEGIN FORM-->
               <form class="form-horizontal" action="#">
+                    
+                    <div class="control-group">
+                        <label class="control-label">活动名称：</label>
+                        <div class="controls-value">活动1</div>
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label">广告主：</label>
+                        <div class="controls-value">耐克专卖店</div>
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label">品牌：</label>
+                        <div class="controls-value">耐克</div>
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label">任务名称：</label>
+                        <div class="controls">
+                            <input type="text" class="span6" value="任务1">
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label">广告牌数量：</label>
+                        <div class="controls-value">
+                            <input type="text" class="span6" value="3">
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label">地点：</label>
+                        <div class="controls-value">
+                            <input type="text" class="span6" value="白云区机场路136号">
+                        </div>
+                    </div>
+    
+                    <div class="control-group">
+                        <label class="control-label">监测人：</label>
+                        <div class="controls-value">
+                            <input type="text" class="span6" value="陈某某、李某">
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label">形式：</label>
+                        <div class="controls-value">
+                            <input type="checkbox" class="checkboxes" id="tcd-photo" />
+                            <label for="tcd-photo">拍照</label>
+                            <input type="checkbox" class="checkboxes" id="tcd-video" />
+                            <label for="tcd-video">视频</label>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label">任务说明：</label>
+                        <div class="controls-value">
+                            <textarea class="span6 tcd-textarea"></textarea>
+                        </div>
+                    </div>
+    
+    
+                    <div class="control-group">
+                        <label>
+                            <input type="checkbox" class="checkboxes" id="tcd-video" />引用活动阶段：
+                        </label>
+                    </div>
+    
+                    
+                    <div class="control-group">
+                        <div class="tcd-stage">
+                            <table class="table table-bordered">
+                                <thead>
+                                  <tr>
+                                      <th width="14%">阶段名称</th>
+                                      <th width="30%">时间范围</th>
+                                      <th width="8%">计划数量</th>
+                                      <th width="8%">已上传数量</th>
+                                      <th width="8%">已审核数量</th>
+                                      <th width="17%">状态</th>
+                                      <th width="13%">操作</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><input type="text" value="活动1" /></td>
+                                        <td class="tcd-time-range"><input type="text" value="2017.01.01" /> - <input type="text" value="2017.01.01" /></td>
+                                        <td><input type="text" value="5" /></td>
+                                        <td>2</td>
+                                        <td>1</td>
+                                        <td>
+                                            <select class="input-medium m-wrap" tabindex="1">
+                                                <option value="Category 1">Category 1</option>
+                                                <option value="Category 2">Category 2</option>
+                                                <option value="Category 3">Category 5</option>
+                                                <option value="Category 4">Category 4</option>
+                                            </select></th>
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-primary">查看图片</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" value="活动1" /></td>
+                                        <td class="tcd-time-range"><input type="text" value="2017.01.01" /> - <input type="text" value="2017.01.01" /></td>
+                                        <td><input type="text" value="5" /></td>
+                                        <td>2</td>
+                                        <td>1</td>
+                                        <td>
+                                            <select class="input-medium m-wrap" tabindex="1">
+                                                <option value="Category 1">Category 1</option>
+                                                <option value="Category 2">Category 2</option>
+                                                <option value="Category 3">Category 5</option>
+                                                <option value="Category 4">Category 4</option>
+                                            </select></th>
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-primary">查看图片</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" value="活动1" /></td>
+                                        <td class="tcd-time-range"><input type="text" value="2017.01.01" /> - <input type="text" value="2017.01.01" /></td>
+                                        <td><input type="text" value="5" /></td>
+                                        <td>2</td>
+                                        <td>1</td>
+                                        <td>
+                                            <select class="input-medium m-wrap" tabindex="1">
+                                                <option value="Category 1">Category 1</option>
+                                                <option value="Category 2">Category 2</option>
+                                                <option value="Category 3">Category 5</option>
+                                                <option value="Category 4">Category 4</option>
+                                            </select></th>
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-primary">查看图片</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" value="活动1" /></td>
+                                        <td class="tcd-time-range"><input type="text" value="2017.01.01" /> - <input type="text" value="2017.01.01" /></td>
+                                        <td><input type="text" value="5" /></td>
+                                        <td>2</td>
+                                        <td>1</td>
+                                        <td>
+                                            <select class="input-medium m-wrap" tabindex="1">
+                                                <option value="Category 1">Category 1</option>
+                                                <option value="Category 2">Category 2</option>
+                                                <option value="Category 3">Category 5</option>
+                                                <option value="Category 4">Category 4</option>
+                                            </select></th>
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-primary">查看图片</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
 
 
+
+                    <button class="btn btn-large btn-success"><i class="icon-ok icon-white"></i> 保存</button>
 
 
 
