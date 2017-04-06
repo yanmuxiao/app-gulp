@@ -40,7 +40,7 @@
 							<th width="8%">描述</th>
 						</tr>
 					</thead>
-					<tbody>
+					<tbody id="jouranlDTbody">
 						<tr>
 							<td>3点同步</td>
 							<td>同步客户资料</td>
@@ -86,10 +86,39 @@
 					</tfoot>
 				</table>
 
+				<div id="syncLayerpage" class="sync-layerpage"></div>
+
 			</div>
 
 
     	</div>
     </div>
 </body>
+<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+<script type="text/javascript" src="js/laypage/laypage.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript">
+
+	// 双击跳转
+	$('.sync-table').on('dblclick', 'tbody tr', function() {
+		window.location.href = 'journal-detail.html';
+	})
+
+
+	// 分页
+	laypage({
+	  cont: $('#syncLayerpage'), //容器。值支持id名、原生dom对象，jquery对象,
+	  pages: 100, //总页数
+	  skip: true, //是否开启跳页
+	  skin: '#AF0000',
+	  groups: 5, //连续显示分页数
+	  jump: function(obj){
+
+	  	console.log(obj.curr);
+	  	 
+	  }
+	});
+
+
+</script>
 </html>

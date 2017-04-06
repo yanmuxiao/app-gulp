@@ -6,6 +6,13 @@
 input {
 	outline: none;
 }
+input[type=checkbox],
+input[type=radio]  {
+	width: 16px;
+	height: 16px;
+	vertical-align: middle;
+	margin-top: -5px;
+}
 
 .sync-containter {
 	width: 90%;
@@ -103,9 +110,14 @@ input {
 	float: left;
 	width: 100px;
 	text-align: right;
+	line-height: 30px;
 }
 .form-content {
 	padding-left: 110px;
+	line-height: 30px;
+}
+.form-content input[type=text] {
+	padding: 4px 6px;
 }
 .every-day,.every-week {
 	display: none;
@@ -129,4 +141,14 @@ input {
 }
 .syncChange-btn {
 	margin-top: 10px;
+}
+
+
+
+/*journal.html*/
+.sync-layerpage {
+	padding: 20px 0;
+}
+.sync-layerpage .laypage_main {
+	text-align: center;
 }
