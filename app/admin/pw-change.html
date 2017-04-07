@@ -129,31 +129,42 @@
 
 
       <!-- begin 中间内容区-->  
-      <div id="main-content" class="container-fluid monitor-p-mc">
+      <div id="main-content" class="container-fluid pw-change-mc">
         
-          <h3 class="page-title">监测人列表</h3>
+          <h3 class="page-title">密码修改</h3>
 
-          <button class="btn btn-large btn-primary monitor-save">保存</button>
 
-          <div class="widget-body activity-list">
-              <table class="table table-bordered">
-                  <thead>
-                  <tr>
-                      <th>序号</th>
-                      <th>监测人</th>
-                      <th>手机号</th>
-                      <th>是否有效</th>
-                  </tr>
-                  </thead>
-                  <tbody>
-                      <tr>
-                          <td>1</td>
-                          <td>李某某</td>
-                          <td>18826488888</td>
-                          <td><input type="checkbox" class="checkboxes" /></td>
-                      </tr>
-                  </tbody>
-              </table>
+          <div class="widget-body">
+              
+              <form class="form-horizontal pw-change-form" action="#">
+                    
+                <div class="control-group">
+                    <label class="control-label">旧密码：</label>
+                    <div class="controls">
+                        <input type="text" class="span6" placeholder="请输入6-16位字符密码">
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label">新密码：</label>
+                    <div class="controls">
+                        <input type="text" class="span6" placeholder="请输入6-16位字符密码">
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label">确认新密码：</label>
+                    <div class="controls">
+                        <input type="text" class="span6" placeholder="请输入6-16位字符密码">
+                    </div>
+                </div>
+
+
+              </form>
+
+
+              <button class="btn btn-large btn-primary pw-change-save">保存</button>
+
           </div>
 
 

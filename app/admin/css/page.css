@@ -134,3 +134,70 @@ ul {
 	width: 40%;
 }
 
+
+
+
+
+/*monitor-people.html*/
+.monitor-save {
+	float: right;
+	margin: -49px 15px 0 0;
+}
+
+
+
+
+
+/*pw-change.html*/
+.pw-change-form .control-label {
+	width: 100px;
+    text-align: right;
+}
+.pw-change-form .controls {
+    margin-left: 120px;
+}
+.pw-change-save {
+	margin: 30px 0 0 120px; 
+}
+
+
+
+
+/*personal-center.html*/
+.ps-center-form .control-label {
+	width: 100px;
+    text-align: right;
+}
+.ps-center-form .controls {
+    margin-left: 120px;
+}
+.pw-change-save {
+	margin: 30px 0 0 120px; 
+}
+
+.license-title {
+	padding: 20px 0;
+}
+.ps-license-ul li {
+	display: inline-block;
+    width: 152px;
+    height: 80px;
+    padding: 0 8px 0 0;
+    border: 2px dotted #ddd;
+    margin-right: 20px;
+    background: url(../img/user-set-add.png) left top no-repeat;
+    position: relative;
+}
+.ps-license-ul li .input-file {
+	position: absolute;
+    width: 98%;
+    height: 98%;
+    top: 0;
+    left: 0;
+    filter: alpha(opacity:0);
+    opacity: 0;
+    cursor: pointer;
+}
+
+
+
