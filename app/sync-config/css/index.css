@@ -147,8 +147,69 @@ input[type=radio]  {
 
 /*journal.html*/
 .sync-layerpage {
-	padding: 20px 0;
+	padding: 60px 0 20px;
 }
 .sync-layerpage .laypage_main {
 	text-align: center;
+}
+
+
+.ui-timepicker-div dt,
+.ui-timepicker-div dd {
+	display: inline-block;
+	padding-top: 15px;
+}
+.ui-timepicker-div dl {
+	height: 120px;
+	padding-top: 10px;
+}
+.ui-timepicker-div dt {
+	width: 25%;
+	font-size: 18px;
+	color: #48576a;
+}
+.ui_tpicker_time {
+	font-size: 18px;
+	color: #48576a;
+}
+.ui-timepicker-div dd {
+	width: 73%;
+}
+
+.ui-datepicker {
+	border: 1px solid #eaeefb;
+}
+.ui-datepicker {
+	background-color: #fff;
+	padding: 10px;
+	width: 310px;
+}
+.ui-timepicker-div .ui-slider-horizontal {
+	border-radius: 2px;
+	height: 4px;
+	background-color: #e4e8f1;
+}
+.ui-timepicker-div .ui-slider-handle {
+	width: 12px;
+	height: 12px;
+	border-radius: 100%;
+	background-color: #20a0ff;
+	margin-top: 2px;
+}
+
+.ui-datepicker-title {
+	font-size: 18px;
+	color: #48576a;
+}
+.ui-datepicker-buttonpane .ui-state-default {
+    background: #fff;
+    border: 1px solid #bfcbd9;
+    color: #1f2d3d;
+    -webkit-appearance: none;
+    text-align: center;
+    box-sizing: border-box;
+    font-weight: normal;
+    font-size: 18px!important;
+    line-height: 30px;
+    padding: 0 10px!important;
 }
