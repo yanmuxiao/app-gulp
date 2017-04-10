@@ -188,6 +188,8 @@ input[type=radio]  {
 	border-radius: 2px;
 	height: 4px;
 	background-color: #e4e8f1;
+	position: relative;
+    text-align: left;
 }
 .ui-timepicker-div .ui-slider-handle {
 	width: 12px;
@@ -195,11 +197,20 @@ input[type=radio]  {
 	border-radius: 100%;
 	background-color: #20a0ff;
 	margin-top: 2px;
+	position: absolute;
+    z-index: 2;
+    cursor: default;
+    top: -7px;
+    margin-left: -6px;
+}
+.ui-timepicker-div .ui-slider-handle:focus {
+	outline: none;
 }
 
 .ui-datepicker-title {
 	font-size: 18px;
 	color: #48576a;
+	text-align: center;
 }
 .ui-datepicker-buttonpane .ui-state-default {
     background: #fff;
@@ -212,4 +223,26 @@ input[type=radio]  {
     font-size: 18px!important;
     line-height: 30px;
     padding: 0 10px!important;
+}
+
+
+.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current {
+    float: left;
+}
+.ui-datepicker .ui-datepicker-buttonpane button {
+    float: right;
+    cursor: pointer;
+    width: auto;
+    margin: 0.5em 0.2em 0.4em;
+    padding: 0.2em 0.6em 0.3em;
+    overflow: visible;
+    border-radius: 4px;
+}
+.ui-datepicker .ui-datepicker-buttonpane button {
+    float: right;
+    cursor: pointer;
+    width: auto;
+    margin: 0.5em 0.2em 0.4em;
+    padding: 0.2em 0.6em 0.3em;
+    overflow: visible;
 }

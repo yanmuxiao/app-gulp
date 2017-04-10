@@ -297,6 +297,7 @@
 	/* body container */	
 	#main-content {
 		margin: 7px !important;
+        margin-top: 70px!important;
 		position: none !important;
 	}
 

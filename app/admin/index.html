@@ -56,6 +56,9 @@
                            </a>
                            <ul class="dropdown-menu extended logout">
                               <li>
+                                  <a href="personal-center.html"><i class="icon-key"></i>个人中心</a>
+                              </li>
+                              <li>
                                   <a href="login.html"><i class="icon-key"></i>退出</a>
                               </li>
                            </ul>
@@ -109,12 +112,12 @@
                     </a>
                 </li>
 
-                <li class="sub-menu">
+                <!-- <li class="sub-menu">
                     <a class="" href="index.html">
                         <i class="icon-dashboard"></i>
                         <span>退出</span>
                     </a>
-                </li>
+                </li> -->
 
                 
             </ul>
@@ -129,9 +132,22 @@
 
 
       <!-- begin 中间内容区-->  
-      <div id="main-content" class="container-fluid">
+      <div id="main-content" class="container-fluid index-mc">
         
           <h3 class="page-title">活动列表</h3>
+
+
+          <div class="task-at-title row-fluid">
+            
+              <div class="span6"></div>
+
+              <div class="span6">
+                  <button class="btn btn-large btn-warning create-at"><i class="icon-plus icon-white"></i> 创建活动</button>
+              </div>
+
+          </div>
+
+
           <div class="widget-body activity-list">
               <table class="table table-bordered">
                   <thead>
@@ -154,7 +170,7 @@
                           <td>2</td>
                           <td>4</td>
                           <td>
-                              <button class="btn btn-primary">详情</button>
+                              <button class="btn btn-primary at-detail-btn">详情</button>
                               <button class="btn btn-danger"><a href="task-list.html">任务</a></button>
                           </td>
                       </tr>
@@ -187,6 +203,7 @@
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="assets/uniform/jquery.uniform.min.js"></script>
 <script type="text/javascript" src="js/layer/layer.js"></script>
+<script type="text/javascript" src="js/laydate/laydate.js"></script>
 <script src="js/jquery.scrollto.min.js"></script>
 
 
@@ -194,11 +211,12 @@
 <script src="js/common-scripts.js"></script>
 
 
+<script src="js/index.js"></script>
 
-<script>
-
-   
+<script type="text/javascript">
+  
 
 </script>
+
 </body>
 </html>

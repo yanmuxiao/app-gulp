@@ -142,8 +142,8 @@
               </ul>
 
               <div class="span6">
-                  <button class="btn btn-large btn-warning"><i class="icon-plus icon-white"></i> 创建任务</button>
-                  <button class="btn btn-large btn-primary"><i class="icon-pencil icon-white"></i> 监测人修改</button>
+                  <button class="btn btn-large btn-warning" id="createTask"><i class="icon-plus icon-white"></i> 创建任务</button>
+                  <button class="btn btn-large btn-primary" id="changeMonitor"><i class="icon-pencil icon-white"></i> 监测人修改</button>
               </div>
 
           </div>
@@ -263,19 +263,21 @@
                 </table>
 
 
-                <div class="row-fluid">
+                <!-- <div class="row-fluid">
                     <div class="span12">
                         <div class="dataTables_paginate paging_bootstrap pagination"><ul>
                           <li class="prev disabled"><a href="javascript:;">← Prev</a></li>
                           <li><a href="javascript:;">1</a></li>
                           <li><a href="javascript:;">2</a></li>
                           <li><a href="javascript:;">3</a></li>
+                          <li><a href="javascript:;">4</a></li>
+                          <li><a href="javascript:;">5</a></li>
                           <li class="next"><a href="javascript:;">Next → </a></li>
                         </ul></div>
                     </div>
-                </div>
-
-
+                </div> -->
+                <div id="syncLayerpage" class="sync-layerpage"></div>
+    
           </div>
 
 
@@ -303,6 +305,7 @@
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="assets/uniform/jquery.uniform.min.js"></script>
 <script type="text/javascript" src="js/layer/layer.js"></script>
+<script type="text/javascript" src="js/laypage/laypage.js"></script>
 <script src="js/jquery.scrollto.min.js"></script>
 
 
@@ -361,7 +364,52 @@
             }
         });
     })
+
+
+    // 分页
+    laypage({
+      cont: $('#syncLayerpage'), //容器。值支持id名、原生dom对象，jquery对象,
+      pages: 100, //总页数
+      skip: true, //是否开启跳页
+      skin: '#AF0000',
+      groups: 5, //连续显示分页数
+      jump: function(obj){
+
+        console.log(obj.curr);
+        console.log($('#jouranlTbody tr').length);
+         
+      }
+    });
+
+
+    // 创建任务
+    $('#createTask').click(function() {
+        window.location.href = 'task-create(detail).html';
+    })
+
+   // 监测人修改
    
+   var atHtml = '<form class="OOHM-layer-form" action="#"><div>' + 
+
+        '<table class="table table-bordered"><thead><tr><th width="30%"><input type="checkbox" class="group-checkable allInput" data-set="#sample_1 .checkboxes" />全选</th><th>监测人</th><th>电话</th></tr></thead><tbody>' +
+
+
+            '<tr><td><input type="checkbox" class="checkboxes" /></td><td>监测人</td><td>18825112987</td></tr><tr><td><input type="checkbox" class="checkboxes" /></td><td>监测人</td><td>18825112987</td></tr><tr><td><input type="checkbox" class="checkboxes" /></td><td>监测人</td><td>18825112987</td></tr><tr><td><input type="checkbox" class="checkboxes" /></td><td>监测人</td><td>18825112987</td></tr><tr><td><input type="checkbox" class="checkboxes" /></td><td>监测人</td><td>18825112987</td></tr>'
+
+
+        + '</tbody></table>'
+    + '</div></div>';
+   $('#changeMonitor').click(function() {
+      var layerMask = layer.open({
+        type: 1,
+        title: '<div>请选择监测人</div>',
+        skin: 'adminLogin', //加上边框
+        area: ['640px', 'auto'], //宽高
+        // scrollbar: false,
+        content: atHtml
+      });
+      function layerClose(){layer.close(layerMask);}
+   })
 
 </script>
 </body>

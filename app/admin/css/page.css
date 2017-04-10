@@ -15,7 +15,6 @@ ul {
 
 
 
-
 /*header*/
 #header .brand  {
 	padding: 0!important;
@@ -34,12 +33,24 @@ ul {
 
 
 /*index.html*/
+
+.index-mc .create-at {
+	float: right;
+	margin: -49px 32px 0 0;
+}
+.index-mc .task-at-title {
+	height: 0;
+}
+
+
+
 .allInput {
 	vertical-align: middle;
 }
 .task-at-title {
 	padding: 0 15px;
 	font-size: 16px;
+	box-sizing: border-box;
 }
 .task-at-title ul li {
 	padding-bottom: 20px;
@@ -80,6 +91,88 @@ ul {
 .task-at-list .task-state div span {
 	display: block;
 }
+
+
+
+.OOHM-layer-form {
+	padding: 15px;
+	max-height: 520px;
+	min-height: 200px;
+}
+.label-title {
+	float: left;
+	width: 100px;
+	text-align: right;
+	line-height: 30px;
+}
+.form-content {
+	padding-left: 110px;
+	line-height: 30px;
+}
+.zhiorto {
+	display: inline-block;
+    vertical-align: top;
+}
+.form-content input[type=text] {
+	padding: 4px 6px;
+}
+.sync-fq .form-content > label:nth-child(2) {
+	margin-left: 30px;
+}
+.sync-time .form-content > input {
+	width: 107px;
+}
+
+
+.add-stage {
+	margin-bottom: 10px;
+}
+.at-table-wrap {
+	padding-right: 20px;
+}
+.at-stage-table {
+	width: 100%;
+}
+.at-stage-table tr td input {
+	margin-bottom: 0;
+}
+.at-stage-table tbody td:first-child input {
+	width: 90%;
+}
+
+.at-stage-table tr td:nth-child(2) input {
+	width: 40%;
+}
+.at-stage-table tr td:nth-child(2) {
+	position: relative;
+}
+/*<i class="icon-remove at-stage-rm"></i>*/
+.at-stage-rm {
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 4px;
+	cursor: pointer;
+}
+
+
+
+
+
+/*task-list.html*/
+.sync-layerpage {
+    padding: 60px 0 20px;
+}
+.sync-layerpage .laypage_main {
+    text-align: center;
+}
+.sync-layerpage .laypage_total label {
+	margin: 0;
+	line-height: 26px;
+}
+
+
+
 
 
 
@@ -168,6 +261,10 @@ ul {
 	width: 100px;
     text-align: right;
 }
+.xinghao {
+	font-size: 15px;
+	color: #f00;
+}
 .ps-center-form .controls {
     margin-left: 120px;
 }
@@ -197,6 +294,10 @@ ul {
     filter: alpha(opacity:0);
     opacity: 0;
     cursor: pointer;
+}
+.zhengjian-rules {
+    padding: 4px 0;
+    color: #ebbf00;
 }
 
 
