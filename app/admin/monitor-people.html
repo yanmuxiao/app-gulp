@@ -146,7 +146,7 @@
                           <td>李某某</td>
                           <td>18826488888</td>
                           <td><input type="checkbox" class="checkboxes" /></td>
-                          <td><button class="btn btn-primary at-detail-btn">详情</button></td>
+                          <td><button class="btn btn-primary monitor-d-link">详情</button></td>
                       </tr>
                   </tbody>
               </table>
@@ -188,6 +188,10 @@
     $(function () {
        $("input[type=checkbox]").uniform();
     });
+
+    $('.monitor-d-link').click(function() {
+        window.location.href = 'monitor-detail.html';
+    })
 
    
 

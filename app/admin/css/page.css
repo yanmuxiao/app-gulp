@@ -324,6 +324,7 @@ label {
     margin-right: 20px;
     background: url(../img/user-set-add.png) left top no-repeat;
     position: relative;
+    overflow: hidden;
 }
 .ps-license-ul li .input-file {
 	position: absolute;
@@ -334,11 +335,167 @@ label {
     filter: alpha(opacity:0);
     opacity: 0;
     cursor: pointer;
+    z-index: 10;
 }
 .zhengjian-rules {
     padding: 4px 0;
     color: #ebbf00;
 }
+.license-img {
+	width: 100%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	-o-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+}
 
 
 
+
+
+/*monitor-detail.html*/
+.monitor-account {
+	line-height: 30px;
+}
+.monitor-d-save {
+	margin: 30px 0 0 120px;
+}
+.monitor-d-form .control-label {
+	width: 100px;
+    text-align: right;
+}
+.monitor-d-form .controls {
+    margin-left: 120px;
+}
+.monitor-d-form .monitor-cbox {
+	width: 15px;
+	height: 15px;
+}
+.m-effective .controls {
+	padding-top: 6px;
+	margin-bottom: 0;
+}
+
+
+
+
+
+/*login.html*/
+.LR-model {
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+
+	width: 450px;
+	background-color: #fff;
+	border-radius: 6px!important;
+	overflow: hidden;
+
+}
+.LR-title {
+	text-align: center;
+	font-size: 26px;
+	padding-top: 20px;
+}
+.LR-form {
+	padding: 30px 60px;
+	margin-bottom: 0;
+}
+.LR-form-list {
+	position: relative;
+    margin-bottom: 20px;
+}
+.LR-form-list-icon {
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    -webkit-background-size: 18px 18px;
+    background-size: 18px 18px;
+    background-position: 14px center;
+}
+.LR-form-user .LR-form-list-icon {
+    background-image: url(../img/user.png);
+}
+.LR-form-pw .LR-form-list-icon {
+    background-image: url(../img/password.png);
+}
+.LR-form .LR-form-itxt {
+	padding: 4px 10px 4px 40px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 40px;
+    font-size: 14px;
+    outline: 0;
+    border: 1px solid #ccc;
+    border-radius: 4px!important;
+    -webkit-appearance: none;
+}
+input.LR-rmb {
+	vertical-align: middle;
+	margin-top: 0;
+	width: 15px;
+	height: 15px;
+}
+.LR-label {
+	display: inline-block;
+}
+.LR-forget-PW {
+	float: right;
+	color: #888;
+}
+.LR-btn-w {
+	margin-top: 20px;
+}
+.LR-btn-one {
+	width: 100%;
+    background-color: #666;
+    color: #fff;
+    font-size: 20px;
+    outline: 0;
+    border: none;
+    padding: 10px 0;
+    border-radius: 4px!important;
+}
+.LR-register-go {
+	padding: 20px 0;
+	text-align: right;
+	font-size: 16px;
+}
+.LR-register-go a {
+	color: #0f0;
+}
+
+
+/*注册*/
+.LR-m-register .LR-form-list {
+	margin-bottom: 10px;
+}
+.LR-form-pw-again .LR-form-list-icon {
+    background-image: url(../img/password.png);
+}
+.LR-form-cpy .LR-form-list-icon {
+    background-image: url(../img/user.png);
+}
+.LR-form-email .LR-form-list-icon {
+	background-image: url(../img/user.png);
+}
+
+
+/*滑动验证码开始*/
+#slider{width:100%;height:40px;position:relative;border-radius:2px;background-color:#dae2d0;overflow:hidden;text-align:center;user-select:none;-moz-user-select:none;-webkit-user-select:none;}
+#slider_bg{position:absolute;left:0;top:0;height:100%;background-color:#8bcd8b;z-index:1;}
+#label{width:20%;position:absolute;left:0;top:0;height:38px;line-height:40px;border:1px solid #cccccc;background:#fff;z-index:3;cursor:move;color:#44baf2;font-size:16px;font-weight:900;}
+#labelTip{position:absolute;left:0;width:100%;height:100%;font-size:13px;font-family:'Microsoft Yahei',serif;color:#787878;line-height:38px;text-align:center;z-index:2;}
+/*滑动验证码结束*/

@@ -45,11 +45,11 @@ gulp.task('browserSync', function() {
 gulp.task('watch', ['browserSync'], function() {
 	
 	// html
-	gulp.watch('app/admin/**/*.html', browserSync.reload);
+	gulp.watch('app/invite-monitor/**/*.html', browserSync.reload);
 	//css
-	gulp.watch('app/admin/**/*.css', browserSync.reload);
+	gulp.watch('app/invite-monitor/**/*.css', browserSync.reload);
 	// js
-	gulp.watch('app/admin/**/*.js', browserSync.reload);
+	gulp.watch('app/invite-monitor/**/*.js', browserSync.reload);
 
 
 })

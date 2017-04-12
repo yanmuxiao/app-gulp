@@ -159,7 +159,7 @@
               </form>
 
 
-              <button class="btn btn-large btn-primary pw-change-save">保存</button>
+              <button class="btn btn-primary pw-change-save">保存</button>
 
           </div>
 
@@ -199,7 +199,10 @@
         $('.pw-change-t').each(function() {
             if($(this).val() == '') {
               layer.msg($(this).parents('.control-group').find('.control-label').text().replace('：', '') + '不能为空！')
+              $(this).focus();
               return false;
+            } else {
+              layer.msg('成功');
             }
         })
     })
