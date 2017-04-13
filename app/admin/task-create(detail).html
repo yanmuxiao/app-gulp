@@ -329,7 +329,8 @@
    var newTastBool = true;
    $('.tcd-table').on('click', '.look-picture', function() {
       if(newTastBool) {
-          layer.msg('现在没有图片可以查看！！');
+          // layer.msg('现在没有图片可以查看！！');
+          window.location.href = "view-picture.html";
       } else {
 
       }
@@ -436,7 +437,7 @@
 
 
     +'</form>';
-
+   // 监测人选择
    $('#changeMonitor').click(function() {
       var layerMask = layer.open({
         type: 1,
@@ -464,11 +465,12 @@
         })
       }
       $('#taskSelectedList').text($('#taskName').val());
-
+      // 取消
       $('#MonitorCancle').click(function() {
           layerClose();
       });
 
+      // 监测人选择确认
       $('#MonitorConfirm').click(function() {
           var mTdcheckbox = $('#monitorTbody tr td:first-child input[type=checkbox]:checked');
           if(mTdcheckbox.length <= 0) {

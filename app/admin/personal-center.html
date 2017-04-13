@@ -199,7 +199,7 @@
                             <ul class="ps-license-ul">
                               <li>
                                   <input type="file" class="input-file" name="">
-                                  <img src="img/avatar1.jpg" class="license-img" />
+                                  <!-- <img src="" class="license-img" /> -->
                               </li>
                             </ul> 
                             <p class="zhengjian-rules">证件要求：必须为清晰的彩色扫描件，图片大小不超过2M；必须在有效期内并通过年检；</p>
@@ -252,7 +252,84 @@
 
 <script>
 
-   
+         
+  
+     
+    $('.input-file').change(function() {
+        if(!+[1,]) {
+          getImgURL(this);
+        } else {
+          getImgURL1(this);
+        }
+    })
+
+    
+
+
+    function getImgURL(node) {    
+
+          var imgURL = "";
+
+          var file = null;  
+          if(node.files && node.files[0] ){  
+              file = node.files[0];   
+          }else if(node.files && node.files.item(0)) {                                  
+              file = node.files.item(0);     
+          }     
+            
+          //这种获取方式支持IE10    
+          node.select();    
+          imgURL = document.selection.createRange().text;      
+          alert(imgURL);  
+            
+            
+          var textHtml = "<img class='license-img' src='"+imgURL+"'/>";     //创建img标签用于显示图片  
+          
+          $(".input-file").after(textHtml);  
+
+          console.log($(".license-img").prop('src'))
+
+          return imgURL;  
+      } 
+
+
+      function getImgURL1(node) {   
+        var imgURL = ""; 
+        try{     
+            var file = null;  
+            if(node.files && node.files[0] ){  
+                file = node.files[0];   
+            }else if(node.files && node.files.item(0)) {                                  
+                file = node.files.item(0);     
+            }     
+            //Firefox 因安全性问题已无法直接通过input[file].value 获取完整的文件路径  
+            try{  
+                //Firefox7.0   
+                imgURL =  file.getAsDataURL();    
+                //alert("//Firefox7.0"+imgRUL);                           
+            }catch(e){  
+                //Firefox8.0以上                                
+                imgRUL = window.URL.createObjectURL(file);  
+                //alert("//Firefox8.0以上"+imgRUL);  
+            }  
+         }catch(e){      //这里不知道怎么处理了，如果是遨游的话会报这个异常                   
+            //支持html5的浏览器,比如高版本的firefox、chrome、ie10  
+            if (node.files && node.files[0]) {                            
+                var reader = new FileReader();   
+                reader.onload = function (e) {                                        
+                    imgURL = e.target.result;    
+                };  
+                reader.readAsDataURL(node.files[0]);   
+            }    
+         }  
+        //imgurl = imgURL;  
+        // creatImg(imgRUL);  
+        var textHtml = "<img class='license-img' src='"+imgRUL+"'/>";  
+        $(".input-file").after(textHtml);  
+
+        console.log($(".license-img").prop('src'))
+        return imgURL;  
+    }
 
 </script>
 </body>
