@@ -561,6 +561,7 @@
 	/* body container */
 	#main-content {
 		margin: 0px  !important;
+        margin-top: 70px  !important;
 	}
 
 	/* style switcher */
@@ -821,6 +822,7 @@
 
     #main-content {
         margin: 1px !important;
+        margin-top: 60px!important;
     }
 
     /*login page*/
@@ -981,6 +983,7 @@
 
     #main-content {
         margin: 1px !important;
+            margin-top: 60px!important;
     }
 
     /*login page*/
