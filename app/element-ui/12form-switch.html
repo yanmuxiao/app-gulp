@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <!-- 引入样式 -->
+  <link rel="stylesheet" href="css/element-ui.css">
+</head>
+<body>
+  <div id="app">
+      
+      <br><br>
+      <el-switch
+        v-model="value1"
+        on-text=""
+        off-text="">
+      </el-switch>
+
+      <br><br>
+      <el-switch
+        v-model="value2"
+        on-color="#13ce66"
+        off-color="#ff4949">
+      </el-switch>
+
+
+      <br><br>
+
+      <el-switch
+        v-model="value3"
+        on-text=""
+        off-text=""
+        disabled>
+      </el-switch>
+      
+
+
+      <br><br>
+      
+      <el-switch
+        v-model="value3"
+        disabled>
+      </el-switch>
+
+      <br><br>
+
+
+
+
+  </div>
+</body>
+  <!-- 先引入 Vue -->
+  <script src="js/vue.js"></script>
+  <!-- 引入组件库 -->
+  <script src="js/element-ui.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      data: function(){
+        return {  
+            value1: true,
+            value2: true
+        }
+      }
+    })
+  </script>
+</html>

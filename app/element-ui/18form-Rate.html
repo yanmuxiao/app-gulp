@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <!-- 引入样式 -->
+  <link rel="stylesheet" href="css/element-ui.css">
+</head>
+<body>
+  <div id="app">
+    
+    <br><br>
+    <div class="block">
+      <span class="demonstration">默认不区分颜色</span>
+      <el-rate v-model="value1"></el-rate>
+    </div>
+
+    <br><br>
+
+    <div class="block">
+      <span class="demonstration">区分颜色</span>
+      <el-rate
+        v-model="value2"
+        :colors="['#99A9BF', '#F7BA2A', '#FF9900']">
+      </el-rate>
+    </div>
+    
+
+    <br><br>
+    <el-rate
+      v-model="value3"
+      show-text>
+    </el-rate>
+
+
+    <br><br>
+    <p>笑脸标签没有</p>
+    <el-rate
+      v-model="value4"
+      :icon-classes="['icon-rate-face-1', 'icon-rate-face-2', 'icon-rate-face-3']"
+      void-icon-class="icon-rate-face-off"
+      :colors="['#99A9BF', '#F7BA2A', '#FF9900']">
+    </el-rate>
+
+    <br><br>
+    <!-- 只读 -->
+    <el-rate
+      v-model="value5"
+      disabled
+      show-text
+      text-color="#ff9900"
+      text-template="{value}">
+    </el-rate>
+
+
+
+  </div>
+</body>
+  <!-- 先引入 Vue -->
+  <script src="js/vue.js"></script>
+  <!-- 引入组件库 -->
+  <script src="js/element-ui.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      data: function(){
+        return {  
+            value1: null,
+            value2: null,
+            value3: null,
+            value4: null,
+            value5: 3.7
+        }
+      }
+    })
+  </script>
+</html>

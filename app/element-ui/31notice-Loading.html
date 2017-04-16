@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <!-- 引入样式 -->
+  <link rel="stylesheet" href="css/element-ui.css">
+  <style>
+  body {
+    margin: 0;
+  }
+</style>
+</head>
+<body>
+  <div id="app">
+      
+      <br><br>
+      <p>区域加载==>在表格等容器中加载数据时显示。</p>
+      <template>
+        <el-table
+          v-loading.body="loading"
+          :data="tableData"
+          style="width: 100%">
+          <el-table-column
+            prop="date"
+            label="日期"
+            width="180">
+          </el-table-column>
+          <el-table-column
+            prop="name"
+            label="姓名"
+            width="180">
+          </el-table-column>
+          <el-table-column
+            prop="address"
+            label="地址">
+          </el-table-column>
+        </el-table>
+      </template>
+
+
+      <br><br>
+      <p>加载文案==>可自定义加载文案。</p>
+      <template>
+        <el-table
+          v-loading="loading2"
+          element-loading-text="拼命加载中"
+          :data="tableData"
+          style="width: 100%">
+          <el-table-column
+            prop="date"
+            label="日期"
+            width="180">
+          </el-table-column>
+          <el-table-column
+            prop="name"
+            label="姓名"
+            width="180">
+          </el-table-column>
+          <el-table-column
+            prop="address"
+            label="地址">
+          </el-table-column>
+        </el-table>
+      </template>
+
+
+
+      <br><br>
+      <p>整页加载==>页面数据加载时显示。</p>
+      <template>
+        <el-button
+          type="primary"
+          @click="openFullScreen"
+          v-loading.fullscreen.lock="fullscreenLoading">
+          显示整页加载，3 秒后消失
+        </el-button>
+      </template>
+
+
+
+      <br><br>
+      <p></p>
+
+
+  </div>
+</body>
+  <!-- 先引入 Vue -->
+  <script src="js/vue.js"></script>
+  <!-- 引入组件库 -->
+  <script src="js/element-ui.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      data: function(){
+        return {
+            tableData: [{
+              date: '2016-05-03',
+              name: '王小虎',
+              address: '上海市普陀区金沙江路 1518 弄'
+            }, {
+              date: '2016-05-02',
+              name: '王小虎',
+              address: '上海市普陀区金沙江路 1518 弄'
+            }, {
+              date: '2016-05-04',
+              name: '王小虎',
+              address: '上海市普陀区金沙江路 1518 弄'
+            }],
+            loading: true,
+
+            loading2: true, //
+
+            fullscreenLoading: false
+        }
+      },
+      methods: {
+        openFullScreen() {
+          this.fullscreenLoading = true;
+          setTimeout(() => {
+            this.fullscreenLoading = false;
+          }, 3000);
+        }
+      }
+    })
+  </script>
+</html>

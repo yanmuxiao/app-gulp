@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <!-- 引入样式 -->
+  <link rel="stylesheet" href="css/element-ui.css">
+</head>
+<body>
+  <div id="app">
+      
+      <br><br>
+      <p>流体高度==>当数据量动态变化时，可以为 Table 设置一个最大高度。</p>
+      <template>
+        <el-table
+          :data="tableData4"
+          border
+          style="width: 100%"
+          max-height="250">
+          <el-table-column
+            fixed
+            prop="date"
+            label="日期"
+            width="150">
+          </el-table-column>
+          <el-table-column
+            prop="name"
+            label="姓名"
+            width="120">
+          </el-table-column>
+          <el-table-column
+            prop="province"
+            label="省份"
+            width="120">
+          </el-table-column>
+          <el-table-column
+            prop="city"
+            label="市区"
+            width="120">
+          </el-table-column>
+          <el-table-column
+            prop="address"
+            label="地址"
+            width="300">
+          </el-table-column>
+          <el-table-column
+            prop="zip"
+            label="邮编"
+            width="120">
+          </el-table-column>
+          <el-table-column
+            fixed="right"
+            label="操作"
+            width="120">
+            <template scope="scope">
+              <el-button
+                @click.native.prevent="deleteRow(scope.$index, tableData4)"
+                type="text"
+                size="small">
+                移除
+              </el-button>
+            </template>
+          </el-table-column>
+        </el-table>
+      </template>
+
+      <br><br>
+      <p>多级表头 ==> 数据结构比较复杂的时候，可使用多级表头来展现数据的层次关系。</p>
+      <template>
+        <el-table
+          :data="tableData4"
+          border
+          style="width: 100%">
+          <el-table-column
+            prop="date"
+            label="日期"
+            width="150">
+          </el-table-column>
+          <el-table-column label="配送信息">
+            <el-table-column
+              prop="name"
+              label="姓名"
+              width="120">
+            </el-table-column>
+            <el-table-column label="地址">
+              <el-table-column
+                prop="province"
+                label="省份"
+                width="120">
+              </el-table-column>
+              <el-table-column
+                prop="city"
+                label="市区"
+                width="120">
+              </el-table-column>
+              <el-table-column
+                prop="address"
+                label="地址"
+                width="300">
+              </el-table-column>
+              <el-table-column
+                prop="zip"
+                label="邮编"
+                width="120">
+              </el-table-column>
+            </el-table-column>
+          </el-table-column>
+        </el-table>
+      </template>
+
+      <br><br>
+      <p>单选==>选择单行数据时使用色块表示。</p>
+      <template>
+        <el-table
+          :data="tableData5"
+          highlight-current-row
+          @current-change="handleCurrentChange"
+          style="width: 100%">
+          <el-table-column
+            type="index"
+            width="50">
+          </el-table-column>
+          <el-table-column
+            property="date"
+            label="日期"
+            width="120">
+          </el-table-column>
+          <el-table-column
+            property="name"
+            label="姓名"
+            width="120">
+          </el-table-column>
+          <el-table-column
+            property="address"
+            label="地址">
+          </el-table-column>
+        </el-table>
+      </template>
+
+
+
+
+      <br><br>
+      <p>多选==>选择多行数据时使用 Checkbox。</p>
+      <template>
+        <el-table
+          :data="tableData6"
+          border
+          tooltip-effect="dark"
+          style="width: 100%"
+          @selection-change="handleSelectionChange">
+          <el-table-column
+            type="selection"
+            width="55">
+          </el-table-column>
+          <el-table-column
+            label="日期"
+            width="120">
+            <template scope="scope">{{ scope.row.date }}</template>
+          </el-table-column>
+          <el-table-column
+            prop="name"
+            label="姓名"
+            width="120">
+          </el-table-column>
+          <el-table-column
+            prop="address"
+            label="地址"
+            show-overflow-tooltip>
+          </el-table-column>
+        </el-table>
+      </template>
+
+      <br><br>
+      <p></p>
+
+
+      
+
+
+  </div>
+</body>
+  <!-- 先引入 Vue -->
+  <script src="js/vue.js"></script>
+  <!-- 引入组件库 -->
+  <script src="js/element-ui.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      data: function(){
+        return {
+            tableData4: [{
+              date: '2016-05-03',
+              name: '王小虎',
+              province: '上海',
+              city: '普陀区',
+              address: '上海市普陀区金沙江路 1518 弄',
+              zip: 200333
+            }, {
+              date: '2016-05-02',
+              name: '王小虎',
+              province: '上海',
+              city: '普陀区',
+              address: '上海市普陀区金沙江路 1518 弄',
+              zip: 200333
+            }, {
+              date: '2016-05-04',
+              name: '王小虎',
+              province: '上海',
+              city: '普陀区',
+              address: '上海市普陀区金沙江路 1518 弄',
+              zip: 200333
+            }, {
+              date: '2016-05-01',
+              name: '王小虎',
+              province: '上海',
+              city: '普陀区',
+              address: '上海市普陀区金沙江路 1518 弄',
+              zip: 200333
+            }, {
+              date: '2016-05-08',
+              name: '王小虎',
+              province: '上海',
+              city: '普陀区',
+              address: '上海市普陀区金沙江路 1518 弄',
+              zip: 200333
+            }, {
+              date: '2016-05-06',
+              name: '王小虎',
+              province: '上海',
+              city: '普陀区',
+              address: '上海市普陀区金沙江路 1518 弄',
+              zip: 200333
+            }, {
+              date: '2016-05-07',
+              name: '王小虎',
+              province: '上海',
+              city: '普陀区',
+              address: '上海市普陀区金沙江路 1518 弄',
+              zip: 200333
+            }],
+
+
+            tableData5: [{
+              date: '2016-05-02',
+              name: '王小虎',
+              address: '上海市普陀区金沙江路 1518 弄'
+            }, {
+              date: '2016-05-04',
+              name: '王小虎',
+              address: '上海市普陀区金沙江路 1517 弄'
+            }, {
+              date: '2016-05-01',
+              name: '王小虎',
+              address: '上海市普陀区金沙江路 1519 弄'
+            }, {
+              date: '2016-05-03',
+              name: '王小虎',
+              address: '上海市普陀区金沙江路 1516 弄'
+            }],
+            currentRow: null,
+
+
+            tableData6: [{
+              date: '2016-05-03',
+              name: '王小虎',
+              address: '上海市普陀区金沙江路 1518 弄'
+            }, {
+              date: '2016-05-02',
+              name: '王小虎',
+              address: '上海市普陀区金沙江路 1518 弄'
+            }, {
+              date: '2016-05-04',
+              name: '王小虎',
+              address: '上海市普陀区金沙江路 1518 弄'
+            }, {
+              date: '2016-05-01',
+              name: '王小虎',
+              address: '上海市普陀区金沙江路 1518 弄'
+            }, {
+              date: '2016-05-08',
+              name: '王小虎',
+              address: '上海市普陀区金沙江路 1518 弄'
+            }, {
+              date: '2016-05-06',
+              name: '王小虎',
+              address: '上海市普陀区金沙江路 1518 弄'
+            }, {
+              date: '2016-05-07',
+              name: '王小虎',
+              address: '上海市普陀区金沙江路 1518 弄'
+            }],
+            multipleSelection: []
+
+
+
+        }
+      },
+      methods: {
+
+        deleteRow(index, rows) {
+          rows.splice(index, 1);
+        },
+
+        handleCurrentChange(val) {
+          this.currentRow = val;
+        },
+
+        handleSelectionChange(val) {
+          this.multipleSelection = val;
+          console.log(this.multipleSelection);
+        }
+
+      }
+    })
+  </script>
+</html>

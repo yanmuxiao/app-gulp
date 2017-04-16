@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <!-- 引入样式 -->
+  <link rel="stylesheet" href="css/element-ui.css">
+</head>
+<body>
+  <div id="app">
+
+      <template>
+        <!-- `checked` 为 true 或 false -->
+        <el-checkbox v-model="checked">备选项</el-checkbox>
+      </template>
+
+
+      <br><br>
+
+      <template>
+        <el-checkbox v-model="checked1" disabled>备选项1</el-checkbox>
+        <el-checkbox v-model="checked2" disabled>备选项</el-checkbox>
+      </template>
+
+      <br><br>
+      <template>
+        <el-checkbox-group v-model="checkList">
+          <el-checkbox label="复选框 A"></el-checkbox>
+          <el-checkbox label="复选框 B"></el-checkbox>
+          <el-checkbox label="复选框 C"></el-checkbox>
+          <el-checkbox label="禁用" disabled></el-checkbox>
+          <el-checkbox label="选中且禁用" disabled></el-checkbox>
+        </el-checkbox-group>
+      </template>
+
+      <br><br>
+
+
+
+  </div>
+
+
+  <div id="indeterminate"> 
+      
+      <template>
+        <el-checkbox :indeterminate="isIndeterminate" v-model="checkAll"  @change="handleCheckAllChange">全选</el-checkbox>
+        <div style="margin: 15px 0;"></div>
+        <el-checkbox-group v-model="checkedCities" @change="handleCheckedCitiesChange">
+          <el-checkbox v-for="city in cities" :label="city">{{city}}</el-checkbox>
+        </el-checkbox-group>
+      </template>
+  
+  </div>
+
+
+
+  <br><br>
+
+
+  <!-- 没效果 -->
+  <div id="minMax">
+
+      <template>
+        <el-checkbox-group 
+          v-model="checkedCities1"
+          :min="1"
+          :max="2">
+          <el-checkbox v-for="city in citiess" :label="city">{{city}}</el-checkbox>
+        </el-checkbox-group>
+      </template>
+    
+  </div>
+
+
+
+
+</body>
+  <!-- 先引入 Vue -->
+  <script src="js/vue.js"></script>
+  <!-- 引入组件库 -->
+  <script src="js/element-ui.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      data: function(){
+        return { 
+            checked: true,
+            checked1: false,
+            checked2: true,
+            checkList: ['选中且禁用','复选框 A']
+        }
+      }
+    })
+
+
+    const cityOptions = ['上海', '北京', '广州', '深圳'];
+    new Vue({
+        el: '#indeterminate',
+        data: {
+          checkAll: true,
+          checkedCities: ['上海', '北京'],
+          cities: cityOptions,
+          isIndeterminate: true
+        },
+        methods: {
+        handleCheckAllChange(event) {
+          this.checkedCities = event.target.checked ? cityOptions : [];
+          this.isIndeterminate = false;
+        },
+        handleCheckedCitiesChange(value) {
+          let checkedCount = value.length;
+          this.checkAll = checkedCount === this.cities.length;
+          this.isIndeterminate = checkedCount > 0 && checkedCount < this.cities.length;
+        }
+      }
+    })
+
+
+    // 没效果
+    const minMaxCityOptions = ['上海', '北京', '广州', '深圳'];
+    new Vue({
+        el: '#minMax',
+        data: function() {
+            return {
+                checkedCities1: ['上海', '北京'],
+                citiess: minMaxCityOptions
+            }
+        }
+    })
+
+  </script>
+</html>

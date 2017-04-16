@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <!-- 引入样式 -->
+  <link rel="stylesheet" href="css/element-ui.css">
+  <style>
+
+    /*基础用法*/
+    .demo01 .el-carousel__item h3 {
+      color: #475669;
+      font-size: 14px;
+      opacity: 0.75;
+      line-height: 150px;
+      margin: 0;
+    }
+
+    .demo01 .el-carousel__item:nth-child(2n) {
+       background-color: #99a9bf;
+    }
+    
+    .demo01 .el-carousel__item:nth-child(2n+1) {
+       background-color: #d3dce6;
+    }
+
+    
+    /*指示器*/
+    .demo02 .el-carousel__item h3 {
+      color: #475669;
+      font-size: 18px;
+      opacity: 0.75;
+      line-height: 300px;
+      margin: 0;
+    }
+    
+    .demo02 .el-carousel__item:nth-child(2n) {
+      background-color: #99a9bf;
+    }
+    
+    .demo02 .el-carousel__item:nth-child(2n+1) {
+      background-color: #d3dce6;
+    }
+
+
+    /*切换箭头*/
+    .demo03 .el-carousel__item h3 {
+      color: #475669;
+      font-size: 18px;
+      opacity: 0.75;
+      line-height: 300px;
+      margin: 0;
+    }
+    
+    .demo03 .el-carousel__item:nth-child(2n) {
+      background-color: #99a9bf;
+    }
+    
+    .demo03 .el-carousel__item:nth-child(2n+1) {
+      background-color: #d3dce6;
+    }
+
+    
+    /*卡片化*/
+    .demo04 .el-carousel__item h3 {
+      color: #475669;
+      font-size: 14px;
+      opacity: 0.75;
+      line-height: 200px;
+      margin: 0;
+    }
+    
+    .demo04 .el-carousel__item:nth-child(2n) {
+      background-color: #99a9bf;
+    }
+    
+    .demo04 .el-carousel__item:nth-child(2n+1) {
+      background-color: #d3dce6;
+    }
+
+</style>
+</head>
+<body>
+  <div id="app">
+
+      <br><br>
+      <p>基础用法==>适用广泛的基础用法</p>
+
+    
+      <div class="demo01">
+
+        <template>
+          <div class="block">
+            <span class="demonstration">默认 Hover 指示器触发</span>
+            <el-carousel height="150px">
+              <el-carousel-item v-for="item in 4">
+                <h3>{{ item }}</h3>
+              </el-carousel-item>
+            </el-carousel>
+          </div>
+
+          <br><br>
+
+          <div class="block">
+            <span class="demonstration">Click 指示器触发</span>
+            <el-carousel trigger="click" height="150px">
+              <el-carousel-item v-for="item in 4">
+                <h3>{{ item }}</h3>
+              </el-carousel-item>
+            </el-carousel>
+          </div>
+        </template>
+
+      </div>
+
+
+
+      <br><br>
+      <p>指示器==>可以将指示器的显示位置设置在容器外部</p>
+      <div class="demo02">
+
+        <template>
+        <el-carousel indicator-position="outside">
+          <el-carousel-item v-for="item in 4">
+            <h3>{{ item }}</h3>
+          </el-carousel-item>
+        </el-carousel>
+      </template>
+
+      </div>
+
+
+
+
+      <br><br>
+      <p>切换箭头==>可以设置切换箭头的显示时机</p>
+      <div class="demo03">
+          <template>
+            <el-carousel :interval="5000" arrow="always">
+              <el-carousel-item v-for="item in 4">
+                <h3>{{ item }}</h3>
+              </el-carousel-item>
+            </el-carousel>
+          </template>
+      </div>
+
+
+
+
+      <br><br>
+      <p>卡片化==>当页面宽度方向空间空余，但高度方向空间匮乏时，可使用卡片风格</p>
+      <div class="demo04">
+        <template>
+          <el-carousel :interval="4000" type="card" height="200px">
+            <el-carousel-item v-for="item in 6">
+              <h3>{{ item }}</h3>
+            </el-carousel-item>
+          </el-carousel>
+        </template>
+      </div>
+
+
+      <br><br>
+      <p></p>
+
+
+  </div>
+</body>
+  <!-- 先引入 Vue -->
+  <script src="js/vue.js"></script>
+  <!-- 引入组件库 -->
+  <script src="js/element-ui.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      data: function(){
+        return {
+          
+        }
+      }
+    })
+  </script>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <!-- 引入样式 -->
+  <link rel="stylesheet" href="css/element-ui.css">
+</head>
+<body>
+  <div id="app">
+      
+      <br><br>
+      <p>基本用法==>页面中的非浮层元素，不会自动消失。</p>
+      <template>
+        <el-alert
+          title="成功提示的文案"
+          type="success">
+        </el-alert>
+        <el-alert
+          title="消息提示的文案"
+          type="info">
+        </el-alert>
+        <el-alert
+          title="警告提示的文案"
+          type="warning">
+        </el-alert>
+        <el-alert
+          title="错误提示的文案"
+          type="error">
+        </el-alert>
+      </template>
+
+
+      <br><br>
+      <p>自定义关闭按钮==>自定义关闭按钮为文字或其他符号。</p>
+      <template>
+        <el-alert
+          title="不可关闭的 alert"
+          type="success"
+          :closable="false">
+        </el-alert>
+        <el-alert
+          title="自定义 close-text"
+          type="info"
+          close-text="知道了">
+        </el-alert>
+        <el-alert
+          title="设置了回调的 alert"
+          type="warning"
+          @close="hello">
+        </el-alert>
+      </template>
+
+
+
+      <br><br>
+      <p>带有 icon==>表示某种状态时提升可读性。</p>
+      <template>
+        <el-alert
+          title="成功提示的文案"
+          type="success"
+          show-icon>
+        </el-alert>
+        <el-alert
+          title="消息提示的文案"
+          type="info"
+          show-icon>
+        </el-alert>
+        <el-alert
+          title="警告提示的文案"
+          type="warning"
+          show-icon>
+        </el-alert>
+        <el-alert
+          title="错误提示的文案"
+          type="error"
+          show-icon>
+        </el-alert>
+      </template>
+
+
+
+      <br><br>
+      <p>带有辅助性文字介绍==>包含标题和内容，解释更详细的警告。</p>
+      <template>
+        <el-alert
+          title="带辅助性文字介绍"
+          type="success"
+          description="这是一句绕口令：黑灰化肥会挥发发灰黑化肥挥发；灰黑化肥会挥发发黑灰化肥发挥。 黑灰化肥会挥发发灰黑化肥黑灰挥发化为灰……">
+        </el-alert>
+      </template>
+
+
+      <br><br>
+      <p>带有 icon 和辅助性文字介绍</p>
+      <template>
+        <el-alert
+          title="成功提示的文案"
+          type="success"
+          description="文字说明文字说明文字说明文字说明文字说明文字说明"
+          show-icon>
+        </el-alert>
+        <el-alert
+          title="消息提示的文案"
+          type="info"
+          description="文字说明文字说明文字说明文字说明文字说明文字说明"
+          show-icon>
+        </el-alert>
+        <el-alert
+          title="警告提示的文案"
+          type="warning"
+          description="文字说明文字说明文字说明文字说明文字说明文字说明"
+          show-icon>
+        </el-alert>
+        <el-alert
+          title="错误提示的文案"
+          type="error"
+          description="文字说明文字说明文字说明文字说明文字说明文字说明"
+          show-icon>
+        </el-alert>
+      </template>
+
+
+
+      <br><br>
+      <p></p>
+
+
+  </div>
+</body>
+  <!-- 先引入 Vue -->
+  <script src="js/vue.js"></script>
+  <!-- 引入组件库 -->
+  <script src="js/element-ui.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      data: function(){
+        return {
+          
+        }
+      },
+      methods: {
+        hello() {
+          alert('Hello World!');
+        }
+      }
+    })
+  </script>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <!-- 引入样式 -->
+  <link rel="stylesheet" href="css/element-ui.css">
+  <style>
+    .item {
+      margin-top: 10px;
+      margin-right: 40px;
+    }
+</style>
+</head>
+<body>
+  <div id="app">
+      
+      <p>基础用法==>展示新消息数量。</p>
+      <br><br>
+      <el-badge :value="12" class="item">
+        <el-button size="small">评论</el-button>
+      </el-badge>
+      <el-badge :value="3" class="item">
+        <el-button size="small">回复</el-button>
+      </el-badge>
+
+      <el-dropdown trigger="click">
+        <span class="el-dropdown-link">
+          点我查看<i class="el-icon-caret-bottom el-icon--right"></i>
+        </span>
+        <el-dropdown-menu slot="dropdown">
+          <el-dropdown-item class="clearfix">
+            评论
+            <el-badge class="mark" :value="12" />
+          </el-dropdown-item>
+          <el-dropdown-item class="clearfix">
+            回复
+            <el-badge class="mark" :value="3" />
+          </el-dropdown-item>
+        </el-dropdown-menu>
+      </el-dropdown>
+
+
+      <br><br>
+      <el-badge :value="200" :max="99" class="item">
+        <el-button size="small">评论</el-button>
+      </el-badge>
+      <el-badge :value="100" :max="10" class="item">
+        <el-button size="small">回复</el-button>
+      </el-badge>
+
+      
+      <br><br>
+      <el-badge value="new" class="item">
+        <el-button size="small">评论</el-button>
+      </el-badge>
+      <el-badge value="hot" class="item">
+        <el-button size="small">回复</el-button>
+      </el-badge>
+
+      
+      <br><br>
+      <el-badge is-dot class="item">数据查询</el-badge>
+      <el-badge is-dot class="item">
+        <el-button class="share-button" icon="share" type="primary"></el-button>
+      </el-badge>
+
+
+      <br><br>
+
+
+  </div>
+</body>
+  <!-- 先引入 Vue -->
+  <script src="js/vue.js"></script>
+  <!-- 引入组件库 -->
+  <script src="js/element-ui.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      data: function(){
+        return {
+          
+        }
+      }
+    })
+  </script>
+</html>

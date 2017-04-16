@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <!-- 引入样式 -->
+  <link rel="stylesheet" href="css/element-ui.css">
+</head>
+<body>
+  <div id="app">
+      
+      <br><br>
+      <div class="block">
+        <span class="demonstration">有默认值</span>
+        <el-color-picker v-model="color1"></el-color-picker>
+      </div>
+
+      <br><br>
+      <div class="block">
+        <span class="demonstration">无默认值</span>
+        <el-color-picker v-model="color2"></el-color-picker>
+      </div>
+      
+      <br><br>
+      <span class="demonstration">选择透明度</span>
+      <el-color-picker v-model="color3" show-alpha></el-color-picker>
+
+
+      <br><br>
+
+
+
+      <br><br>
+
+
+  </div>
+</body>
+  <!-- 先引入 Vue -->
+  <script src="js/vue.js"></script>
+  <!-- 引入组件库 -->
+  <script src="js/element-ui.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+          color1: '#20a0ff',
+          color2: null,
+
+          color3: 'rgba(19, 206, 102, 0.8)'
+
+      }
+    })
+  </script>
+</html>

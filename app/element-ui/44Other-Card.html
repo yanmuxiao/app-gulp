@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <!-- 引入样式 -->
+  <link rel="stylesheet" href="css/element-ui.css">
+
+  <style>
+
+    /*基础用法*/
+    .demo01 .text {
+      font-size: 14px;
+    }
+
+    .demo01 .item {
+      padding: 18px 0;
+    }
+
+    .demo01 .clearfix:before,
+    .demo01 .clearfix:after {
+        display: table;
+        content: "";
+    }
+    .demo01 .clearfix:after {
+        clear: both
+    }
+
+    .demo01 .box-card {
+      width: 480px;
+    }
+
+
+    /*简单卡片*/
+    .demo02 .text {
+      font-size: 14px;
+    }
+
+    .demo02 .item {
+      padding: 18px 0;
+    }
+
+    .demo02 .box-card {
+      width: 480px;
+    }
+
+
+    /*带图片*/
+    .demo03 .time {
+      font-size: 13px;
+      color: #999;
+    }
+    
+    .demo03 .bottom {
+      margin-top: 13px;
+      line-height: 12px;
+    }
+
+    .demo03 .button {
+      padding: 0;
+      float: right;
+    }
+
+    .demo03 .image {
+      width: 100%;
+      display: block;
+    }
+
+    .demo03 .clearfix:before,
+    .demo03 .clearfix:after {
+        display: table;
+        content: "";
+    }
+    
+    .demo03 .clearfix:after {
+        clear: both
+    }
+
+
+</style>
+</head>
+<body>
+  <div id="app">
+
+      <br><br>
+      <p>基础用法==>包含标题，内容和操作。</p>
+      <div class="demo01">
+          
+          <el-card class="box-card">
+            <div slot="header" class="clearfix">
+              <span style="line-height: 36px;">卡片名称</span>
+              <el-button style="float: right;" type="primary">操作按钮</el-button>
+            </div>
+            <div v-for="o in 4" class="text item">
+              {{'列表内容 ' + o }}
+            </div>
+          </el-card>
+
+      </div>
+
+
+      <br><br>
+      <div class="demo02">
+
+        <p>简单卡片==>卡片可以只有内容区域。</p>
+        <el-card class="box-card">
+          <div v-for="o in 4" class="text item">
+            {{'列表内容 ' + o }}
+          </div>
+        </el-card>
+
+
+      </div>
+
+
+
+      <br><br>
+      <p>带图片==>可配置定义更丰富的内容展示。</p>
+      <div class="demo03">
+        <el-row>
+          <el-col :span="8" v-for="(o, index) in 2" :offset="index > 0 ? 2 : 0">
+            <el-card :body-style="{ padding: '0px' }">
+              <img src="image/hamburger.50e4091.png" class="image">
+              <div style="padding: 14px;">
+                <span>好吃的汉堡</span>
+                <div class="bottom clearfix">
+                  <time class="time">{{ currentDate }}</time>
+                  <el-button type="text" class="button">操作按钮</el-button>
+                </div>
+              </div>
+            </el-card>
+          </el-col>
+        </el-row>
+      </div>
+
+
+
+      <br><br>
+      <p></p>
+
+
+  </div>
+</body>
+  <!-- 先引入 Vue -->
+  <script src="js/vue.js"></script>
+  <!-- 引入组件库 -->
+  <script src="js/element-ui.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      data() {
+        return {
+          currentDate: new Date()
+        };
+      }
+    })
+  </script>
+</html>

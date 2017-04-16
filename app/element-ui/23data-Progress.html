@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <!-- 引入样式 -->
+  <link rel="stylesheet" href="css/element-ui.css">
+</head>
+<body>
+  <div id="app">
+
+    <br><br>
+    <p>线形进度条 — 百分比外显</p>
+    <el-progress :percentage="0"></el-progress>
+    <el-progress :percentage="70"></el-progress>
+    <el-progress :percentage="100" status="success"></el-progress>
+    <el-progress :percentage="50" status="exception"></el-progress>
+
+    
+    <br><br>
+    <p>线形进度条 — 百分比内显 ==> 百分比不占用额外控件，适用于文件上传等场景。</p>
+    <el-progress :text-inside="true" :stroke-width="18" :percentage="0"></el-progress>
+    <el-progress :text-inside="true" :stroke-width="18" :percentage="70"></el-progress>
+    <el-progress :text-inside="true" :stroke-width="18" :percentage="100" status="success"></el-progress>
+    <el-progress :text-inside="true" :stroke-width="18" :percentage="50" status="exception"></el-progress>
+
+    
+    <br><br>
+    <p>环形进度条</p>
+    <el-progress type="circle" :percentage="0"></el-progress>
+    <el-progress type="circle" :percentage="25"></el-progress>
+    <el-progress type="circle" :percentage="100" status="success"></el-progress>
+    <el-progress type="circle" :percentage="50" status="exception"></el-progress>
+
+
+  </div>
+</body>
+  <!-- 先引入 Vue -->
+  <script src="js/vue.js"></script>
+  <!-- 引入组件库 -->
+  <script src="js/element-ui.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      data: function(){
+        return {
+          
+        }
+      }
+    })
+  </script>
+</html>
