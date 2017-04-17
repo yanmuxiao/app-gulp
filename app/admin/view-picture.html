@@ -156,34 +156,11 @@
                                 <img src="img/4px.png" class="px4">
                                 <img src="img/zoomFullScreen.jpg" id="01" class="img-label">
                             </div>
-                            <div>
+                            <div class="untreaded-d-w">
                                 <p class="untreated-pic-info">李某某 <br> 2017-03-13 21:28:45</p>
+                                <button class="btn btn-small btn-info treated-detail" type="button">详情</button>
                             </div>
                         </div>
-
-                        <!-- <div class="the-pic-detail">
-                          <ul>
-                            <li>
-                              <p>角度：<span>正面</span></p>
-                            </li>
-                            <li>
-                              <p>监测人：<span>李某某</span></p>
-                            </li>
-                            <li>
-                              <p>拍摄日期：<span>2017-03-21 21:28:45</span></p>
-                            </li>
-                            <li>
-                              <p>拍摄说明：<span>拍摄时间为晚上，照片色彩受光照影响。</span></p>
-                            </li>
-                            <li>
-                              <p>地址：<span>白云机场路136号</span></p>
-                            </li>
-                            <li>
-                              <p>提交日期：<span>2017-03-31 22:48:45</span></p>
-                            </li>
-                          </ul>
-                        </div> -->
-
 
 
                       </li>
@@ -202,8 +179,9 @@
                                 <img src="img/4px.png" class="px4">
                                 <img src="img/img-list01.jpg" id="02" class="img-label">
                             </div>
-                            <div>
+                            <div class="untreaded-d-w">
                                 <p class="untreated-pic-info">李某某 <br> 2017-03-13 21:28:45</p>
+                                <button class="btn btn-small btn-info treated-detail" type="button">详情</button>
                             </div>
                         </div>
                       </li>
@@ -228,8 +206,9 @@
                                 <img src="img/4px.png" class="px4">
                                 <img src="img/zoomFullScreen.jpg" id="01" class="img-label">
                             </div>
-                            <div>
+                            <div class="untreaded-d-w">
                                 <p class="untreated-pic-info">李某某 <br> 2017-03-13 21:28:45</p>
+                                <button class="btn btn-small btn-info treated-detail" type="button">详情</button>
                             </div>
                         </div>
                       </li>
@@ -248,8 +227,9 @@
                                 <img src="img/4px.png" class="px4">
                                 <img src="img/img-list01.jpg" id="04" class="img-label">
                             </div>
-                            <div>
+                            <div class="untreaded-d-w">
                                 <p class="untreated-pic-info">李某某 <br> 2017-03-13 21:28:45</p>
+                                <button class="btn btn-small btn-info treated-detail" type="button">详情</button>
                             </div>
                         </div>
                       </li>
@@ -268,8 +248,9 @@
                                 <img src="img/4px.png" class="px4">
                                 <img src="img/zoomFullScreen.jpg" id="01" class="img-label">
                             </div>
-                            <div>
+                            <div class="untreaded-d-w">
                                 <p class="untreated-pic-info">李某某 <br> 2017-03-13 21:28:45</p>
+                                <button class="btn btn-small btn-info treated-detail" type="button">详情</button>
                             </div>
                         </div>
                       </li>
@@ -286,7 +267,8 @@
   </div>
   <!-- END CONTAINER-->
   
-
+  
+  <!-- 查看大图 -->
   <div class="view-pic-mask">
     
     <div class="view-pic-w">
@@ -342,6 +324,7 @@
 
     // 图片状态下拉切换
     $('.pic-stage-on').click(function() {
+        $('.pic-stage-ul').not($(this)).hide();
         $(this).next('.pic-stage-ul').toggle();
         return false;
     })
@@ -368,17 +351,42 @@
     })
 
 
-    $('.untreated-pic-ul').on('click', '.img-label', function() {
-        $('.view-pic-mask').show();
+    // 查看图片详情
+    var picDetailHtml = '<div class="the-pic-detail"><ul>' +
+      
+        '<li><p>角度：<span>正面</span></p></li>' +
+        '<li><p>监测人：<span>李某某</span></p></li>' +
+        '<li><p>拍摄日期：<span>2017-03-21 21:28:45</span></p></li>' +
+        '<li><p>拍摄说明：<span>拍摄时间为晚上，照片色彩受光照影响。拍摄时间为晚上，照片色彩受光照影响。拍摄时间为晚上，照片色彩受光照影响。拍摄时间为晚上，照片色彩受光照影响。</span></p></li>' +
+        '<li><p>地址：<span>白云机场路136号</span></p></li>' +
+        '<li><p>提交日期：<span>2017-03-31 22:48:45</span></p></li>'
+      
+    + '</ul></div>'
+    $('.untreated-pic-ul').on('click', '.treated-detail', function(){
+      var layerMask = layer.open({
+        type: 1,
+        title: '<div>图片详情</div>',
+        skin: 'adminLogin', //加上边框
+        area: ['500px', 'auto'], //宽高
+        // scrollbar: false,
+        shadeClose: true,
+        content: picDetailHtml
+      });
+      function layerClose(){layer.close(layerMask);}
     })
 
+
+
+
+    // 关闭查看大图
     $('.view-pic-clons').click(function() {
         $('.view-pic-mask').hide();
     })
-    
-    $('.img-label').click(viewPicFn);
-
-
+    // 点击图片查看大图
+    $('.untreated-pic-ul').on('click', '.img-label', function() {
+        $('.view-pic-mask').show();
+        viewPicFn();
+    })
     function viewPicFn() {
 
       $('.img-label').each(function() {
@@ -566,6 +574,8 @@
 
 
 
+
+
       // 大图上一张
       $('#pvPrev').unbind().click(function(){
           prevImgFn();
@@ -578,7 +588,9 @@
       })
 
 
-      // 键盘绑定
+
+
+      // 键盘事件绑定
       document.onkeydown = function(event){
           var e = event || window.event;
           if(e && e.keyCode==37){ // 按 <--
@@ -588,17 +600,22 @@
              nextImgFn();
           }            
       }; 
+      // 大图上一张
       function prevImgFn(){
           if($('.pv-s-on').prev('.s-img-w').length > 0){
               $('.pv-s-on').prev('.s-img-w').click();
           }
       }
+      // 大图下一张
       function nextImgFn(){
           if($('.pv-s-on').next('.s-img-w').length > 0){
             $('.pv-s-on').next('.s-img-w').click();
           }
       }
     }
+
+
+
    
 
 </script>

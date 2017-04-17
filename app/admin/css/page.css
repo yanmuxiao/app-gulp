@@ -442,11 +442,25 @@ label {
 	cursor: pointer;
 }
 .untreated-pic-info {
-	padding: 5px 10px 5px 10px;
+	padding: 5px 50px 5px 10px;
 	margin-bottom: 0;
-	line-height: 1.5;
+	line-height: 1.8;
 	background: #afafaf;
 	color: #fff;
+}
+.untreaded-d-w {
+	position: relative;
+}
+.treated-detail {
+	position: absolute;
+	right: 5px;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+	border-radius: 4px!important;
 }
 .pic-stage-w {
 	position: absolute;
@@ -461,6 +475,22 @@ label {
 	cursor: pointer;
 	width: 80px;
 }
+
+.the-pic-detail {
+	padding: 20px;
+	font-size: 14px;
+}
+.the-pic-detail li p {
+	margin-bottom: 15px;
+}
+.the-pic-detail li p span {
+	color: #444;
+}
+
+
+
+
+
 .pic-stage-on {
     padding: 4px 20px 4px 10px;
     color: #666;
@@ -499,19 +529,6 @@ label {
 	color: #fff;
 }
 
-
-/*.the-pic-detail {
-	position: absolute;
-	left: 0;
-	right: 0;
-	top: 0;
-	bottom: 0;
-	background-color: rgba(0,0,0,0.5);
-	z-index: 100;
-	color: #fff;
-	padding: 10px;
-}
-*/
 
 .view-pic-mask {
 	position: fixed;
