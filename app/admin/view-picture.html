@@ -13,6 +13,7 @@
     <link href="css/style-responsive.css" rel="stylesheet" />
     <link href="css/style-default.css" rel="stylesheet" id="style_color" />
     <link href="css/page.css" rel="stylesheet" type="text/css"/>
+    <link href="css/willesPlay.css" rel="stylesheet" type="text/css"/>
 </head>
 
 <body class="fixed-top">
@@ -143,13 +144,7 @@
                   <ul class="untreated-pic-ul">
                       <li class="untreated-pic-list">
                         <div class="pic-stage-w">
-                            <div class="pic-stage-on" dataType="unStage"><span class="picStage">未处理</span><i class="icon-sort-down"></i></div>
-                            <ul class="pic-stage-ul">
-                                <li data-stage="unStage">未处理</li>
-                                <li data-stage="passStage">通过</li>
-                                <li data-stage="minedStage">待定</li>
-                                <li data-stage="uneffectStage">无效</li>
-                            </ul>
+                            <div class="pic-stage-on" dataType="unStage">未处理</div>
                         </div>
                         <div class="untreated-pic">
                             <div class="untreated-pic-w">
@@ -166,18 +161,12 @@
                       </li>
                       <li class="untreated-pic-list">
                         <div class="pic-stage-w">
-                            <div class="pic-stage-on" dataType="unStage"><span class="picStage">未处理</span><i class="icon-sort-down"></i></div>
-                            <ul class="pic-stage-ul">
-                                <li data-stage="unStage">未处理</li>
-                                <li data-stage="passStage">通过</li>
-                                <li data-stage="minedStage">待定</li>
-                                <li data-stage="uneffectStage">无效</li>
-                            </ul>
+                            <div class="pic-stage-on" dataType="unStage">未处理</div>
                         </div>
                         <div class="untreated-pic">
                             <div class="untreated-pic-w">
                                 <img src="img/4px.png" class="px4">
-                                <img src="img/img-list01.jpg" id="02" class="img-label">
+                                <img src="img/img-list01.jpg" id="02" videoUrl="hb.mp4" class="img-label">
                             </div>
                             <div class="untreaded-d-w">
                                 <p class="untreated-pic-info">李某某 <br> 2017-03-13 21:28:45</p>
@@ -193,18 +182,12 @@
                   <ul class="untreated-pic-ul">
                       <li class="untreated-pic-list">
                         <div class="pic-stage-w">
-                            <div class="pic-stage-on" dataType="passStage"><span class="picStage">通过</span><i class="icon-sort-down"></i></div>
-                            <ul class="pic-stage-ul">
-                                <li data-stage="unStage">未处理</li>
-                                <li data-stage="passStage">通过</li>
-                                <li data-stage="minedStage">待定</li>
-                                <li data-stage="uneffectStage">无效</li>
-                            </ul>
+                            <div class="pic-stage-on" dataType="passStage">通过</div>
                         </div>
                         <div class="untreated-pic">
                             <div class="untreated-pic-w">
                                 <img src="img/4px.png" class="px4">
-                                <img src="img/zoomFullScreen.jpg" id="01" class="img-label">
+                                <img src="img/zoomFullScreen.jpg" id="03" class="img-label">
                             </div>
                             <div class="untreaded-d-w">
                                 <p class="untreated-pic-info">李某某 <br> 2017-03-13 21:28:45</p>
@@ -214,18 +197,12 @@
                       </li>
                       <li class="untreated-pic-list">
                         <div class="pic-stage-w">
-                            <div class="pic-stage-on" dataType="minedStage"><span class="picStage">待定</span><i class="icon-sort-down"></i></div>
-                            <ul class="pic-stage-ul">
-                                <li data-stage="unStage">未处理</li>
-                                <li data-stage="passStage">通过</li>
-                                <li data-stage="minedStage">待定</li>
-                                <li data-stage="uneffectStage">无效</li>
-                            </ul>
+                            <div class="pic-stage-on" dataType="minedStage">待定</div>
                         </div>
                         <div class="untreated-pic">
                             <div class="untreated-pic-w">
                                 <img src="img/4px.png" class="px4">
-                                <img src="img/img-list01.jpg" id="04" class="img-label">
+                                <img src="img/img-list01.jpg" videoUrl="hb1.mp4" id="04" class="img-label">
                             </div>
                             <div class="untreaded-d-w">
                                 <p class="untreated-pic-info">李某某 <br> 2017-03-13 21:28:45</p>
@@ -235,18 +212,12 @@
                       </li>
                       <li class="untreated-pic-list">
                         <div class="pic-stage-w">
-                            <div class="pic-stage-on" dataType="uneffectStage"><span class="picStage">无效</span><i class="icon-sort-down"></i></div>
-                            <ul class="pic-stage-ul">
-                                <li data-stage="unStage">未处理</li>
-                                <li data-stage="passStage">通过</li>
-                                <li data-stage="minedStage">待定</li>
-                                <li data-stage="uneffectStage">无效</li>
-                            </ul>
+                            <div class="pic-stage-on" dataType="uneffectStage">无效</div>
                         </div>
                         <div class="untreated-pic">
                             <div class="untreated-pic-w">
                                 <img src="img/4px.png" class="px4">
-                                <img src="img/zoomFullScreen.jpg" id="01" class="img-label">
+                                <img src="img/zoomFullScreen.jpg" id="05" class="img-label">
                             </div>
                             <div class="untreaded-d-w">
                                 <p class="untreated-pic-info">李某某 <br> 2017-03-13 21:28:45</p>
@@ -278,8 +249,59 @@
 
             <span class="pvPrev" id="pvPrev"></span>
 
-            <div class="pic-w">
-                <img id="openBigImg" src="img/img-list01.jpg">
+  
+            <div class="view-stage-w">状态：<span class="view-stage" dataType="passStage">未处理</span></div>
+            <div class="pic-w" id="openBigImg">
+
+
+                <img src="img/img-list01.jpg" class="view-img" id="">
+
+        
+                <div class="container" id="videoWrap">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div id="willesPlay">
+                            <div class="playHeader">
+                              <div class="videoName">Tara - 懂的那份感觉</div>
+                            </div>
+                            <div class="playContent">
+                              <video width="100%" height="400px" id="playVideo">
+                                <source src="hb.mp4" type="video/mp4"></source>
+                                当前浏览器不支持 video直接播放，点击这里下载视频： <a href="/">下载视频</a>
+                              </video>
+                              <div class="playTip glyphicon glyphicon-play"></div>
+                            </div>
+                            <div class="playControll">
+                              <div class="playPause playIcon"></div>
+                              <div class="timebar">
+                                <span class="currentTime">0:00:00</span>
+                                <div class="progress">
+                                  <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+                                  </div>
+                                <span class="duration">0:00:00</span>
+                              </div>
+                              <div class="otherControl">
+                                <span class="volume glyphicon glyphicon-volume-down"></span>
+                                <span class="fullScreen glyphicon glyphicon-fullscreen"></span>
+                                <div class="volumeBar">
+                                    <div class="volumewrap">
+                                      <div class="progress">
+                                      <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 8px;height: 40%;"></div>
+                                    </div>
+                                      </div>
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+
+
+
+
+
             </div>
 
             <span class="pvNext" id="pvNext"></span>
@@ -317,38 +339,67 @@
 <script type="text/javascript" src="js/laydate/laydate.js"></script>
 <script type="text/javascript" src="js/laypage/laypage.js"></script>
 <script type="text/javascript" src="js/viewer-jquery.min.js"></script>
+<script type="text/javascript" src="js/willesPlay.js"></script>
 <script src="js/jquery.scrollto.min.js"></script>
 <!--common script for all pages-->
 <script src="js/common-scripts.js"></script>
 <script>
 
-    // 图片状态下拉切换
-    $('.pic-stage-on').click(function() {
-        $('.pic-stage-ul').not($(this)).hide();
-        $(this).next('.pic-stage-ul').toggle();
-        return false;
-    })
-    // 关闭图片状态下拉
-    $(document).click(function() {
-        $('.pic-stage-ul').hide();
-    })
-    // 选中切换状态
-    $('.pic-stage-ul li').click(function() {
-        
-        var _this = $(this);
-        var layerDel = layer.confirm('确定修改？', {
-            shadeClose: true,
-            btn: ['确定','取消'] //按钮
-          }, function(){
-              _this.parents('.pic-stage-w').find('.pic-stage-on').attr('dataType', _this.data('stage'))
-              _this.parents('.pic-stage-w').find('.picStage').text(_this.text());
-              $('.pic-stage-ul').hide();
-              layer.close(layerDel);
 
-          }, function(){
-          });
-          return false;
+    // 未处理的图片状态为未处理
+    // 处理过的图片不能在切换会未处理，有待定、通过、无效三种状态
+    
+    // 图片状态切换
+    $('.untreated-pic-ul').on('click', '.pic-stage-on', function() {
+
+        if ($(this).attr('dataType') == 'minedStage') {
+
+            $(this).attr('dataType', 'passStage').text('通过');
+            layer.msg('图片id为' + $(this).parents('.untreated-pic-list').eq(0).find('.img-label').prop('id')  + '的状态切换为通过');
+
+        } else if ($(this).attr('dataType') == 'passStage') {
+
+            $(this).attr('dataType', 'uneffectStage').text('无效');
+            layer.msg('图片id为' + $(this).parents('.untreated-pic-list').eq(0).find('.img-label').prop('id')  + '的状态切换为无效');
+
+        } else {
+
+            $(this).attr('dataType', 'minedStage').text('待定');
+            layer.msg('图片id为' + $(this).parents('.untreated-pic-list').eq(0).find('.img-label').prop('id')  + '的状态切换为待定');
+
+        }
+
     })
+
+
+    // 查看图片顶部切换状态
+    $('.view-stage').click(function() {
+
+        if ($(this).attr('dataType') == 'minedStage') {
+
+            $(this).attr('dataType', 'passStage').text('通过');
+            $('.pv-s-on > img').attr('dataType', 'passStage');//同步切换小图的状态
+            layer.msg('图片id为' + $(this).parents('.view-pic-pv').eq(0).find('.view-img').prop('id')  + '的状态切换为通过');
+
+        } else if ($(this).attr('dataType') == 'passStage') {
+
+            $(this).attr('dataType', 'uneffectStage').text('无效');
+            $('.pv-s-on > img').attr('dataType', 'uneffectStage');//同步切换小图的状态
+            layer.msg('图片id为' + $(this).parents('.view-pic-pv').eq(0).find('.view-img').prop('id')  + '的状态切换为无效');
+
+        } else {
+
+            $(this).attr('dataType', 'minedStage').text('待定');
+            $('.pv-s-on > img').attr('dataType', 'minedStage');//同步切换小图的状态
+            layer.msg('图片id为' + $(this).parents('.view-pic-pv').eq(0).find('.view-img').prop('id')  + '的状态切换为待定');
+
+        }
+
+        // 列表中的状态也改变
+        $('.untreated-pic-list').eq($('.s-img-w').index($('.pv-s-on'))).find('.pic-stage-on').attr('dataType', $(this).attr('dataType')).text($(this).text())
+
+    })
+
 
 
     // 查看图片详情
@@ -385,81 +436,46 @@
     // 点击图片查看大图
     $('.untreated-pic-ul').on('click', '.img-label', function() {
         $('.view-pic-mask').show();
-        viewPicFn();
+        viewPicFn($(this).prop('id'));
     })
-    function viewPicFn() {
 
-      $('.img-label').each(function() {
-          console.log($(this).prop('src'));
-          console.log($(this).prop('id'));
-      })
 
-      var curId = '05';// 当前大图的id
-      var curImg = ''; // 当前大图对应小图的选中状态
-      var imgIndex; // 当前大图对应的小图的索引
+    function viewPicFn(_thisID) {
+      
+      var curId = _thisID;// 当前大图的id，也就是点击的图片
+      
 
       // 所有的小图
-      var imgList = [{
-          imgSrc : 'img/img-list01.jpg',
-          imgId : '01'
-      },{
-          imgSrc : 'img/zoomFullScreen.jpg',
-          imgId : '02'
-      },{
-          imgSrc : 'img/img-list01.jpg',
-          imgId : '03'
-      },{
-          imgSrc : 'img/zoomFullScreen.jpg',
-          imgId : '04'
-      },{
-          imgSrc : 'img/img-list01.jpg',
-          imgId : '05'
-      },{
-          imgSrc : 'img/zoomFullScreen.jpg',
-          imgId : '06'
-      },{
-          imgSrc : 'img/img-list01.jpg',
-          imgId : '07'
-      },{
-          imgSrc : 'img/zoomFullScreen.jpg',
-          imgId : '08'
-      },{
-          imgSrc : 'img/img-list01.jpg',
-          imgId : '09'
-      },{
-          imgSrc : 'img/zoomFullScreen.jpg',
-          imgId : '10'
-      },{
-          imgSrc : 'img/img-list01.jpg',
-          imgId : '11'
-      },{
-          imgSrc : 'img/zoomFullScreen.jpg',
-          imgId : '12'
-      },{
-          imgSrc : 'img/img-list01.jpg',
-          imgId : '13'
-      },{
-          imgSrc : 'img/zoomFullScreen.jpg',
-          imgId : '14'
-      },{
-          imgSrc : 'img/img-list01.jpg',
-          imgId : '15'
-      },{
-          imgSrc : 'img/zoomFullScreen.jpg',
-          imgId : '16'
-      }];
+      var imgList = [];
+      
+
+      $('.img-label').each(function() {
+
+          var imgListObj = {};
+          imgListObj.imgSrc = $(this).prop('src');
+          imgListObj.imgId = $(this).prop('id');
+          imgListObj.videoUrl = $(this).attr('videoUrl');
+          imgListObj.imgStage = $(this).parents('.untreated-pic-list').find('.pic-stage-on').attr('datatype');
+          imgList.push(imgListObj);
+      })
 
 
       var smallImg = []; // 将小图的信息嵌入对应的html放到对应的容器
+      var curImg = ''; // 当前大图对应小图的选中状态
+      var imgIndex; // 当前大图对应的小图的索引
       $.each(imgList,function(){
           if(this.imgId == curId){
               curImg = 'pv-s-on';
           }else{
               curImg = '';
           }
-          smallImg.push('<div class="s-img-w ' + curImg + '"><img id="' + this.imgId + '" src="' + this.imgSrc +'" /></div>')
+          smallImg.push('<div class="s-img-w ' + curImg + '"><img id="' + this.imgId + '" dataType="' + this.imgStage + '" videoUrl="' + this.videoUrl + '" src="' + this.imgSrc +'" /></div>')
       })
-      $('#pvSmallScroll').append(smallImg.join(''));
+
+
+
+
+      $('#pvSmallScroll').html(smallImg.join(''));
       var pvSmallImg = $('#pvSmallScroll .s-img-w');
       var pvSmallImgLength = pvSmallImg.length;
       var pvScrollW = 0;
@@ -468,19 +484,25 @@
           $('#pvSmallScroll').width(pvScrollW + 'px');
       }
 
+
+
+
       imgIndex = $('.s-img-w').index($('.pv-s-on'));
+      // 当前图片为第一个，隐藏切换(prev)
       if(imgIndex == 0){
           $('#pvPrev').hide();
       }else{
           $('#pvPrev').show();
       }
-
+      // 当前图片为最后一个，隐藏切换(next)
       if(imgIndex == pvSmallImgLength-1){
           $('#pvNext').hide();
       }else{
           $('#pvNext').show();
       }
       
+
+
       $('#pvSmallScroll .s-img-w').click(function(){
           imgIndex = pvSmallImg.index($(this));
           if(pvSmallImgLength > 7){
@@ -498,6 +520,7 @@
               $('.pv-s-prev').hide();
               $('.pv-s-next').hide();
           }
+
 
           if(imgIndex == 0){
               $('#pvPrev').hide();
@@ -517,27 +540,38 @@
           $('#pvSmallScroll').animate({
               'left' : (3 - imgIndex) * 56 + 'px'
           })
-          $('#openBigImg').attr('src',$(this).find('img')[0].src);
-      })
-      pvSmallImg.removeClass('pv-s-on').eq(imgIndex).addClass('pv-s-on');
-      if(pvSmallImgLength > 7){
-          if(imgIndex <= 3){
-              $('.pv-s-prev').hide();
-          }else{
-              $('.pv-s-prev').show();
+
+          var curVideoUrl = $(this).find('img').attr('videoUrl')
+
+          if( $(this).find('img').attr('videoUrl') != 'undefined') {
+
+              $('#openBigImg .view-img').hide();
+              $('#videoWrap').show().find('#playVideo')[0].src = curVideoUrl;
+
+          } else {
+
+              $('#videoWrap').hide().find('#playVideo')[0].pause();
+              $('#openBigImg .view-img').show().attr({
+                  'src': $(this).find('img')[0].src,
+                  'id': $(this).find('img')[0].id,
+              });
+
           }
-          if(imgIndex >= pvSmallImgLength-4){
-              $('.pv-s-next').hide();
-          }else{
-              $('.pv-s-next').show();
+          
+
+          var curDataType = $(this).find('img').attr('dataType');
+          var curDataTypeTxt = {
+              'unStage': '未处理',
+              'passStage': '通过',
+              'minedStage': '待定',
+              'uneffectStage': '无效'
           }
-      }else{
-          $('.pv-s-prev').hide();
-          $('.pv-s-next').hide();
-      }
-      $('#pvSmallScroll').animate({
-          'left' : (3 - imgIndex) * 56 + 'px'
+          $('.view-stage').attr('dataType', curDataType).text(curDataTypeTxt[curDataType]);
+
       })
+      $('.pv-s-on').click();//当前小图点击一下
+
+
 
 
       // 小图上3个
@@ -555,6 +589,7 @@
           }
           $('.pv-s-next').show();
       })
+
 
       // 小图下3个
       $('.pv-s-next').unbind().click(function(){
@@ -613,7 +648,6 @@
           }
       }
     }
-
 
 
    

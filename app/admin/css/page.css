@@ -401,6 +401,7 @@ label {
 .untreated-pic-ul {
 	font-size: 0;
 	padding: 10px 15px;
+	min-height: 120px;
 }
 .untreated-pic-list {
 	font-size: 14px;
@@ -473,7 +474,7 @@ label {
 	box-sizing: border-box;
 	overflow: hidden;
 	cursor: pointer;
-	width: 80px;
+	width: 70px;
 }
 
 .the-pic-detail {
@@ -492,10 +493,11 @@ label {
 
 
 .pic-stage-on {
-    padding: 4px 20px 4px 10px;
+    padding: 4px 10px 4px 10px;
     color: #666;
     margin: 0;
     position: relative;
+    text-align: center;
 }
 .pic-stage-on .icon-sort-down {
 	position: absolute;
@@ -562,6 +564,46 @@ label {
 	position: relative;
 	z-index: 103;
 }
+
+.view-stage-w {
+	position: absolute;
+	top: 5%;
+	left: 50%;
+    font-size: 20px;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	transform: translateX(-50%);
+	color:#ddd;
+}
+.view-stage {
+	border-radius: 4px!important;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-block;
+    width: 80px;
+    color: #fff;
+    padding: 6px 10px 6px 10px;
+    color: #666;
+    margin: 0;
+    position: relative;
+    text-align: center;
+    color: #fff;
+}
+.view-stage[dataType='unStage'] {
+	background-color: #1B9AF7;
+}
+.view-stage[dataType='passStage'] {
+	background-color: #A5DE37;
+}
+.view-stage[dataType='minedStage']  {
+	background-color: #ff6600;
+}
+.view-stage[dataType='uneffectStage'] {
+	background-color: #999;
+}
+
 .pic-w {
 	width: 80%;
 	height: 80%;
