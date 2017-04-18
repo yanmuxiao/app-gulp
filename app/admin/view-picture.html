@@ -269,7 +269,7 @@
                                 <source src="hb.mp4" type="video/mp4"></source>
                                 当前浏览器不支持 video直接播放，点击这里下载视频： <a href="/">下载视频</a>
                               </video>
-                              <div class="playTip glyphicon glyphicon-play"></div>
+                              <div class="playTip glyphicon glyphicon-play"><i class="icon-play"></i></div>
                             </div>
                             <div class="playControll">
                               <div class="playPause playIcon"></div>
@@ -432,6 +432,8 @@
     // 关闭查看大图
     $('.view-pic-clons').click(function() {
         $('.view-pic-mask').hide();
+        $('#playVideo')[0].pause();
+        $('#playVideo')[0].src='';
     })
     // 点击图片查看大图
     $('.untreated-pic-ul').on('click', '.img-label', function() {
