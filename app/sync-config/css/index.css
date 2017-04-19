@@ -1,1 +1,38 @@
 *{margin:0;padding:0}input{outline:none}input[type=checkbox],input[type=radio]{width:16px;height:16px;vertical-align:middle;margin-top:-5px}.sync-containter{width:90%;margin:0 auto}.head-wrap{position:fixed;top:0;right:0;left:0;height:60px;background-color:#324057;color:#cbcfd4;z-index:1000}.head-wrap .sync-containter{height:60px}.head-wrap h1{font-size:26px;line-height:60px;margin:0;float:left}.head-guide{float:left;height:60px;font-size:0;margin-left:30px}.head-guide > a{color:#cbcfd4;display:inline-block;font-size:20px;text-decoration:none;height:30px;line-height:30px;margin:15px 20px 0 20px}.head-guide > a.guide-on{color:#2fade7}.content-wrap .sync-containter{margin-top:60px;padding:15px}.sync-operate{padding-top:20px}.sync-table{padding-top:30px}.sync-table table{text-align:center;width:100%}.sync-table table th,.sync-table table tfoot td{background-color:#ddd;border:1px solid #ccc;padding:6px 2px}.sync-table table td{border:1px solid #ddd;padding:6px 2px;position:relative}.sync-table table th{font-weight:normal}.sync-table .button-glow{padding:0;min-width:60px}.sync-form{padding:15px}.sync-sp-list{padding-bottom:20px}.label-title{float:left;width:100px;text-align:right;line-height:30px}.form-content{padding-left:110px;line-height:30px}.form-content input[type=text]{padding:4px 6px}.every-day,.every-week{display:none}.every-week li{display:inline-block;margin-right:10px}.sync-fq .form-content > label:nth-child(2){margin-left:30px}.sync-time .form-content > input{width:107px}.sync-layer-btn{text-align:center;padding-top:20px}.sync-layer-btn > button{margin:0 20px}.syncChange-btn{margin-top:10px}.switch-container .switch{display:none}.switch-container label{position:relative;display:block;padding:1px;border-radius:24px;height:22px;background-color:#eee;cursor:pointer;vertical-align:top;-webkit-user-select:none}.switch-container label:before{content:'';display:block;border-radius:24px;height:22px;background-color:white;-webkit-transform:scale(1,1);-webkit-transition:all 0.3s ease;-moz-transition:all 0.3s ease;-ms-transition:all 0.3s ease;-o-transition:all 0.3s ease;transition:all 0.3s ease}.switch-container label:after{content:'';position:absolute;top:50%;left:50%;margin-top:-11px;margin-left:-11px;width:22px;height:22px;border-radius:22px;background-color:white;box-shadow:1px 1px 1px 1px rgba(0,0,0,0.08);-webkit-transform:translateX(-11px);-moz-transform:translateX(-11px);-ms-transform:translateX(-11px);-o-transform:translateX(-11px);transform:translateX(-11px);-webkit-transition:all 0.3s ease;-moz-transition:all 0.3s ease;-ms-transition:all 0.3s ease;-o-transition:all 0.3s ease;transition:all 0.3s ease}.switch-container .switch:checked~label:after{-webkit-transform:translateX(12px);-moz-transform:translateX(12px);-ms-transform:translateX(12px);-o-transform:translateX(12px);transform:translateX(12px)}.switch-container .switch:checked~label:before{background-color:#64bd63}.sync-layerpage{padding:60px 0 20px}.sync-layerpage .laypage_main{text-align:center}.ui-timepicker-div dt,.ui-timepicker-div dd{display:inline-block;padding-top:15px}.ui-timepicker-div dl{height:120px;padding-top:10px}.ui-timepicker-div dt{width:25%;font-size:18px;color:#48576a}.ui_tpicker_time{font-size:18px;color:#48576a}.ui-timepicker-div dd{width:73%}.ui-datepicker{border:1px solid #eaeefb;display:none}.ui-datepicker{background-color:#fff;padding:10px;width:310px}.ui-timepicker-div .ui-slider-horizontal{border-radius:2px;height:4px;background-color:#e4e8f1;position:relative;text-align:left}.ui-timepicker-div .ui-slider-handle{width:12px;height:12px;border-radius:100%;background-color:#20a0ff;margin-top:2px;position:absolute;z-index:2;cursor:default;top:-7px;margin-left:-6px}.ui-timepicker-div .ui-slider-handle:focus{outline:none}.ui-datepicker-title{font-size:18px;color:#48576a;text-align:center}.ui-datepicker-buttonpane .ui-state-default{background:#fff;border:1px solid #bfcbd9;color:#1f2d3d;-webkit-appearance:none;text-align:center;box-sizing:border-box;font-weight:normal;font-size:18px!important;line-height:30px;padding:0 10px!important}.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current{float:left}.ui-datepicker .ui-datepicker-buttonpane button{float:right;cursor:pointer;width:auto;margin:0.5em 0.2em 0.4em;padding:0.2em 0.6em 0.3em;overflow:visible;border-radius:4px;position:relative}.implementTime{width:200px;margin-bottom:20px}.implement-form{padding-top:60px}.implement-form .label-title{width:140px;text-align:left}.implement-form .form-content{padding-left:145px}input[type=text]{border:1px solid #bfcbd9;border-radius:3px}td{word-break:break-all}
+.jDetailLink {cursor: pointer;}
+
+
+.jDetailTr {
+}
+.jDetail {
+	overflow: hidden;
+}
+
+.jDetail .jDetail-content {
+	margin: 10px;
+	padding-right: 30px;
+	padding-left: 20px;
+	cursor: default;
+	overflow: hidden;
+	position: relative;
+	word-break: break-all;
+	max-height: 67px;
+}
+.jDetail-btn {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	font-size: 20px;
+	display: none;
+}
+
+
+.jDetail-faile {
+    background-color: #ff1022;
+    color: #fff;
+}
+.jDetail-c-w {
+	box-sizing: border-box;
+	word-break: break-all;
+	padding: 20px;
+}

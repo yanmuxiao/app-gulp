@@ -7,6 +7,7 @@
 <meta name="description" content="">
 <meta name="keywords" content="">
 <link href="css/normalize.css" rel="stylesheet">
+<link href="http://cdn.bootcss.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 <link href="css/button.css" rel="stylesheet">
 <link href="css/index.css" rel="stylesheet">
 </head>
@@ -35,50 +36,86 @@
 							<th width="8%">标签</th>
 							<th width="8%">步骤</th>
 							<th>明细</th>
-							<th width="8%">日期</th>
+							<th width="8%">操作日期</th>
 							<th width="8%">结果</th>
-							<th width="8%">描述</th>
+							<th width="18%">描述</th>
 						</tr>
 					</thead>
 					<tbody id="jouranlDTbody">
-						<tr>
+
+						<tr class="">
 							<td>3点同步</td>
 							<td>同步客户资料</td>
-							<td>
+							<td class="jDetail">
 
-							  &lt;&#39;name&#39;:&#39;account&#39;,&#39;custom&#39;:false,&#39;label&#39;:&#39;客户&#39;,&#39;disabled&#39;:false,&#39;createable&#39;:true,&#39;deletable&#39;:true,&#39;updateable&#39;:true,&#39;queryable&#39;:true,&#39;feedEnabled&#39;:true,&#39;fields&#39;:【&lt;&#39;autoNumber&#39;:true,&#39;label&#39;:&#39;ID&#39;,&#39;propertyname&#39;:&#39;id&#39;,&#39;type&#39;:&#39;id&#39;,&#39;required&#39;:true,&#39;length&#39;:&#39;20&#39;,&#39;sortable&#39;:true,&#39;createable&#39;:false,&#39;updateable&#39;:false,&#39;unique&#39;:true,&#39;enabled&#39;:true&gt;,&lt;&#39;autoNumber&#39;:false,&#39;label&#39;:&#39;业务类型&#39;,&#39;sortable&#39;:true,&#39;createable&#39;:true,&#39;updateable&#39;:false,&#39;unique&#39;:false,&#39;enabled&#39;:true,&#39;itemOrder&#39;:2,&#39;type&#39;:&#39;entityType&#39;,&#39;required&#39;:true,&#39;length&#39;:&#39;20&#39;,&#39;propertyname&#39;:&#39;entityType&#39;&gt;,&lt;&#39;autoNumber&#39;:false,&#39;label&#39;:&#39;客户所有人&#39;,&#39;sortable&#39;:true,&#39;createable&#39;:true,&#39;updateable&#39;:true,&#39;unique&#39;:false,&#39;enabled&#39;:true,&#39;itemOrder&#39;:3,&#39;type&#39;:&#39;reference&#39;,&#39;required&#39;:true,&#39;length&#39;:&#39;4&#39;,&#39;propertyname&#39;:&#39;ownerId&#39;&gt;,&lt;&#39;autoNumber&#39;:false,&#39;label&#39;:&#39;客户名称&#39;,&#39;sortable&#39;:true,&#39;createable&#39;:true,&#39;updateable&#39;:true,&#39;unique&#39;:true,&#39;enabled&#39;:true,&#39;itemOrder&#39;:4,&#39;type&#39;:&#39;text&#39;,&#39;required&#39;:true,&#39;length&#39;:&#39;100&#39;,&#39;propertyname&#39;:&#39;accountName&#39;&gt;,&lt;&#39;autoNumber&#39;:false,&#39;label&#39;:&#39;客户级别&#39;,&#39;sortable&#39;:true,&#39;createable&#39;:true,&#39;updateable&#39;:true,&#39;unique&#39;:false,&#39;enabled&#39;:true,&#39;itemOrder&#39;:5,&#39;type&#39;:&#39;select&#39;,&#39;required&#39;:false,&#39;length&#39;:&#39;2&#39;,&#39;propertyname&#39;:&#39;level&#39;,&#39;selectitem&#39;:【&lt;&#39;label&#39;:&#39;VIP&#39;,&#39;value&#39;:9&gt;,&lt;&#39;label&#39;:&#39;A&#39;,&#39;value&#39;:10&gt;,&lt;&#39;label&#39;:&#39;B&#39;,&#39;value&#39;:11&gt;,&lt;&#39;label&#39;:&#39;C&#39;,&#39;value&#39;:12&gt;,&lt;&#39;label&#39;:&#39;D&#39;,&#39;value&#39;:13&gt;】&gt;,&lt;&#39;autoNumber&#39;:false,&#39;label&#39;:&#39;上级客户&#39;,&#39;sortable&#39;:true,&#39;createable&#39;:true,&#39;updateable&#39;:true,&#39;unique&#39;:false,&#39;enabled&#39;:true,&#39;itemOrder&#39;:6,&#39;type&#39;:&#39;parent&#39;,&#39;required&#39;:false,&#39;length&#39;:&#39;20&#39;,&#39;propertyname&#39;:&#39;parentAccountId&#39;&gt;,&lt;&#39;autoNumber&#39;:false,&#39;label&#39;:&#39;省份&#39;,&#39;sortable&#39;:true,&#39;createable&#39;:true,&#39;updateable&#39;:true,&#39;unique&#39;:false,&#39;enabled&#39;:true,&#39;itemOrder&#39;:9,&#39;type&#39;:&#39;text&#39;,&#39;required&#39;:false,&#39;length&#39;:&#39;50&#39;,&#39;propertyname&#39;:&#39;state&#39;&gt;,&lt;&#39;autoNumber&#39;:false,&#39;label&#39;:&#39;市&#39;,&#39;sortable&#39;:true,&#39;createable&#39;:true,&#39;updateable&#39;:true,&#39;unique&#39;:false,&#39;enabled&#39;:true,&#39;itemOrder&#39;:10,&#39;type&#39;:&#39;text&#39;,&#39;required&#39;:false,&#39;length&#39;:&#39;60&#39;,&#39;propertyname&#39;:&#39;city&#39;&gt;,&lt;&#39;autoNumber&#39;:false,&#39;label&#39;:&#39;区&#39;,&#39;sortable&#39;:true,&#39;createable&#39;:true,&#39;updateable&#39;:true,&#39;unique&#39;:false,&#39;enabled&#39;:true,&#39;itemOrder&#39;:11,&#39;type&#39;:&#39;text&#39;,&#39;required&#39;:false,&#39;length&#39;:&#39;60&#39;,&#39;propertyname&#39;:&#39;region&#39;&gt;,&lt;&#39;autoNumber&#39;:false,&#39;label&#39;:&#39;经度&#39;,&#39;sortable&#39;:true,&#39;createable&#39;:true,&#39;updateable&#39;:true,&#39;unique&#39;:false,&#39;enabled&#39;:true,&#39;itemOrder&#39;:12,&#39;type&#39;:&#39;float&#39;,&#39;required&#39;:false,&#39;length&#39;:&#39;18&#39;,&#39;propertyname&#39;:&#39;longitude&#39;&gt;,&lt;&#39;autoNumber&#39;:false,&#39;label&#39;:&#39;纬度&#39;,&#39;sortable&#39;:true,&#39;createable&#39;:true,&#39;updateable&#39;:true,&#39;unique&#39;:false,&#39;enabled&#39;:true,&#39;itemOrder&#39;:13,&#39;type&#39;:&#39;float&#39;,&#39;required&#39;:false,&#39;length&#39;:&#39;18&#39;,&#39;propertyname&#39;:&#39;latitude&#39;&gt;,&lt;&#39;autoNumber&#39;:false,&#39;label&#39;:&#39;地址&#39;,&#39;sortable&#39;:true,&#39;createable&#39;:true,&#39;updateable&#39;:true,&#39;unique&#39;:false,&#39;enabled&#39;:true,&#39;itemOrder&#39;:14,&#39;type&#39;:&#39;text&#39;,&#39;required&#39;:false,&#39;length&#39;:&#39;500&#39;,&#39;propertyname&#39;:&#39;address&#39;&gt;,&lt;&#39;autoNumber&#39;:false,&#39;label&#39;:&#39;最新活动记录时间&#39;,&#39;sortable&#39;:true,&#39;createable&#39;:false,&#39;updateable&#39;:false,&#39;unique&#39;:false,&#39;enabled&#39;:true,&#39;itemOrder&#39;:23,&#39;type&#39;:&#39;date&#39;,&#39;required&#39;:false,&#39;length&#39;:&#39;4&#39;,&#39;propertyname&#39;:&#39;recentActivityRecordTime&#39;&gt;,&lt;&#39;autoNumber&#39;:false,&#39;label&#39;:&#39;最新跟进人&#39;,&#39;sortable&#39;:true,&#39;createable&#39;:false,&#39;updateable&#39;:false,&#39;unique&#39;:false,&#39;enabled&#39;:true,&#39;itemOrder&#39;:24,&#39;type&#39;:&#39;reference&#39;,&#39;required&#39;:false,&#39;length&#39;:&#39;4&#39;,&#39;propertyname&#39;:&#39;recentActivityCreatedBy&#39;&gt;,&lt;&#39;autoNumber&#39;:false,&#39;label&#39;:&#39;创建日期&#39;,&#39;sortable&#39;:true,&#39;createable&#39;:false,&#39;updateable&#39;:false,&#39;unique&#39;:false,&#39;enabled&#39;:true,&#39;itemOrder&#39;:25,&#39;type&#39;:&#39;date&#39;,&#39;required&#39;:true,&#39;length&#39;:&#39;10&#39;,&#39;propertyname&#39;:&#39;createdAt&#39;&gt;,&lt;&#39;autoNumber&#39;:false,&#39;label&#39;:&#39;所属公海&#39;,&#39;sortable&#39;:true,&#39;createable&#39;:true,&#39;updateable&#39;:false,&#39;unique&#39;:false,&#39;enabled&#39;:true,&#39;itemOrder&#39;:25,&#39;type&#39;:&#39;select&#39;,&#39;required&#39;:true,&#39;length&#39;:&#39;18&#39;,&#39;propertyname&#39;:&#39;highSeaId&#39;,&#39;selectitem&#39;:【&lt;&#39;value&#39;:194586,&#39;label&#39;:&#39;默认分组&#39;&gt;】&gt;,&lt;&#39;autoNumber&#39;:false,&#39;label&#39;:&#39;创建人&#39;,&#39;sortable&#39;:true,&#39;createable&#39;:false,&#39;updateable&#39;:false,&#39;unique&#39;:false,&#39;enabled&#39;:true,&#39;itemOrder&#39;:26,&#39;type&#39;:&#39;reference&#39;,&#39;required&#39;:true,&#39;length&#39;:&#39;4&#39;,&#39;propertyname&#39;:&#39;createdBy&#39;&gt;,&lt;&#39;autoNumber&#39;:false,&#39;label&#39;:&#39;最新修改日&#39;,&#39;sortable&#39;:true,&#39;createable&#39;:false,&#39;updateable&#39;:false,&#39;unique&#39;:false,&#39;enabled&#39;:true,&#39;itemOrder&#39;:27,&#39;type&#39;:&#39;date&#39;,&#39;required&#39;:true,&#39;length&#39;:&#39;10&#39;,&#39;propertyname&#39;:&#39;updatedAt&#39;&gt;,&lt;&#39;autoNumber&#39;:false,&#39;label&#39;:&#39;认领日期&#39;,&#39;sortable&#39;:true,&#39;createable&#39;:false,&#39;updateable&#39;:false,&#39;unique&#39;:false,&#39;enabled&#39;:true,&#39;itemOrder&#39;:27,&#39;type&#39;:&#39;date&#39;,&#39;required&#39;:false,&#39;length&#39;:&#39;10&#39;,&#39;propertyname&#39;:&#39;claimTime&#39;&gt;,&lt;&#39;autoNumber&#39;:false,&#39;label&#39;:&#39;最新修改人&#39;,&#39;sortable&#39;:true,&#39;createable&#39;:false,&#39;updateable&#39;:false,&#39;unique&#39;:false,&#39;enabled&#39;:true,&#39;itemOrder&#39;:28,&#39;type&#39;:&#39;reference&#39;,&#39;required&#39;:true,&#39;length&#39;:&#39;4&#39;,&#39;propertyname&#39;:&#39;updatedBy&#39;&gt;,&lt;&#39;autoNumber&#39;:false,&#39;label&#39;:&#39;到期时间&#39;,&#39;sortable&#39;:true,&#39;createable&#39;:false,&#39;updateable&#39;:false,&#39;unique&#39;:false,&#39;enabled&#39;:true,&#39;itemOrder&#39;:28,&#39;type&#39;:&#39;date&#39;,&#39;required&#39;:false,&#39;length&#39;:&#39;10&#39;,&#39;propertyname&#39;:&#39;expireTime&#39;&gt;,&lt;&#39;autoNumber&#39;:false,&#39;label&#39;:&#39;说明&#39;,&#39;sortable&#39;:true,&#39;createable&#39;:true,&#39;updateable&#39;:true,&#39;unique&#39;:false,&#39;enabled&#39;:true,&#39;itemOrder&#39;:29,&#39;type&#39;:&#39;textarea&#39;,&#39;required&#39;:false,&#39;length&#39;:&#39;2000&#39;,&#39;propertyname&#39;:&#39;comment&#39;&gt;,&lt;&#39;autoNumber&#39;:false,&#39;label&#39;:&#39;状态&#39;,&#39;sortable&#39;:true,&#39;createable&#39;:false,&#39;updateable&#39;:false,&#39;unique&#39;:false,&#39;enabled&#39;:true,&#39;itemOrder&#39;:29,&#39;type&#39;:&#39;select&#39;,&#39;required&#39;:false,&#39;length&#39;:&#39;2&#39;,&#39;propertyname&#39;:&#39;highSeaStatus&#39;,&#39;selectitem&#39;:【&lt;&#39;label&#39;:&#39;自建&#39;,&#39;value&#39;:1&gt;,&lt;&#39;label&#39;:&#39;未领取&#39;,&#39;value&#39;:2&gt;,&lt;&#39;label&#39;:&#39;已领取&#39;,&#39;value&#39;:3&gt;,&lt;&#39;label&#39;:&#39;已签约&#39;,&#39;value&#39;:4&gt;,&lt;&#39;label&#39;:&#39;已废弃&#39;,&#39;value&#39;:5&gt;,&lt;&#39;label&#39;:&#39;已冻结&#39;,&#39;value&#39;:6&gt;】&gt;,&lt;&#39;autoNumber&#39;:false,&#39;label&#39;:&#39;审批提交人&#39;,&#39;sortable&#39;:true,&#39;createable&#39;:true,&#39;updateable&#39;:true,&#39;unique&#39;:false,&#39;enabled&#39;:true,&#39;itemOrder&#39;:30,&#39;type&#39;:&#39;text&#39;,&#39;required&#39;:false,&#39;length&#39;:&#39;4&#39;,&#39;propertyname&#39;:&#39;applicantId&#39;&gt;,&lt;&#39;autoNumber&#39;:false,&#39;label&#39;:&#39;审批状态&#39;,&#39;sortable&#39;:true,&#39;createable&#39;:true,&#39;updateable&#39;:true,&#39;unique&#39;:false,&#39;enabled&#39;:true,&#39;itemOrder&#39;:31,&#39;type&#39;:&#39;text&#39;,&#39;required&#39;:false,&#39;length&#39;:&#39;4&#39;,&#39;propertyname&#39;:&#39;approvalStatus&#39;&gt;,&lt;&#39;autoNumber&#39;:false,&#39;label&#39;:&#39;所属部门&#39;,&#39;sortable&#39;:true,&#39;createable&#39;:true,&#39;updateable&#39;:true,&#39;unique&#39;:false,&#39;enabled&#39;:true,&#39;itemOrder&#39;:31,&#39;type&#39;:&#39;dimension&#39;,&#39;required&#39;:true,&#39;length&#39;:&#39;20&#39;,&#39;propertyname&#39;:&#39;dimDepart&#39;&gt;,&lt;&#39;autoNumber&#39;:false,&#39;label&#39;:&#39;锁定状态&#39;,&#39;sortable&#39;:true,&#39;createable&#39;:true,&#39;updateable&#39;:true,&#39;unique&#39;:false,&#39;enabled&#39;:true,&#39;itemOrder&#39;:32,&#39;type&#39;:&#39;select&#39;,&#39;required&#39;:false,&#39;length&#39;:&#39;2&#39;,&#39;propertyname&#39;:&#39;lockStatus&#39;,&#39;selectitem&#39;:【&lt;&#39;label&#39;:&#39;未锁定&#39;,&#39;value&#39;:1&gt;,&lt;&#39;label&#39;:&#39;已锁定&#39;,&#39;value&#39;:2&gt;】&gt;,&lt;&#39;autoNumber&#39;:false,&#39;label&#39;:&#39;工商注册&#39;,&#39;sortable&#39;:true,&#39;createable&#39;:true,&#39;updateable&#39;:true,&#39;unique&#39;:false,&#39;enabled&#39;:true,&#39;itemOrder&#39;:33,&#39;type&#39;:&#39;select&#39;,&#39;required&#39;:false,&#39;length&#39;:&#39;2&#39;,&#39;propertyname&#39;:&#39;srcFlg&#39;,&#39;selectitem&#39;:【&lt;&#39;label&#39;:&#39;否&#39;,&#39;value&#39;:0&gt;,&lt;&#39;label&#39;:&#39;是&#39;,&#39;value&#39;:1&gt;】&gt;,&lt;&#39;autoNumber&#39;:false,&#39;label&#39;:&#39;客户类型&#39;,&#39;sortable&#39;:true,&#39;createable&#39;:true,&#39;updateable&#39;:true,&#39;unique&#39;:false,&#39;enabled&#39;:true,&#39;itemOrder&#39;:36,&#39;type&#39;:&#39;select&#39;,&#39;required&#39;:false,&#39;length&#39;:&#39;2&#39;,&#39;propertyname&#39;:&#39;dbcSelect1&#39;,&#39;selectitem&#39;:【&lt;&#39;label&#39;:&#39;直接客户&#39;,&#39;value&#39;:1&gt;,&lt;&#39;label&#39;:&#39;4A&#39;,&#39;value&#39;:2&gt;,&lt;&#39;label&#39;:&#39;本土代理&#39;,&#39;value&#39;:3&gt;,&lt;&#39;label&#39;:&#39;线上客户&#39;,&#39;value&#39;:4&gt;】&gt;,&lt;&#39;autoNumber&#39;:false,&#39;label&#39;:&#39;行业&#39;,&#39;sortable&#39;:true,&#39;createable&#39;:true,&#39;updateable&#39;:true,&#39;unique&#39;:false,&#39;enabled&#39;:true,&#39;itemOrder&#39;:37,&#39;type&#39;:&#39;select&#39;,&#39;required&#39;:false,&#39;length&#39;:&#39;2&#39;,&#39;propertyname&#39;:&#39;dbcSelect2&#39;,&#39;selectitem&#39;:【&lt;&#39;label&#39;:&#39;金融保险&#39;,&#39;value&#39;:1&gt;,&lt;&#39;label&#39;:&#39;汽车&#39;,&#39;value&#39;:2&gt;,&lt;&#39;label&#39;:&#39;房地产&#39;,&#39;value&#39;:3&gt;,&lt;&#39;label&#39;:&#39;医疗服务&#39;,&#39;value&#39;:4&gt;,&lt;&#39;label&#39;:&#39;社会服务&#39;,&#39;value&#39;:5&gt;,&lt;&#39;label&#39;:&#39;邮电通讯&#39;,&#39;value&#39;:6&gt;,&lt;&#39;label&#39;:&#39;保健&#39;,&#39;value&#39;:7&gt;,&lt;&#39;label&#39;:&#39;娱乐&#39;,&#39;value&#39;:8&gt;,&lt;&#39;label&#39;:&#39;商业商场&#39;,&#39;value&#39;:9&gt;,&lt;&#39;label&#39;:&#39;旅游酒店&#39;,&#39;value&#39;:10&gt;,&lt;&#39;label&#39;:&#39;餐饮&#39;,&#39;value&#39;:11&gt;,&lt;&#39;label&#39;:&#39;家装建材&#39;,&#39;value&#39;:12&gt;,&lt;&#39;label&#39;:&#39;电子家电&#39;,&#39;value&#39;:13&gt;,&lt;&#39;label&#39;:&#39;食品饮料&#39;,&#39;value&#39;:14&gt;,&lt;&#39;label&#39;:&#39;烟酒&#39;,&#39;value&#39;:15&gt;,&lt;&#39;label&#39;:&#39;药业&#39;,&#39;value&#39;:16&gt;,&lt;&#39;label&#39;:&#39;美容健身&#39;,&#39;value&#39;:17&gt;,&lt;&#39;label&#39;:&#39;IT业&#39;,&#39;value&#39;:18&gt;,&lt;&#39;label&#39;:&#39;交通运输&#39;,&#39;value&#39;:19&gt;,&lt;&#39;label&#39;:&#39;日用品&#39;,&#39;value&#39;:20&gt;,&lt;&#39;label&#39;:&#39;化妆品&#39;,&#39;value&#39;:21&gt;,&lt;&#39;label&#39;:&#39;服装服饰&#39;,&#39;value&#39;:22&gt;,&lt;&#39;label&#39;:&#39;钟表首饰&#39;,&#39;value&#39;:23&gt;,&lt;&#39;label&#39;:&#39;教育培训招聘&#39;,&#39;value&#39;:24&gt;,&lt;&#39;label&#39;:&#39;燃料油品&#39;,&#39;value&#39;:25&gt;,&lt;&#39;label&#39;:&#39;文化&#39;,&#39;value&#39;:26&gt;,&lt;&#39;label&#39;:&#39;会展&#39;,&#39;value&#39;:27&gt;,&lt;&#39;label&#39;:&#39;综合&#39;,&#39;value&#39;:28&gt;,&lt;&#39;label&#39;:&#39;家装市场&#39;,&#39;value&#39;:29&gt;,&lt;&#39;label&#39;:&#39;汽车服务&#39;,&#39;value&#39;:30&gt;,&lt;&#39;label&#39;:&#39;其他&#39;,&#39;value&#39;:31&gt;】&gt;,&lt;&#39;autoNumber&#39;:false,&#39;label&#39;:&#39;MAS客户ID&#39;,&#39;sortable&#39;:true,&#39;createable&#39;:true,&#39;updateable&#39;:true,&#39;unique&#39;:false,&#39;enabled&#39;:true,&#39;itemOrder&#39;:38,&#39;type&#39;:&#39;text&#39;,&#39;required&#39;:false,&#39;length&#39;:&#39;300&#39;,&#39;propertyname&#39;:&#39;dbcVarchar1&#39;&gt;,&lt;&#39;autoNumber&#39;:false,&#39;label&#39;:&#39;同步状态&#39;,&#39;sortable&#39;:true,&#39;createable&#39;:true,&#39;updateable&#39;:true,&#39;unique&#39;:false,&#39;enabled&#39;:true,&#39;itemOrder&#39;:39,&#39;type&#39;:&#39;select&#39;,&#39;required&#39;:false,&#39;length&#39;:&#39;2&#39;,&#39;propertyname&#39;:&#39;dbcSelect3&#39;,&#39;selectitem&#39;:【&lt;&#39;label&#39;:&#39;未同步&#39;,&#39;value&#39;:1&gt;,&lt;&#39;label&#39;:&#39;同步成功&#39;,&#39;value&#39;:2&gt;,&lt;&#39;label&#39;:&#39;同步失败&#39;,&#39;value&#39;:3&gt;】&gt;,&lt;&#39;autoNumber&#39;:false,&#39;label&#39;:&#39;最后同步时间&#39;,&#39;sortable&#39;:true,&#39;createable&#39;:true,&#39;updateable&#39;:true,&#39;unique&#39;:false,&#39;enabled&#39;:true,&#39;itemOrder&#39;:40,&#39;type&#39;:&#39;date&#39;,&#39;required&#39;:false,&#39;length&#39;:&#39;10&#39;,&#39;propertyname&#39;:&#39;dbcDate1&#39;&gt;,&lt;&#39;autoNumber&#39;:false,&#39;label&#39;:&#39;同步信息&#39;,&#39;sortable&#39;:true,&#39;createable&#39;:true,&#39;updateable&#39;:true,&#39;unique&#39;:false,&#39;enabled&#39;:true,&#39;itemOrder&#39;:41,&#39;type&#39;:&#39;textarea&#39;,&#39;required&#39;:false,&#39;length&#39;:&#39;2000&#39;,&#39;propertyname&#39;:&#39;dbcTextarea1&#39;&gt;,&lt;&#39;autoNumber&#39;:false,&#39;label&#39;:&#39;账期（天）&#39;,&#39;sortable&#39;:true,&#39;createable&#39;:true,&#39;updateable&#39;:true,&#39;unique&#39;:false,&#39;enabled&#39;:true,&#39;itemOrder&#39;:42,&#39;type&#39;:&#39;float&#39;,&#39;required&#39;:false,&#39;length&#39;:&#39;18&#39;,&#39;propertyname&#39;:&#39;dbcReal1&#39;&gt;】,&#39;entityTypes&#39;:【&lt;&#39;id&#39;:3433067,&#39;name&#39;:&#39;默认业务类型&#39;,&#39;disabled&#39;:false,&#39;default&#39;:true,&#39;description&#39;:&#39;&#39;&gt;】&gt;
-                                    
-
+							  <div class="jDetail-content"><p>&lt;&#39;name&#39;:&#39;account&#39;,&#39;custom&#39;:false,&#39;label&#39;:&#39;客户&#39;,&#39;disabled&#39;:false,&#39;createable&#39&lt;&#39;name&#39;:&#39;account&#39;,&#39;custom&#39;:false,&#39;label&#39;:&#39;客户&#39;,&#39;disabled&#39;:false,&#39;createable&#39&lt;&#39;name&#39;:&#39;account&#39;,&#39;custom&#39;:false,&#39;label&#39;:&#39;客户&#39;,&#39;disabled&#39;:false,&#39;createable&#39&lt;&#39;name&#39;:&#39;account&#39;,&#39;custom&#39;:false,&#39;label&#39;:&#39;客户&#39;,&#39;disabled&#39;:false,&#39;createable&#39&lt;&#39;name&#39;:&#39;account&#39;,&#39;custom&#39;:false,&#39;label&#39;:&#39;客户&#39;,&#39;disabled&#39;:false,&#39;createable&#39&lt;&#39;name&#39;:&#39;account&#39;,&#39;custom&#39;:false,&#39;label&#39;:&#39;客户&#39;,&#39;disabled&#39;:false,&#39;createable&#39</p></div>
+							  <button class="button button-primary button-circle button-small jDetail-btn">···</button>
 							</td>
                             
 							<td>2017/4/5  17:21</td>
-							<td>成功</td>
-							<td></td>
+							<td>失败</td>
+							<td  class="jDetail">
+								<div class="jDetail-content"><p>&lt;&#39;name&#39;:&#39;account&#39;,&#39;custom&#39;:false,&#39;label&#39;:&#39;客户&#39;,&#39;disabled&#39;:false,&#39;createable&#39&lt;&#39;name&#39;:&#39</p></div>
+							  	<button class="button button-small button-circle jDetail-btn">···</button>
+							</td>
 						</tr>
-						<tr>
+
+
+						<tr class="jDetail-faile">
 							<td>3点同步</td>
 							<td>同步客户资料</td>
-							<td>{"totalSize":6,"count":6,"records":[{"id":13008007,"accountName":"山东丽承文化传媒有限公司","address":"","level":"","comment":""},{"id":13007935,"accountName":"远誉广告（中国）有限公司","address":"","level":"","comment":""},{"id":13007933,"accountName":"澳优奶粉有限公司","address":"","level":9,"comment":""},{"id":13491658,"accountName":"测试客户1","address":"","level":11,"comment":""},{"id":13007934,"accountName":"广州小糊涂仙酒业有限公司","address":"","level":"","comment":""},{"id":13487536,"accountName":"测试客户","address":"1231","level":11,"comment":""}]}</td>
+							<td class="jDetail">
+
+							  <div class="jDetail-content"><p>&lt;&#39;name&#39;:&#39;account&#39;,&#39;custom&#39;:false,&#39;label&#39;:&#39;客户&#39;,&#39;disabled&#39;:false,&#39;createable&#39&lt;&#39;name&#39;:&#39;account&#39;,&#39;custom&#39;:false,&#39;label&#39;:&#39;客户&#39;,&#39;disabled&#39;</p></div>
+							  <button class="button button-primary button-circle button-small jDetail-btn">···</button>
+							</td>
+                            
 							<td>2017/4/5  17:21</td>
-							<td>成功</td>
-							<td></td>
+							<td>失败</td>
+							<td  class="jDetail">
+								<div class="jDetail-content"><p>&lt;&#39;name&#39;:&#39;account&#39;,&#39</p></div>
+							  	<button class="button button-small button-circle jDetail-btn">···</button>
+							</td>
 						</tr>
-						<tr>
+
+
+
+						<tr class="">
 							<td>3点同步</td>
 							<td>同步客户资料</td>
-							<td>{"totalSize":6,"count":6,"records":[{"id":13008007,"accountName":"山东丽承文化传媒有限公司","address":"","level":"","comment":""},{"id":13007935,"accountName":"远誉广告（中国）有限公司","address":"","level":"","comment":""},{"id":13007933,"accountName":"澳优奶粉有限公司","address":"","level":9,"comment":""},{"id":13491658,"accountName":"测试客户1","address":"","level":11,"comment":""},{"id":13007934,"accountName":"广州小糊涂仙酒业有限公司","address":"","level":"","comment":""},{"id":13487536,"accountName":"测试客户","address":"1231","level":11,"comment":""}]}</td>
+							<td class="jDetail">
+
+							  <div class="jDetail-content"><p>&lt;&#39;name&#39;:&#39;account&#39;,&#39;custom&#39;:false,&#39;label&#39;:&#39;客户&#39;,&#39;disabled&#39;:false,&#39;createable&#39&lt;&#39;name&#39;:&#39;account&#39;,&#39;custom&#39;:false,&#39;label&#39;:&#39;客户&#39;,&#39;disabled&#39;:false,&#39;createable&#39&lt;&#39;name&#39;:&#39;account&#39;,&#39;custom&#39;:false,&#39;label&#39;:&#39;客户&#39;,&#39;disabled&#39;:false,&#39;createable&#39&lt;&#39;name&#39;:&#39;account&#39;,&#39;custom&#39;:false,&#39;label&#39;:&#39;客户&#39;,&#39;disabled&#39;:false,&#39;createable&#39&lt;&#39;name&#39;:&#39;account&#39;,&#39;custom&#39;:false,&#39;label&#39;:&#39;客户&#39;,&#39;disabled&#39;:false,&#39;createable&#39&lt;&#39;name&#39;:&#39;account&#39;,&#39;custom&#39;:false,&#39;label&#39;:&#39;客户&#39;,&#39;disabled&#39;:false,&#39;createable&#39</p></div>
+							  <button class="button button-primary button-circle button-small jDetail-btn">···</button>
+							</td>
+                            
 							<td>2017/4/5  17:21</td>
-							<td>成功</td>
-							<td></td>
+							<td>失败</td>
+							<td  class="jDetail">
+								<div class="jDetail-content"><p>&lt;&#39;name&#39;:&#39;account&#39;,&#39;custom&#39;:false,&#39;label&#39;:&#39;客户&#39;,&#39;disabled&#39;:false,&#39;createable&#39&lt;&#39;name&#39;:&#39</p></div>
+							  	<button class="button button-small button-circle jDetail-btn">···</button>
+							</td>
 						</tr>
-						<tr>
+
+
+						<tr class="jDetail-faile">
 							<td>3点同步</td>
 							<td>同步客户资料</td>
-							<td>{"totalSize":6,"count":6,"records":[{"id":13008007,"accountName":"山东丽承文化传媒有限公司","address":"","level":"","comment":""},{"id":13007935,"accountName":"远誉广告（中国）有限公司","address":"","level":"","comment":""},{"id":13007933,"accountName":"澳优奶粉有限公司","address":"","level":9,"comment":""},{"id":13491658,"accountName":"测试客户1","address":"","level":11,"comment":""},{"id":13007934,"accountName":"广州小糊涂仙酒业有限公司","address":"","level":"","comment":""},{"id":13487536,"accountName":"测试客户","address":"1231","level":11,"comment":""}]}</td>
+							<td class="jDetail">
+
+							  <div class="jDetail-content"><p>&lt;&#39;name&#39;:&#39;account&#39;,&#39;custom&#39;:false,&#39;label&#39;:&#39;客户&#39;,&#39;disabled&#39;:false,&#39;createable&#39&lt;&#39;name&#39;:&#39;account&#39;,&#39;custom&#39;:false,&#39;label&#39;:&#39;客户&#39;,&#39;disabled&#39;:false,&#39;createable&#39&lt;&#39;name&#39;:&#39;account&#39;,&#39;custom&#39;:false,&#39;label&#39;:&#39;客户&#39;,&#39;disabled&#39;:false,&#39;createable&#39&lt;&#39;name&#39;:&#39;account&#39;,&#39;custom&#39;:false,&#39;label&#39;:&#39;客户&#39;,&#39;disabled&#39;:false,&#39;createable&#39&lt;&#39;name&#39;:&#39;account&#39;,&#39;custom&#39;:false,&#39;label&#39;:&#39;客户&#39;,&#39;disabled&#39;:false,&#39;createable&#39&lt;&#39;name&#39;:&#39;account&#39;,&#39;custom&#39;:false,&#39;label&#39;:&#39;客户&#39;,&#39;disabled&#39;:false,&#39;createable&#39</p></div>
+							  <button class="button button-primary button-circle button-small jDetail-btn">···</button>
+							</td>
+                            
 							<td>2017/4/5  17:21</td>
-							<td>成功</td>
-							<td></td>
+							<td>失败</td>
+							<td  class="jDetail">
+								<div class="jDetail-content"><p>&lt;&#39;name&#39;:&#39;account&#39;,&#39;custom&#39;:false,&#39;label&#39;:&#39;客户&#39;,&#39;disabled&#39;:false,&#39;createable&#39&lt;&#39;name&#39;:&#39</p></div>
+							  	<button class="button button-small button-circle jDetail-btn">···</button>
+							</td>
 						</tr>
+
+
 					</tbody>
 					<tfoot>
 						<tr>
@@ -86,7 +123,7 @@
 							<td></td>
 							<td></td>
 							<td></td>
-							<td>成功10，失败1</td>
+							<td>成功10<br>失败1</td>
 							<td></td>
 						</tr>
 					</tfoot>
@@ -101,13 +138,22 @@
     </div>
 </body>
 <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+<script type="text/javascript" src="js/layer/layer.js"></script>
 <script type="text/javascript" src="js/laypage/laypage.js"></script>
 <script type="text/javascript" src="js/common.js"></script>
 <script type="text/javascript">
 
-	// 双击跳转
-	$('.sync-table').on('dblclick', 'tbody tr', function() {
-		window.location.href = 'journal-detail.html';
+
+	$('.sync-table').on('click', '.jDetail-btn', function() {
+		var jDetailTxt = '<div class="jDetail-c-w">' + $(this).prev('.jDetail-content').text() + '</div>';
+		layer.open({
+			type: 1,
+	      	title: '<div>任务日志清单明细</div>',
+	      	skin: 'jDetail-c', //加上边框
+	      	area: ['620px', '460px'], //宽高
+	      	// scrollbar: false,
+	      	content: jDetailTxt
+		})
 	})
 
 
@@ -124,6 +170,19 @@
 	  	 
 	  }
 	});
+
+	function jDetailBtnFn() {
+		$('.jDetail-content > p').each(function() {
+			if($(this).height() > 70) {
+				$(this).parents('.jDetail').find('.jDetail-btn').show();
+			} else {
+				$(this).parents('.jDetail').find('.jDetail-btn').hide();
+			}
+		})
+	}
+	jDetailBtnFn();
+
+	$(window).resize(jDetailBtnFn);
 
 
 </script>
