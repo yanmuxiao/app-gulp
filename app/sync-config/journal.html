@@ -86,5 +86,13 @@
 	});
 
 
+	var pageAccount = 100; // 总页数
+	$('body').on('click', '.laypage_btn', function() {
+		if(parseInt($('.laypage_skip').val()) > pageAccount) {
+			layer.msg('您的输入超出总页数！')
+		}
+	})
+
+
 </script>
 </html>
