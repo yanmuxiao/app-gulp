@@ -193,7 +193,7 @@
                                 <div><span>已完成</span></div>
                                 <div><span>未生效</span></div>
                             </td>
-                            <td><button class="btn btn-primary"><a href="task-create(detail).html">详情</a></button></td>
+                            <td><button class="btn btn-primary btn-small task-detail-btn">详情</button></td>
                         </tr>
                         <tr>
                             <td><input type="checkbox" class="checkboxes" value="1" /></td>
@@ -223,7 +223,7 @@
                                 <div><span>已完成</span></div>
                                 <div><span>未生效</span></div>
                             </td>
-                            <td><button class="btn btn-primary">详情</button></td>
+                            <td><button class="btn btn-primary btn-small task-detail-btn">详情</button></td>
                         </tr>
                         <tr>
                             <td><input type="checkbox" class="checkboxes" /></td>
@@ -253,7 +253,7 @@
                                 <div><span>已完成</span></div>
                                 <div><span>未生效</span></div>
                             </td>
-                            <td><button class="btn btn-primary">详情</button></td>
+                            <td><button class="btn btn-primary btn-small task-detail-btn">详情</button></td>
                         </tr>
                     </tbody>
                 </table>
@@ -380,7 +380,7 @@
 
       '<div class="form-btn-w"><button class="btn" id="MonitorCancle" type="button">取消</button><button class="btn  btn-success" id="MonitorConfirm" type="button">确定</button></div>' +
 
-      '<div class="invite-monitor"><h4>发送邀请链接</h4><div class="invite-content"><h5>邀请加入任务：<span id="taskSelectedList"></span></h5><p>复制以下链接和密码，通过QQ、邮箱、微信等方式发送给你的朋友。</p><div class="invite-info-w"><input type="text" class="invite-url" value="http://www.ados.cn/liuliangu/index/index.html。邀请密码：123456" /><button class="btn  btn-info" type="button">复制</button></div><p class="reset-invite-pw">重置邀请密码</p></div></div>'
+      '<div class="invite-monitor"><h4>发送邀请链接</h4><div class="invite-content"><h5>邀请加入任务：<span id="taskSelectedList"></span></h5><p>复制以下链接和密码，通过QQ、邮箱、微信等方式发送给你的朋友。</p><div class="invite-info-w"><input type="text" class="invite-url" id="inviteUrl" value="http://s-113712.gotocdn.com:89//invitemonitor/10/onsite/。邀请密码：123456" /><button class="btn  btn-info" type="button" onclick="Copy()">复制</button></div><p class="reset-invite-pw">重置邀请密码</p></div></div>'
 
 
     +'</form>';
@@ -426,7 +426,20 @@
    })
 
 
-   
+   $('.table').on('click', '.task-detail-btn', function() {
+      window.location.href = 'task-create(detail).html';
+   })
+
+
+   function Copy() {
+        var value = $('#inviteUrl').val();
+        if (value != '') {
+            var Url2 = document.getElementById("inviteUrl");
+            Url2.select(); // 选择对象
+            document.execCommand("Copy"); // 执行浏览器复制命令
+            layer.msg("已复制好，可贴粘。");
+        }
+    }
 
 
 </script>

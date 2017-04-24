@@ -26,11 +26,11 @@
               <div class="LR-form-c">
                 <div class="LR-form-list LR-form-user">
                     <span class="LR-form-list-icon"></span>
-                    <input type="text" placeholder="请输入账号" name="LRUser" id="LRUser" class="LR-form-itxt">
+                    <input type="text" placeholder="请输入账号" data-pattern="user" name="LRUser" id="LRUser" class="LR-form-itxt validate">
                 </div>
                 <div class="LR-form-list LR-form-pw">
                     <span class="LR-form-list-icon"></span>
-                    <input type="password" placeholder="请输入密码"  name="LRPW" id="LRPW" class="LR-form-itxt">
+                    <input type="password" placeholder="请输入密码" data-pattern="password"  name="LRPW" id="LRPW" class="LR-form-itxt validate">
                 </div>
                 <div class="LR-form-list">
                     <input type="checkbox" class="LR-rmb" id="LRRmb" name=""><label class="LR-label" for="LRRmb">记住密码</label>
@@ -38,7 +38,7 @@
                 </div>
               </div>
               <div class="LR-btn-w">
-                  <button type="button" class="LR-btn-one" id="">登录</button>
+                  <button type="button" class="LR-btn-one" id="loginBtn">登录</button>
               </div>
               <div class="LR-register-go">没有账号？去<a href="register.html">注册</a></div>
           </form>
@@ -57,12 +57,33 @@
 
 
 <script src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/layer/layer.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
 <script type="text/javascript">
 
     $('body').css({
         backgroundColor: 'rgba(0,0,0,0.5)'
     })
 
+
+    // 正则
+    var validateArr = {
+        focusArg : true,
+        user : ['[^\\s]','用户名不能为空'],
+        password :  ['^[A-Za-z0-9]{6,}$','密码为不少于6位的数字和字母的组合'],
+        validateFalse: false
+    };
+    // 表单submit提交的方法
+    $('#loginBtn').click(function(){
+        if(XjQuery.validate(validateArr)){
+
+            window.location.href="index.html"
+            return false;
+        }else{
+
+            return false;
+        }   
+    })
 
 
 

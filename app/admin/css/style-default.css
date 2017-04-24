@@ -12,20 +12,20 @@ ul.faq-list li a:hover, ul.faq-list li a.active{
 }
 
 #header.navbar-inverse .navbar-inner {
-    background-color: #000;
-    background-image: -moz-linear-gradient(top, #000, #000);
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#000), to(#000));
-    background-image: -webkit-linear-gradient(top, #000, #000);
-    background-image: -o-linear-gradient(top, #000, #000);
-    background-image: linear-gradient(to bottom, #000, #000);
+    background-color: #324157;
+    background-image: -moz-linear-gradient(top, #324157, #324157);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#324157), to(#324157));
+    background-image: -webkit-linear-gradient(top, #324157, #324157);
+    background-image: -o-linear-gradient(top, #324157, #324157);
+    background-image: linear-gradient(to bottom, #324157, #324157);
     background-repeat: repeat-x;
-    border-color: #000;
+    border-color: #324157;
     color: #fff;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff4a8bc2', endColorstr='#ff4a8bc2', GradientType=0);
 }
 
 .sidebar-toggle-box {
-    background: #000;
+    background: #324157;
     color: #fff;
 }
 
@@ -61,7 +61,7 @@ ul.faq-list li a:hover, ul.faq-list li a.active{
 }
 
 #sidebar > ul > li.active > a, #sidebar > ul > li >a:hover, #sidebar > ul > li:hover>a{
-    background: #000;
+    background: #1F2D3D;
 }
 
 #sidebar > ul > li > ul.sub > li > a {

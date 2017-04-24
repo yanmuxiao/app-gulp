@@ -79,7 +79,7 @@ label {
 .task-at-list .task-stage div,
 .task-at-list .task-time div,
 .task-at-list .task-state div {
-	border-bottom: 1px solid #ddd;
+	border-bottom: 1px solid #bfcbd9;
 	display: table;
 	width: 100%;
 }
@@ -260,6 +260,8 @@ label {
 }
 .tcd-stage td .input-medium {
 	width: 90%;
+	border-color: #bfcbd9;
+    border-radius: 2px!important;
 }
 .tcd-stage .tcd-time-range input {
 	width: 40%;
@@ -886,6 +888,7 @@ button.btn {
 }
 input[type=text] {
 	border-radius: 2px!important;
+	border-color: #bfcbd9;
 }
 table th,
 .table th {
@@ -902,4 +905,21 @@ body {
     overflow: auto;
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
+}
+textarea {
+	border-color: #bfcbd9;
+    border-radius: 3px!important;
+}
+.logined {
+	border-radius: 100%!important;
+}
+.layui-layer {
+	border-radius: 4px!important;
+}
+.table-bordered {
+	border-color: #bfcbd9;
+	border-radius: 2px!important;
+}
+.table-bordered th, .table-bordered td {
+	border-color: #bfcbd9;
 }
