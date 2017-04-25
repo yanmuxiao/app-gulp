@@ -8,9 +8,11 @@
 
 var dataStr = Mock.mock({
 	'dataStr1|1-10': 'str', //str * (1 - 10)
-	'dataStr3|3': 'str' //str * 3
+	'dataStr3|3': 'str2' //str * 3
 });
 console.log(JSON.stringify(dataStr, null, 4));
+
+
 
 
 // Number 
@@ -29,6 +31,9 @@ var dataNum = Mock.mock({
 console.log(JSON.stringify(dataNum, null, '\t'));
 
 
+
+
+
 // Boolean ==> 结果都是返回随机boolean值
 // 1. 'name|1': boolean
 // 1. 'name|1-2': boolean
@@ -37,6 +42,9 @@ var dataBoolean = Mock.mock({
 	'dataBoolean2|1-2': true // true or false
 });
 console.log(JSON.stringify(dataBoolean, null, '\t'));
+
+
+
 
 
 // Object ==> 返回给对象min-max个随机值
@@ -58,11 +66,14 @@ var dataObj = Mock.mock({
 console.log(JSON.stringify(dataObj, null, '\t'));
 
 
+
+
+
 // Array
 // 1. 'name|+1': array  ==> 返回array的第一个值
 // 2. 'name|min - max ': ==> array的内容 * (min - max) ==> 和string一样
 // 3. 'name|num': array
-// 		==> num为1时返回的是字符串，值为array的第随机个值
+// 		==> num为1时返回的是字符串，值为array的一个随机值
 // 		==> num > 1时返回的是num个长度的array
 var dataArr = Mock.mock({
 	'dataArr1|+1': [
@@ -88,7 +99,11 @@ var dataArr = Mock.mock({
 });
 console.log(JSON.stringify(dataArr, null, '\t'));
 
-// 那么如何返回随机长度的数组呢，像Object一样？？？
+// 那么如何返回随机长度的数组呢，像Object一样？？？？？？？？？
+
+
+
+
 
 // 4. 数组内存放对象的数组
 var dataArrObj = Mock.mock({

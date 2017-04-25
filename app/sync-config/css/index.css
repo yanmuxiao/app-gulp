@@ -36,3 +36,11 @@
 	word-break: break-all;
 	padding: 20px;
 }
+
+
+.sync-select {
+	padding: 4px 6px;
+	border: 1px solid #bfcbd9;
+    border-radius: 3px;
+    outline: none;
+}

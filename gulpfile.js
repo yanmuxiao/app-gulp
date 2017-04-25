@@ -1,5 +1,5 @@
 var gulp = require('gulp');
-var sass = require('gulp-sass');
+// var sass = require('gulp-sass');
 var browserSync = require('browser-sync');
 // var useref = require('gulp-useref'); 
 // var uglify = require('gulp-uglify');
@@ -33,11 +33,11 @@ gulp.task('browserSync', function() {
 // })
 
 // gulp.task('useref', function() {
-//   return gulp.src('app/*.html')
+//   return gulp.src('app/mock/*.html')
 //     .pipe(useref())
-//     .pipe(gulpIf('*.js', uglify()))
-//     .pipe(gulpIf('*.css', cleanCss()))
-//     .pipe(gulp.dest('dist'));
+//     .pipe(gulpIf('app/mock/*/*.js', uglify()))
+//     .pipe(gulpIf('app/mock/*/*.css', cleanCss()))
+//     .pipe(gulp.dest('dist/mock'));
 // });
 
 
@@ -45,11 +45,11 @@ gulp.task('browserSync', function() {
 gulp.task('watch', ['browserSync'], function() {
 	
 	// html
-	gulp.watch('app/admin/**/*.html', browserSync.reload);
+	gulp.watch('app/mock/**/*.html', browserSync.reload);
 	//css
-	gulp.watch('app/admin/**/*.css', browserSync.reload);
+	gulp.watch('app/mock/**/*.css', browserSync.reload);
 	// js
-	gulp.watch('app/admin/**/*.js', browserSync.reload);
+	gulp.watch('app/mock/**/*.js', browserSync.reload);
 
 
 })
