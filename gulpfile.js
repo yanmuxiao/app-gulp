@@ -45,11 +45,11 @@ gulp.task('browserSync', function() {
 gulp.task('watch', ['browserSync'], function() {
 	
 	// html
-	gulp.watch('app/mock/**/*.html', browserSync.reload);
+	gulp.watch('app/lodash/**/*.html', browserSync.reload);
 	//css
-	gulp.watch('app/mock/**/*.css', browserSync.reload);
+	gulp.watch('app/lodash/**/*.css', browserSync.reload);
 	// js
-	gulp.watch('app/mock/**/*.js', browserSync.reload);
+	gulp.watch('app/lodash/**/*.js', browserSync.reload);
 
 
 })
