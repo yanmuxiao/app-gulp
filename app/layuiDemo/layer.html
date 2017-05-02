@@ -56,7 +56,7 @@
 					  <li class="layui-nav-item layui-nav-itemed">
 					    <a class="javascript:;" href="javascript:;">组件示例<span class="layui-nav-more"></span></a>
 					    <dl class="layui-nav-child">
-					      <dd class="">
+					      <dd class="layui-this">
 					        <a href="layer.html">
 					          <i class="layui-icon" style="top: 3px;"></i><cite>弹出层</cite>
 					        </a>
@@ -141,7 +141,45 @@
 				<div class="layui-body layui-tab-content site-demo site-demo-body">
 					<div class="layui-main">
 						
-							
+							<div id="LAY_preview">
+          
+<blockquote class="layui-elem-quote">
+  大部分演示都在layer独立组件的官网，与内置的layer模块，用法是完全一致的
+</blockquote>
+<a class="layui-btn layui-btn-normal" href="http://layer.layui.com/" target="_blank">前去layer官网</a>
+ 
+<fieldset class="layui-elem-field layui-field-title site-demo-button" style="margin-top: 30px;">
+  <legend>特殊例子</legend>
+</fieldset>
+ 
+<div class="site-demo-button" id="LAY_demo" style="margin-bottom: 0;">
+  <blockquote class="layui-elem-quote layui-quote-nm">
+    Tips：为了更清晰演示，每触发下述一个例子之前，都会关闭所有已经演示的层
+  </blockquote>
+  <button data-method="setTop" class="layui-btn">多窗口模式，层叠置顶</button>
+  <button data-method="confirmTrans" class="layui-btn">配置一个透明的询问框</button>
+  <button data-method="notice" class="layui-btn">示范一个公告层</button>
+  <button data-method="offset" data-type="t" class="layui-btn layui-btn-normal">上弹出</button>
+  <button data-method="offset" data-type="r" class="layui-btn layui-btn-normal">右弹出</button>
+  <button data-method="offset" data-type="b" class="layui-btn layui-btn-normal">下弹出</button>
+  <button data-method="offset" data-type="l" class="layui-btn layui-btn-normal">左弹出</button>
+  <button data-method="offset" data-type="lt" class="layui-btn layui-btn-normal">左上弹出</button>
+  <button data-method="offset" data-type="lb" class="layui-btn layui-btn-normal">左下弹出</button>
+  <button data-method="offset" data-type="rt" class="layui-btn layui-btn-normal">右上弹出</button>
+  <button data-method="offset" data-type="rb" class="layui-btn layui-btn-normal">右下弹出</button>
+  <button data-method="offset" data-type="auto" class="layui-btn layui-btn-normal">居中弹出</button>
+</div>
+ 
+<!-- 通用-970*90 -->
+<div>
+  <ins class="adsbygoogle" style="display:inline-block;width:970px;height:90px" data-ad-client="ca-pub-6111334333458862" data-ad-slot="6835627838" data-adsbygoogle-status="done"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:970px;background-color:transparent"><ins id="aswift_0_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:970px;background-color:transparent"><iframe width="970" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;width:970px;height:90px;"></iframe></ins></ins></ins>
+</div>
+ 
+<fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;">
+  <legend>再次温馨提醒</legend>
+</fieldset>
+<p class="site-demo-text">本页演示是采用了Layui加载的layer，如果你使用的是独立版的layer，无需通过layui.use('layer')来加载。Layui中的layer与独立版的layer的唯一不同，就是加载方式这一点有所差异，请阅读文档：<a href="http://www.layui.com/doc/modules/layer.html#use" target="_blank">http://www.layui.com/doc/modules/layer.html#use</a></p>     
+          </div>
           
 
 

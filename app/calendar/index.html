@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<style type="text/css">
+	
+	.calendar-w {
+		width: 280px;
+	}
+
+	.calendar-week, .calendar-day {
+		width: 100%;
+		font-size: 0;
+	}
+	.calendar-week li,
+	.calendar-day li {
+		display: inline-block;
+		font-size: 14px;
+		width: 14%;
+		height: 40px;
+		line-height: 40px;
+		text-align: center;
+	}
+
+
+	.goneMD, .nextMD {
+		color: #aaa;
+	}
+
+</style>
+</head>
+<body>
+    
+	<div class="calendar-w">
+		<ul class="calendar-week">
+			<li>日</li>
+			<li>一</li>
+			<li>二</li>
+			<li>三</li>
+			<li>四</li>
+			<li>五</li>
+			<li>六</li>
+		</ul>
+		<ul class="calendar-day" id="calendarDay">
+		</ul>
+
+	</div>
+
+	<p id="yearMonth"> 2017 年 5 月</p>
+
+	<button id="prev">prev</button>
+	<button id="next">next</button>
+
+
+</body>
+<script type="text/javascript">
+	
+
+//通用函数
+var F = {
+  //计算某年某月有多少天
+  getDaysInMonth: function(year, month) {
+    return new Date(year, month + 1, 0).getDate();
+  },
+  //计算某月1号是星期几
+  getWeekInMonth: function(year, month) {
+    return new Date(year, month, 1).getDay();
+  },
+  getMonth: function(m) {
+    return ['一', '二', '三', '四', '五', '六', '七', '八', '九', '十', '十一', '十二'][m];
+  },
+  //计算年某月的最后一天日期
+  getLastDayInMonth: function(year, month) {
+    return new Date(year, month, this.getDaysInMonth(year, month));
+  }
+}
+
+
+
+
+
+
+function calendarFn(year, month) {
+
+
+	var curMonthDays = F.getDaysInMonth(year, month); // 当前月天数
+	var curMonthFirst = F.getWeekInMonth(year, month); // 当前月的第一天是周几
+
+
+	var predMonthDays = 0; // 上一个月天数
+	if(month <= 0) {
+		predMonthDays = F.getDaysInMonth(year - 1, 11);
+	} else {
+		predMonthDays = F.getDaysInMonth(year, month - 1);
+	}
+
+	//var curMonthArr = [];	// 当前月的显示数组
+
+
+
+	// 当前月day字符串
+	var currentHtml = '';
+	for(var i = 0; i < curMonthDays; i++) {
+		currentHtml += '<li class="curMD">' + (parseInt(i)+1) + '</li>';
+	}
+
+
+	// 上一个月的补足
+	var prevMonthArr = [];	// 上一个月的补足显示数组
+	var prevHtml = '';
+
+	if(curMonthFirst == 0) {
+		curMonthFirst = 7;
+	}
+	for(var j = curMonthFirst-1; j >= 0; j--) {
+		prevHtml += '<li class="goneMD">' + (predMonthDays - j) + '</li>';
+	}
+
+	// 下一个月的补足
+	var nextMonthArr = [];	// 下一个月的补足显示数组
+	var nextMonthNum = 42 - curMonthDays - curMonthFirst;
+	var nextHtml = '';
+	for(var k = 0; k < nextMonthNum; k++) {
+		nextHtml += '<li class="nextMD">' + (k+1) + '</li>';
+	}
+
+	document.querySelector('#calendarDay').innerHTML = prevHtml + currentHtml + nextHtml;
+
+}
+
+
+var curY = 2017;
+var curM = 4;
+
+
+calendarFn(curY, curM);
+
+document.querySelector('#prev').onclick = function() {
+	curM--
+	if(curM < 0) {
+		curM = 11;
+		curY--;
+	}
+	calendarFn(curY, curM);
+	document.querySelector('#yearMonth').innerHTML = curY + ' 年 ' + (curM + 1) + ' 月 ';
+}
+
+document.querySelector('#next').onclick = function() {
+	curM++;
+	if(curM > 11) {
+		curM = 0;
+		curY++;
+	}
+	calendarFn(curY, curM);
+	document.querySelector('#yearMonth').innerHTML = curY + ' 年 ' + (curM + 1) +' 月 ';
+}
+
+
+
+</script>
+</html>

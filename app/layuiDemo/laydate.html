@@ -67,7 +67,7 @@
 					          <cite>即时通讯</cite>
 					        </a>
 					      </dd>
-					       <dd class="">
+					       <dd class="layui-this">
 					        <a href="laydate.html">
 					          <i class="layui-icon" style="top: 1px;"></i><cite>日期时间选择</cite>
 					        </a>
@@ -142,7 +142,29 @@
 					<div class="layui-main">
 						
 							
-          
+          				<fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px;">
+						  <legend>顺便列举几个常用例子</legend>
+						</fieldset>
+						<div class="layui-inline">
+						  <input class="layui-input" placeholder="自定义日期格式" onclick="layui.laydate({elem: this, istime: true, format: 'YYYY-MM-DD hh:mm:ss'})">
+						</div>
+						<div class="layui-inline">
+						  <input class="layui-input" placeholder="开启节日" onclick="layui.laydate({elem: this, festival: true})">
+						</div>
+						<div class="layui-inline">
+						  <input class="layui-input" placeholder="只能选昨天到明天" onclick="layui.laydate({elem: this, min: laydate.now(-1), max: laydate.now(+1)})">
+						</div>
+						<div class="layui-form-pane" style="margin-top: 15px;">
+						  <div class="layui-form-item">
+						    <label class="layui-form-label">范围选择</label>
+						    <div class="layui-input-inline">
+						      <input class="layui-input" placeholder="开始日" id="LAY_demorange_s">
+						    </div>
+						    <div class="layui-input-inline">
+						      <input class="layui-input" placeholder="截止日" id="LAY_demorange_e">
+						    </div>
+						  </div>
+						</div>  
 
 
 					</div>
@@ -181,11 +203,45 @@
 <script src="layui/global.js" charset="utf-8"></script>
 
 <script type="text/javascript">
-	
-	layui.use('element', function(){
+
+
+
+	layui.use(['element', 'laydate'], function(){
+
 	  var element = layui.element(); 
 	  //导航的hover效果、二级菜单等功能，需要依赖element模块
 
+
+	  var laydate = layui.laydate;
+	  
+	  var start = {
+	    min: laydate.now()
+	    ,max: '2099-06-16 23:59:59'
+	    ,istoday: false
+	    ,choose: function(datas){
+	      end.min = datas; //开始日选好后，重置结束日的最小日期
+	      end.start = datas //将结束日的初始值设定为开始日
+	    }
+	  };
+	  
+	  var end = {
+	    min: laydate.now()
+	    ,max: '2099-06-16 23:59:59'
+	    ,istoday: false
+	    ,choose: function(datas){
+	      start.max = datas; //结束日选好后，重置开始日的最大日期
+	    }
+	  };
+	  
+	  document.getElementById('LAY_demorange_s').onclick = function(){
+	    start.elem = this;
+	    laydate(start);
+	  }
+	  document.getElementById('LAY_demorange_e').onclick = function(){
+	    end.elem = this
+	    laydate(end);
+	  }
+	  
 	});
 
 
