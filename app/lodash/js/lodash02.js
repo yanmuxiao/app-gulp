@@ -34,6 +34,8 @@ console.log(_.isArguments(function() { return arguments; }()));
 console.log(_.isArguments([1, 2, 3]));
 // => false
 
+
+
 var a = 1.2;
 var b = 3;
 console.log(a/b); // 0.39999999999999997
