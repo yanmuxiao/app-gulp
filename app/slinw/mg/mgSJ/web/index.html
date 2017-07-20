@@ -1,0 +1,315 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<title>秘果</title>
+	<link href="css/layout.css" rel="stylesheet" />
+	<script src="js/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="js/module_top.js"></script>
+</head>
+<body>
+ <div id="module_header">
+        <div class="wrap clearfix">
+            <h1 class="fl logo">
+                <a href="#" target="_blank"><img src="images/logo.jpg" width="183" height="30" alt="139邮箱" title="139邮箱"></a>
+                <a href="#" target="_blank"><img src="images/module_top_logo.jpg" width="120" height="29" alt="139邮箱" title="139邮箱"></a>
+            </h1>
+            <!--没登陆之前START-->
+            <ul class="fr loadBefore" style="display:none;">
+                <li><a href="#" class="regBtn">免费注册</a></li>
+                <li><a href="#" class="loadIcon module_top_icon" title="用户登录">用户登录</a></li>
+                <li><a href="#" class="emailIcon module_top_icon" title="邮件">邮箱</a></li>
+                <li><a href="#" class="giftIcon module_top_icon" title="积分">积分</a></li>
+            </ul>
+            <!--没登陆之前END-->
+            <!--登录之后Start-->
+            <ul class="fr loadAfter" style="display:block;">
+                <li><span class="clearfix personBtn"><span class="module_top_icon personIcon fl">&nbsp;</span><span class="telephoneBtn">13621823878</span></span></li>
+                <li><a href="#" class="quitBtn">退出</a></li>
+                <li><a href="#" class="emailNumIcon module_top_icon" title="未读邮件数"><span>13602</span> 封</a></li>
+                <li><a href="#" class="giftNumIcon module_top_icon" title="邮箱积分数"><span>1362</span> 分</a></li>
+            </ul>
+            <!--登录之后END-->
+        </div>
+
+        <!--弹窗START-->
+        <div class="module_popLayout_load"  style="display: none;">
+            <div class="title clearfix">
+                <div class="title_general title_account    fl general_style" id="title_account" onclick="_zc.titleCheck(this,'title_msg','account_tab')">帐号登录</div>
+                <div class="title_general title_msg    fl general_style" id="title_msg" onclick="_zc.titleCheck(this,'title_account','msg_tab')">短信登录</div>
+                <div class="title_bottom_style general_style" id="title_bottom_style"></div>
+                <a href="javascript:;" class="module_closeBtn module_top_icon">关闭</a>
+            </div>
+            <div class="loadWrap">
+                <table align="center" cellpadding="0" cellspacing="0" width="320" class="inputTable account_tab  " id="account_tab">
+                    <tr>
+                        <td>
+                            <div class="txtbox txtbox01"><span>帐号不存在  <a href="#">立即注册</a></span><div class="tips_ico"></div></div>
+                            <div class="accountWrap">
+                                <div class="module_top_icoInput module_top_ico03"></div>
+                                <input type="text" value="通行证/手机号/别名" class="accountIpt" onFocus="_zc.inputFocus(this,'通行证/手机号/别名')" onBlur="_zc.inputBlur(this,'通行证/手机号/别名')">
+                                <div class="ico139"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="txtbox txtbox02"><span>帐号或密码输入错误</span><div class="tips_ico"></div></div>
+                            <div class="passWordWrap">
+                                <div class="module_top_icoInput module_top_ico04"></div>
+                                <label for="passWordIpt" class="labelpwd" id="labelpwd">密码</label>
+                                <input type="password" class="passWordIpt" id="passWordIpt" onFocus="_zc.passWordFocus(this)" onBlur="_zc.passWordBlur(this)">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+
+                            <div class="txtbox txtbox03"><span>验证码输入错误</span><div class="tips_ico"></div></div>
+
+                            <div class="codeWordWrap">
+                                <div class="module_top_icoInput module_top_ico05"></div>
+                                <input type="text" value="请输入正确的字母或数字" class="yzmIpt" onFocus="_zc.inputFocus(this,'请输入正确的字母或数字');" onBlur="_zc.inputBlur(this,'请输入正确的字母或数字');">
+                                <div class="yzmIpt_hint_error"></div> <!--yzmIpt_hint_error yzmIpt_hint_right-->
+                            </div>
+
+                            <div class="moudle_code clearfix" id="moudle_code">
+                                <div class="moudle_code_img fl">
+                                    <img src="images/moudule_code.jpg" />
+                                </div>
+
+                                <div class="module_pop_refresh fl module_opacity"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr><td><a href="#" class="loadBtn">登    录</a><a href="#" class="getPassWords">忘记密码</a></td></tr>
+                </table>
+                <table align="center" cellpadding="0" cellspacing="0" width="320" class="inputTable msg_tab hide" id="msg_tab" style="display:none;">
+                    <tr>
+                        <td>
+                            <div class="txtbox txtbox01"><span>帐号不存在  <a href="#">立即注册</a></span><div class="tips_ico"></div></div>
+                            <div class="accountWrap_msg fl">
+                                <div class="module_top_ico08 module_top_icoInput"></div>
+                                <input type="text" value="手机号" class="accountIpt_msg" onFocus="_zc.inputFocus(this,'手机号')" onBlur="_zc.inputBlur(this,'手机号')">
+                            </div>
+                            <div class="getCodeBtn  ">获取验证码</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="txtbox txtbox03"><span>验证码输入错误</span><div class="tips_ico"></div></div>
+                            <div class="codeWordWrap">
+                                <div class="module_top_icoInput module_top_ico05"></div>
+                                <input type="text" value="短信验证码" class="yzmIpt  " onFocus="_zc.inputFocus(this,'短信验证码');" onBlur="_zc.inputBlur(this,'短信验证码');">
+                                <div class="yzmIpt_hint_right"></div> <!--yzmIpt_hint_error yzmIpt_hint_right-->
+                            </div>
+                            <div class="moudle_code clearfix" id="moudle_code2">
+                                <div class="moudle_code_img fl">
+                                    <img src="images/moudule_code.jpg" />
+                                </div>
+                                <div class="module_pop_refresh fl module_opacity"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr><td><a href="#" class="loadBtn_msg">登    录</a></td></tr>
+                </table>
+            </div>
+        </div>
+        <!--弹窗END-->
+    </div>
+
+		 <div class="contaier">
+	        <div class="header">
+                <div class="tabbox">
+	             	<div class="head_tit">
+	             		<i class="icon"></i>
+	             		<i class="icon2"></i>
+	             		<b>还有<u style="color: #ffd800;">1</u>次抢票机会</b>
+	             	</div>
+                 	<div class="head_tit2">
+                    	<span>活动规则</span>
+                    	<span>获奖须知</span>
+                 	</div>
+                </div> 	
+	        </div>
+	        <div class="Img"><img src="images/s.png" alt=""></div>
+	        <div class="main">
+             	<div class="bg_col">
+                    <div class="bg_col_sub">
+                        <embed src="https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&v=20161117&vid=f0519tx3vlg&auto=0" allowFullScreen="true" quality="high"  align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"  class="vid"></embed>
+                    </div>
+                </div>
+			    <div class="bg_sub">
+					<img src="images/s6.png" alt="" style="margin-left: -80px;">
+			    </div>
+                <div class="main_sub">
+					<div class="main_sub_bg">
+					   <img src="images/title.png" alt="" class="content_img">
+                       <div class="verify">
+             				<input type="text" class="btn_tn">
+              				<span>@139.com</span>
+              				<button>发送</button>
+           			   </div>
+                       <div class="hides"><p>1111111111</p><p>222222222</p><p>33333333</p></div>
+           			   <img src="images/Img.png" alt="" style="display: block;margin: 20px auto 30px;    width: 90%;">
+                       <h1>电影《秘果》剧情梗概</h1>
+           				<p class="intro"> 这是一个关于秘密的故事。十七岁的段柏文，自幼丧母，而且与继母有很大矛盾。在天一中学，他遇见了“小耳朵”，并爱上了这个“年轻、漂亮、有品”的老师，这是他的最大秘密。但他不知道，他的发小于池子喜欢他——这也是于池子的秘密。高二那年，于池子发现自己的朋友斯嘉丽居然和段柏文有着不一般的关系，而且她也发现了斯嘉丽的秘密。于是，于池子精心设计了报复斯嘉丽的计划，进展十分成功，可是结果却是她没又想到的。事情的真相，又让她始料未及……<br><br>
+           				导演：连奕琦 <br>
+		   				主演：陈飞宇、欧阳娜娜、邹元清、张诚航<br>
+		   				类型：剧情|爱情<br>
+           				</p>
+					</div>
+                </div>
+                <div class="bottom_Img">
+                	<div style="margin-top: 60px;">
+                    	<img src="images/s7.png" alt="">
+                	</div>
+                    <div class="bottom_cont">
+						<div class="bottom_cont_sub">
+                            <img src="images/s10.png" alt="">
+                            <img src="images/s11.png" alt="">
+                            <img src="images/s12.png" alt="">
+						</div>
+                    </div>
+                </div>
+           </div>
+
+        </div>
+    </div>
+     <div class="foot" style="font-size: 14px; color: white; background: #454444; line-height: 30px; text-align: center; padding: 20px 0;">
+        <p align="center">
+            <img src="images/topV3_icon2.png" alt="" width="138" height="63">
+        </p>
+        京ICP备05002571号 | 中国移动通信版权所有 | 客服热线:10086
+    </div>
+   <!-- footer end -->
+     <div class="cmp activity8 ">
+        <div style="position: absolute;top: 50%;left: 50%;margin-left: -300px;margin-top: -230px;">
+            <i class="icon_btn8 iconbtn"></i>
+                <div class="contenter8">       
+                    <img src="images/icon1.png" alt="" style="display: block;margin: 6px auto">
+                    <b >1、用户抢到电影票后，活动页面会弹出中奖提醒，同时将会收到139邮箱下发的中奖邮件，请留意邮件中电影票的领用方法和有效使用期限。<br>
+                        2、所中奖品由合作商家派发，如遇上任何关于奖品问题，请拨打中奖邮件中商家客服电话：10105335 咨询。<br>
+                        3、所获奖品不能兑换现金及其他奖励。<br>
+                        4、所有中奖客户需同时满足以下条件，否则取消获奖资格：<br>
+                        1）所有中奖客户需要使用移动手机号码作为登录帐号，并且以139邮箱为接收奖品信息专用邮箱；<br>
+                        2）活动期间及领奖截止时间前如获奖客户出现手机号换号、注销等情况导致无法给其发放奖品，则视为客户主动放弃兑奖资格，并不再办理奖品补发，奖品产生的个人所得税由客户自理；<br>
+                        3）手机号码状态正常，且满足以下条件：<br>
+                        ①活动当月不出现销号、欠费情况；<br>
+                        ②活动当月主叫通话费不少于4元，主叫通话时长不少于30分钟（10086等客服热线时长不在此列）；<br>
+                        4）为了保障客户权益，针对不正当手段参加活动者，我方有权在不事先通知的前提下，取消活动参与者获得的奖励和资格，并不做任何赔偿；<br>
+                        5、更多活动详情，可发邮件到service@139.com咨询。<br>
+                    </b>
+                </div>
+        </div>
+ </div>
+
+ <div class="cmp activity1 ">
+        <div style="position: absolute;top: 50%;left: 50%;margin-left: -240px;margin-top: -130px;">
+            <i class="icon_btn1 iconbtn"></i>
+                <div class="contenter1 popup">       
+                   <b>恭喜您抢到电影票啦!<br>去看看战利品吧！</b>     
+                   <span class="left">到139邮箱查看邮件</span>  
+                   <span class="right">继续抢票</span>  
+                </div>
+        </div>
+ </div>
+
+  <div class="cmp activity2 ">
+        <div style="position: absolute;top: 50%;left: 50%;margin-left: -240px;margin-top: -130px;">
+            <i class="icon_btn2 iconbtn"></i>
+                <div class="contenter2 popup">       
+                   <b>哎呀，没有抢到票呢！<br>肯定是姿势不对！<br>换个姿势继续抢！</b>     
+                   <span class="go">继续抢票</span>   
+                </div>
+        </div>
+ </div>
+  <div class="cmp activity3 ">
+        <div style="position: absolute;top: 50%;left: 50%;margin-left: -240px;margin-top: -130px;">
+            <i class="icon_btn3 iconbtn"></i>
+                <div class="contenter3 popup">       
+                   <b>亲，您今天没抢票机会啦！<br>快去获取更多机会吧！</b>     
+                   <span class="left">邀请好友看电影</span>  
+                   <span class="right">继续抢票</span>  
+                </div>
+        </div>
+ </div>
+   <div class="cmp activity4 ">
+        <div style="position: absolute;top: 50%;left: 50%;margin-left: -240px;margin-top: -130px;">
+            <i class="icon_btn4 iconbtn"></i>
+                <div class="contenter4 popup">       
+                   <b>亲，您今天邀请好友数达到上限了！<br>请明天再来！</b>     
+                   <span class="go">好咧</span>  
+                </div>
+        </div>
+ </div>
+
+    <div class="cmp activity5 ">
+        <div style="position: absolute;top: 50%;left: 50%;margin-left: -240px;margin-top: -130px;">
+            <i class="icon_btn5 iconbtn"></i>
+                <div class="contenter5 popup">       
+                   <b>恭喜您获得一次抢票机会！</b>     
+                   <span class="left">邀请好友看电影</span>  
+                   <span class="right">继续抢票</span>  
+                </div>
+        </div>
+ </div>
+
+     <div class="cmp activity6 ">
+        <div style="position: absolute;top: 50%;left: 50%;margin-left: -240px;margin-top: -130px;">
+            <i class="icon_btn6 iconbtn"></i>
+                <div class="contenter6 popup">       
+                   <b>亲爱的用户，您即将离开139邮箱<br>活动页面前往第三方商家页面。<br>请确认是否跳转？</b>     
+                   <span class="left">确定</span>  
+                   <span class="right">暂不跳转</span>  
+                </div>
+        </div>
+ </div>
+
+     <div class="cmp activity7 ">
+        <div style="position: absolute;top: 50%;left: 50%;margin-left: -240px;margin-top: -200px;">
+            <i class="icon_btn7 iconbtn"></i>
+                <div class="contenter7">       
+                    <img src="images/icon.png" alt="" style="display: block;margin: 20px auto">
+                    <b >1、活动时间：即日起-2017年7月14日<br>
+						2、活动期间，用户每天登录活动即可获得1次抢票机会。<br>
+						3、通过发邮件邀请好友参与活动，每天最多可获得三次抢票机会，不能重复邀请好友；机会仅限当天使用，不作累计；<br>
+						4、本次活动面向中国移动全品牌的用户，包括全球通、动感地带和神州行，异网用户暂时不能参与活动。</b>
+                </div>
+        </div>
+     </div>   
+
+<!-- 下线弹窗 -->
+
+      <div class="cmp activity55" style="display: block; z-index: 99;">
+        <div style="position: absolute;top: 50%;left: 50%;margin-left: -280px;margin-top: -260px;">
+            <div class="contenter55">       
+               <p><span>下期预告：</span>“上139邮箱，免费看电影”活动将在近期上线，格瓦拉生活网随便看特享名额和立减10元优享名额随机抽，敬请期待！
+               </p>
+               <div class="Img_">
+                    <img src="images/ss1.png" alt="">
+                   <a href="http://happy.mail.10086.cn/jsp/api/tj/ar-yyxxtc/"><img src="images/ss2.png" alt=""></a> 
+                </div>
+               <div class="clear"></div>
+                </div>
+        </div>
+ </div>
+
+
+
+</body>
+
+<script>
+$('.iconbtn').click(function(){
+      $(this).parents('.cmp').hide();
+   })
+$(".btn_tn").click(function(){
+    $(".hides").show();
+})
+$(".btn_tn").mouseout(function(){
+  $(".hides").hide();
+});
+
+</script>
+</html>

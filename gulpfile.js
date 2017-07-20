@@ -45,11 +45,11 @@ gulp.task('browserSync', function() {
 gulp.task('watch', ['browserSync'], function() {
 	
 	// html
-	gulp.watch('app/layuiDemo/**/*.html', browserSync.reload);
+	gulp.watch('app/slinw/**/*.html', browserSync.reload);
 	//css
-	gulp.watch('app/layuiDemo/**/*.css', browserSync.reload);
+	gulp.watch('app/slinw/**/*.css', browserSync.reload);
 	// js
-	gulp.watch('app/layuiDemo/**/*.js', browserSync.reload);
+	gulp.watch('app/slinw/**/*.js', browserSync.reload);
 
 
 })
