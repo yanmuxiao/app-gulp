@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" class="full-screen">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>流式表格</title> 
+<link rel="stylesheet" type="text/css" href="/ui/plugins/font-images/font.css"/>
+<link rel="stylesheet" type="text/css" href="/ui/plugins/bootstrap4.0/css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="/efacesurveillance/css/common.css" />
+<link rel="stylesheet" type="text/css" href="/efacesurveillance/demo1/demo.css" />
+</head>
+<body>
+<div class="pager-wrap">
+	<div class="pager-content">
+	<div class="page-title">
+		<span>撤控申请</span>
+	</div>
+	<div  class="page-info-metro square-pager full">
+		<div class="page-data tc fr" listview-page="">	               
+               <a class="page-prev fl" listview-prev-btn="" href="#"><i class="icon-arrow-left7"></i></a>
+            <span class="page-num">共有 <i class="page-num" listview-counts="">0</i>条记录</span>
+            <a class="current-page"><i listview-current="">0</i>/<i listview-total="">0</i></a>
+            <a class="page-next fr" listview-next-btn="" href="#"><i class="icon-arrow-right7"></i></a>
+          </div>				    		
+   	</div>
+	<div class="table-wrap is-scrolling-left table-scrollable-y table-scrollable-x" id='tableList'>
+	</div>
+	<script id="listTemplate" type="x-tmpl">
+		<div class="table-header-wrap">
+            <table class="table" cellspacing="0" cellpadding="0">  
+                <thead>             
+                    <tr> 
+						<th class="tc" style='width:45px;'></th>
+                    	<th class="tc" style="width: 191px;"><span>姓名</span></th>
+                    	<th class="w15 tc"><span>证件</span></th>
+                    	<th class="w12 tc"><span>布控有效期起</span></th>      
+                    	<th class="w12 tc"><span>布控有效期止</span></th> 
+                    	<th class="w10"><span>布控库类别</span></th>
+                    	<th class="w10"><span>布控库名</span></th>     
+	                    <th class="w8 tc"><span>告警等级</span></th> 
+	                    <th class="w8 tc"><span>状态</span></th> 
+	                    <th class="tc" style="width:260px;"><span>操作</span></th> 
+		            </tr>
+	            </thead>
+	        </table>
+		</div>
+		<div class="table-body-wrap scrollYItem" id="tableContentScroll">
+            <table class="table" cellspacing="0" cellpadding="0">
+				<tbody>
+					{% for(var i=0;i<o.length;i++){ %}
+							<tr index='{%=i%}'>  
+								<td class="tc expandToggleBtn" style='width:45px;'><span class='icon-uniE91A'></span></td>
+			           			<td class="tc" style="width: 191px;"><span>{%=o[i].NAME%}</span></td>
+								<td class="w15 tc"><span>{%= o[i].IDENTITY_ID %}</span></td>                                                  
+			            		<td class="w12 tc"><span>{%= o[i].BEGIN_TIME %}</span></td>
+			            		<td class="w12 tc"><span>{%= o[i].END_TIME %}</span></td>
+								<td class="w10"><span>{%= o[i].KIND_NAME %}</span></td>
+								<td class="w10"><span>{%= o[i].DB_NAME %}</span></td>                                                                                                                                                                         	 
+			            		<td class="w8 tc"><span>{%= o[i].ALARM_LEVEL %}</span></td>
+			            		<td class="w8 tc"><span>{%= o[i].APPROVE_STATUS %}</span></td>
+								<td class="tc" style="width: 260px;">
+                    				<ul class="btn-group-icons list-inline">
+										<li class="attachment"><b><i class="icon-attachment2"></i> 附件</b></li>
+                        				<li class="editBtn"><b><i class="icon-pencil3"></i> 修改</b></li>
+                        				<li class="deleteBtn"><b><i class="icon-trash"></i> 撤销</b></li>
+										<li class="removeControlBtn"><b><i class="icon-forward5"></i> 撤控</b></li>
+                    				</ul>
+               	 				</td>
+							</tr>
+							<tr class='expandedCell hide extend-cell' index='{%=i%}'>
+								<td colspan="10">
+									{% for(var j=0;j<o.length;j++){ %}
+								<div class='table-item-wrap'>
+								<div class="table-item tc" style='width:45px;'>&nbsp;</div>
+			           			<div class="table-item tc" style="width: 191px;"><span>{%=o[j].NAME%}</span></div>
+								<div class="table-item w15 tc"><span>{%= o[j].IDENTITY_ID %}</span></div>                                                  
+			            		<div class="table-item w12 tc"><span>{%= o[j].BEGIN_TIME %}</span></div>
+			            		<div class="table-item w12 tc"><span>{%= o[j].END_TIME %}</span></div>
+								<div class="table-item w10"><span>{%= o[j].KIND_NAME %}</span></div>
+								<div class="table-item w10"><span>{%= o[j].DB_NAME %}</span></div>                                                                                                                                                                         	 
+			            		<div class="table-item w8 tc"><span>{%= o[j].ALARM_LEVEL %}</span></div>
+			            		<div class="table-item w8 tc"><span>{%= o[j].APPROVE_STATUS %}</span></div>
+								<div class="table-item" style="width: 260px;">
+                    				<ul class="btn-group-icons list-inline">
+										<li class="attachment"><b><i class="icon-attachment2"></i> 附件</b></li>
+                        				<li class="editBtn"><b><i class="icon-pencil3"></i> 修改</b></li>
+                        				<li class="deleteBtn"><b><i class="icon-trash"></i> 撤销</b></li>
+										<li class="removeControlBtn"><b><i class="icon-forward5"></i> 撤控</b></li>
+                    				</ul>
+               	 				</div>
+								</div>
+							{% } %}
+								</td>
+							</tr>
+						{% } %}
+				</tbody>                                                                                            
+	        </table>
+        </div>
+        <div class="table-fixed scrollYItem" style="width: 236px;">
+			<div class='table-fixed-header'>
+				<table class="table" cellspacing="0" cellpadding="0">  
+                <thead>             
+                    <tr>
+						<th class="tc" style='width:45px;'></th>
+	                    <th class="tc" style="width: 191px;"><span>姓名</span></th>
+	                </tr>
+	            </thead>
+				</table>
+			</div>
+			<div class='table-fixed-body' id="tableLeftScroll">
+		    	<table class="table" cellspacing="0" cellpadding="0">
+					<tbody>
+						{% for(var i=0;i<o.length;i++){ %}
+						<tr index='{%=i%}'>
+							<td class="tc expandToggleBtn" style='width:45px;'><span class='icon-uniE91A'></span></td>
+		                    <td class="tc" style="width: 191px;"><span title="{%=o[i].NAME%}">{%=o[i].NAME%}</span></td>
+						</tr>
+						<tr class='expandedCell hide extend-cell' index='{%=i%}'>
+							<td colspan="2">
+								{% for(var j=0;j<o.length;j++){ %}
+									<div class='table-item-wrap'>
+									<div class="table-item" style='width:45px;'></div>
+				           			<div class="table-item tc" style="width: 191px;"><span>{%=o[j].NAME%}</span></div>
+									</div>
+								{% } %}
+							</td>
+						</tr>
+						{% } %}
+					</tbody>                    
+		        </table>
+			</div>
+	    </div>
+	    <div class="table-fixed-right scrollYItem" style="width: 260px;">
+			<div class='table-fixed-header'>
+				<table class="table" cellspacing="0" cellpadding="0">  
+                <thead>             
+                    <tr>    
+	                    <th class="tc" style="width: 260px;"><span>操作</span></th>	
+	                </tr>
+	            </thead>
+				</table>
+			</div>
+			<div class='table-fixed-body' id="tableRightScroll">
+		    	<table class="table" cellspacing="0" cellpadding="0">  
+					<tbody>
+						{% for(var i=0;i<o.length;i++){ %}
+						<tr index='{%=i%}'>
+		                    <td class="tc" style="width: 260px;">
+	                    		<ul class="btn-group-icons list-inline">
+									<li class="attachment"><b><i class="icon-attachment2"></i> 附件</b></li>
+	                        		<li class="editBtn"><b><i class="icon-pencil3"></i> 修改</b></li>
+	                        		<li class="deleteBtn"><b><i class="icon-trash"></i> 撤销</b></li>
+									<li class="removeControlBtn"><b><i class="icon-forward5"></i> 撤控</b></li>
+	                    		</ul>
+	               	 		</td>
+						</tr>
+						<tr class='expandedCell hide extend-cell' index='{%=i%}'>
+							<td colspan="2">
+								{% for(var j=0;j<o.length;j++){ %}
+									<div class='table-item-wrap'>
+									<div class="table-item p0">
+	                    				<ul class="btn-group-icons list-inline">
+											<li class="attachment"><b><i class="icon-attachment2"></i> 附件</b></li>
+	                        				<li class="editBtn"><b><i class="icon-pencil3"></i> 修改</b></li>
+	                        				<li class="deleteBtn"><b><i class="icon-trash"></i> 撤销</b></li>
+											<li class="removeControlBtn"><b><i class="icon-forward5"></i> 撤控</b></li>
+	                    				</ul>
+	               	 				</div>
+									</div>
+								{% } %}
+							</td>
+						</tr>
+						{% } %}
+					</tbody>                    
+		        </table>
+			</div>
+	    </div>
+		<div class="table-fixed-right-patch"></div>
+	</script>
+	</div>
+</div>
+</body>
+<script type="text/javascript" src="/ui/plugins/jquery.min.js"></script> 
+<script type="text/javascript" src="/ui/plugins/eapui/eapui.js"></script>
+<script type="text/javascript" src="/ui/plugins/mCustomScrollbar/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="/efacesurveillance/demo1/demo.js"></script>
+</html>

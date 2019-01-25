@@ -2,6 +2,7 @@
 
 var i = 0;
 function addContactToList() {
+	console.log('!@@#Y$U#YU$Y#U$Y#‘’');
 	console.log(i++);
 }
 document.querySelector('#confirmBtn').onclick = _.before(5, addContactToList)

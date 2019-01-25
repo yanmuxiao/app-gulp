@@ -1,0 +1,97 @@
+@charset 'utf-8';
+.table-wrap{
+	margin:0px auto;
+	position: relative;
+	overflow: hidden;
+}
+
+.table-scrollable-y .table-body-wrap{
+	overflow-y:auto;
+}
+.table-scrollable-x .table-body-wrap{
+	overflow-x:auto;
+}
+.table-header-wrap{
+	position: relative;
+}
+.table-scrollable-y .table-body-wrap{
+	height:500px;
+}
+.table-scrollable-x .table-body-wrap table,
+.table-scrollable-x .table-header-wrap table{
+	min-width: 1600px;
+	max-width: inherit;
+}
+.table-fixed, .table-fixed-right {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,.12);
+    display:none;
+}
+.table-fixed-body{
+	position:absolute;
+	top:46px;
+    bottom: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.table-scrollable-x .table-fixed,
+.table-scrollable-x .table-fixed-right {
+    display:block;
+}
+.table-scrollable-x .table-fixed-right{
+	left:auto;
+    right:17px;
+}
+.table-scrollable-y .table-fixed,
+.table-scrollable-y .table-fixed-right {
+    bottom:17px;
+}
+.table-wrap.is-scrolling-left .table-fixed,
+.table-wrap.is-scrolling-right .table-fixed-right{
+    box-shadow: none;
+}
+.table-scrollable-x .table-fixed-right-patch{
+    position: absolute;
+    top: -1px;
+    right: 0;
+    background-color: #F7F8FA;
+    border-bottom: 1px solid #ebeef5;
+    width: 17px; 
+    height: 48px;
+}
+
+
+.table-item-wrap{
+	display:table;
+	width:100%;
+	table-layout: fixed;
+}
+.table-item-wrap .table-item{
+	display:table-cell;
+	vertical-align:middle;
+	font-size: 12px;
+    font-weight: normal;
+    padding: 0 0 0 5px;
+    color: #515151;
+    height: 46px;
+}
+.table-item-wrap .table-item span{
+	display: block;
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: middle;	
+}
+
+.table-wrap .table tr:hover td {
+    background: transparent;
+}
+.extend-cell{
+	background:#EDEEF3;
+}

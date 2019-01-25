@@ -15,6 +15,8 @@ gulp.task('default', function() {
 })
 
 
+var dir = 'app'
+
 // 使用Browser Sync自动刷新
 gulp.task('browserSync', function() {
 	browserSync({
@@ -45,11 +47,11 @@ gulp.task('browserSync', function() {
 gulp.task('watch', ['browserSync'], function() {
 	
 	// html
-	gulp.watch('app/slinw/**/*.html', browserSync.reload);
+	gulp.watch('app/*/**/*.html', browserSync.reload);
 	//css
-	gulp.watch('app/slinw/**/*.css', browserSync.reload);
+	gulp.watch('app/*/**/*.css', browserSync.reload);
 	// js
-	gulp.watch('app/slinw/**/*.js', browserSync.reload);
+	gulp.watch('app/*/**/*.js', browserSync.reload);
 
 
 })
